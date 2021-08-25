@@ -1,0 +1,20 @@
+state={
+	id=263
+	name="STATE_263"
+	provinces={
+		1560 7586 7797 9910 12418
+	}
+	history={
+		owner = CHN
+		add_core_of = CHN
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = {
+			12418 1
+		}
+	}
+	manpower=280600
+	state_category = rural
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,18 @@
+
+state={
+	id=282
+	name="STATE_282"
+
+	history={
+		owner = GRF
+		add_core_of = GRF
+
+	}
+
+	provinces={
+		57 152 172 193 3142 3163 6033 6057 6086 6095 9107 9169 9184 9190 9880 10833 11150 11153 11165 12024 13105 13111 13216 13217 13219 
+	}
+	manpower=1329
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

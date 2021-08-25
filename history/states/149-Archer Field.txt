@@ -1,0 +1,27 @@
+
+state={
+	id=149
+	name="STATE_149"
+	
+	history={
+		owner = CRY
+		add_core_of = CRY
+		buildings = {
+			infrastructure = 4
+			arms_factory= 1
+		}
+		victory_points = {
+			3117 5 
+		}
+		victory_points = {
+			215 2
+		}
+	}
+
+	provinces={
+		215 3117 3203 6480 6556 9249 9451 9568 11424 11453 
+	}
+	manpower=667200
+	buildings_max_level_factor=1.000
+	state_category=town
+}

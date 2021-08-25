@@ -1,0 +1,24 @@
+
+state={
+	id=205
+	name="STATE_205"
+
+	history={
+		owner = OLE
+		add_core_of = OLE
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			3957 5
+		}
+	}
+
+	provinces={
+		1115 3957 3965 3979 4769 8088 10868 12711 
+	}
+	manpower=566185
+	buildings_max_level_factor=1.000
+	state_category=town
+}

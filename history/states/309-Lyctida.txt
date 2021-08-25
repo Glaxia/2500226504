@@ -1,0 +1,29 @@
+
+state={
+	id=309
+	name="STATE_309"
+	resources={
+		aluminium = 8
+	}
+	history={
+		owner = CHN
+		add_core_of = CHN
+		buildings = {
+			arms_factory = 3
+			industrial_complex = 4
+			infrastructure = 8
+
+		}
+		victory_points = {
+			195 25 
+		}
+
+	}
+
+	provinces={
+		195 
+	}
+	manpower=1646797
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

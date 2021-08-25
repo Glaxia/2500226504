@@ -1,0 +1,24 @@
+
+state={
+	id=155
+	name="STATE_155"
+	resources={
+		tungsten = 16
+	}
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		11 109 151 3054 3083 3138 6009 6074 6152 6168 6170 9095 9134 9175 11026 11069 11152 
+	}
+	manpower=87722
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

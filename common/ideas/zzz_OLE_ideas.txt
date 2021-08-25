@@ -1,0 +1,26 @@
+ideas = {
+
+	country = {
+
+		OLE_raising_dissent = {
+
+
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = no
+			}
+
+			modifier = {
+				political_power_gain = -0.25
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+		
+	}
+}
+
+
+	

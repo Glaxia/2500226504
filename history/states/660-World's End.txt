@@ -1,0 +1,22 @@
+
+state={
+	id=660
+	name="STATE_660"
+
+	history={
+		owner = HAU
+		add_core_of = HAU
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		98 4446 4652 6140 7673 8360 9215 10354 10382 10522 12302 
+	}
+	manpower=95600
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

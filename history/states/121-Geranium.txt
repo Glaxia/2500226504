@@ -1,0 +1,26 @@
+state={
+	id=121
+	name="STATE_121"
+	state_category = town
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
+		victory_points = {
+			11399 5
+		}
+		victory_points = {
+			3482 5
+		}
+	}
+
+	provinces={
+		548 3434 3482 6401 6499 9400 9452 9508 11399 11507 11532 12562
+	}
+	manpower=1355510
+	buildings_max_level_factor=1.000
+}

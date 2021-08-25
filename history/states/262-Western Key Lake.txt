@@ -1,0 +1,28 @@
+
+state={
+	id=262
+	name="STATE_262"
+
+	history={
+		owner = CHN
+		add_core_of = CHN
+		buildings = {
+			industrial_complex = 5
+			arms_factory = 1
+			infrastructure = 7
+			air_base = 1
+
+		}
+		victory_points = {
+			6752 20 
+		}
+
+	}
+
+	provinces={
+		6752 
+	}
+	manpower=1716691
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

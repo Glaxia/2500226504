@@ -1,0 +1,341 @@
+﻿capital = 153
+
+set_research_slots = 3
+
+set_technology = {
+	pony_race = 1
+	pre_gw_artillery = 1
+	early_fighter = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	early_bomber = 1
+	gwtank = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	interwar_antitank = 1
+	gw_artillery = 1
+	basic_machine_tools = 1
+	motorised_infantry = 1
+	tech_support = 1
+	fuel_silos = 1
+	tech_pegasi = 1
+	tech_recon = 1
+	tech_military_police = 1
+	tech_engineers = 1
+}
+actually_fix_weapon_techs = yes 
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_secondary_battery = 1
+		basic_fire_control_system = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+set_cosmetic_tag = EQS_empire
+set_convoys = 50
+set_popularities = {
+	authoritarian_socialism = 50
+	liberal_socialism = 40
+	social_harmonism = 10
+}
+set_politics = {
+	ruling_party = liberal_socialism
+	last_election = "1006.1.1"
+	election_frequency = 36
+	elections_allowed = yes
+}
+
+
+add_ideas = {
+	
+}
+
+set_stability = 0.7
+set_war_support = 0.6
+
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 2000
+	producer = STG
+}
+
+add_equipment_to_stockpile = {
+	type = artillery_equipment_1
+	amount = 100
+	producer = STG
+}
+
+create_country_leader = {
+	name = "Altidiya"
+	desc = "POLITICS_ALTY_DESC"
+	expire = "1965.1.1"
+	ideology = liberal_socialism_sub
+	female = yes
+	picture = "Alty.tga"
+	traits = { }
+}
+create_country_leader = {
+	 name = "Sinister"
+	 desc = "POLITICS_SINNIE_DESC"
+	 expire = "1965.1.1"
+	ideology = authoritarian_socialism_sub
+	picture = "Sinnie.tga"
+	traits = {  }
+}
+create_field_marshal = {
+	name = "Nestor Lunin"
+	picture = "Nestor.tga"
+	traits = { pony_race_trait trait_nestor_lunin }
+	skill = 3
+	id = 1000
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Ember Flare"
+	picture = "Ember_Flare.tga"
+	traits = { pony_race_trait inflexible_strategist }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Veronica"
+	picture = "Veronica.tga"
+	traits = { pony_race_trait panzer_leader }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	female = yes
+}
+create_corps_commander = {
+	name = "Vinous Kostylev"
+	picture = "Vinous.tga"
+	traits = { pony_race_trait inspiring_commissar }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 3
+	planning_skill = 2
+	logistics_skill = 1
+	id = 6970
+}
+create_corps_commander = {
+	name = "Alexia Goldgear"
+	picture = "Gereval.tga"
+	traits = { thestral_race_trait artillery_expert }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	id = 6969
+}
+create_corps_commander = {
+	name = "Cherry Swirl"
+	picture = "Cherry_Swirl.tga"
+	traits = { pony_race_trait }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+	id = 6968
+}
+create_corps_commander = {
+	name = "Black Paint"
+	picture = "Black_Paint.tga"
+	traits = { pony_race_trait }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 3
+}
+create_corps_commander = {
+	name = "Comrade Ulman"
+	picture = "Ulman.tga"
+	traits = { pony_race_trait }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Fiat Coin"
+	picture = "Ikapoc.tga"
+	traits = { pony_race_trait brilliant_strategist war_hero }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Purple Heart"
+	picture = "PurpleHeart.tga"
+	traits = { pony_race_trait }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 1
+	female = yes
+}
+create_corps_commander = {
+	name = "Katya Ironstead"
+	picture = "Katya.tga"
+	traits = { pony_race_trait winter_specialist }
+	skill = 2
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+	female = yes
+	id = 6967
+}
+create_corps_commander = {
+	name = "Cogwheel Ponyarchuk"
+	picture = "Ponyarchuk.tga"
+	traits = { pony_race_trait politically_connected }
+	skill = 2
+	id = 7777
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Gemian Smit"
+	picture = "Gemian Smit.tga"
+	traits = { pony_race_trait career_officer }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Whagirl"
+	picture = "Whagirl.tga"
+	traits = { pony_race_trait }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+	female = yes
+}
+create_corps_commander = {
+	name = "Vampirenok"
+	picture = "Vampirenok.tga"
+	traits = { thestral_race_trait infantry_officer }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	female = yes
+}
+create_corps_commander = {
+	name = "Depuresso"
+	picture = "Depuresso.tga"
+	traits = { pony_race_trait harsh_leader }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+	female = yes
+}
+create_corps_commander = {
+	name = "Marussia"
+	picture = "Marussia.tga"
+	traits = { pony_race_trait commissar_general }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+	female = yes
+}
+create_corps_commander = {
+	name = "Victor Historia"
+	picture = "CHG.tga"
+	traits = { pony_race_trait artillery_specialist }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "That BT-7"
+	picture = "ThatfuckingBt7.tga"
+	traits = { pony_race_trait armor_officer }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 1
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}

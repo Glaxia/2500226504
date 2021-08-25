@@ -1,0 +1,24 @@
+
+state={
+	id=46
+	name="STATE_46"
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			6311 2
+		}
+
+	}
+
+	provinces={
+		299 3141 3229 6084 6311 10245 11044 11160 11380 12343 
+	}
+	manpower=455100
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

@@ -1,0 +1,38 @@
+
+state={
+	id=136
+	name="STATE_136"
+	resources={
+		steel= 8
+	}
+	history={
+		owner = EQS
+		add_core_of = EQS
+		victory_points = {
+			748 20 
+		}
+		victory_points = {
+			11704 3 
+		}
+		victory_points = {
+			9674 2
+		}
+		victory_points = {
+			9694 1
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+
+	}
+
+	provinces={
+		714 731 748 1450 1536 1610 1662 3711 4614 6718 6721 6736 6753 6763 7495 9674 9691 9694 9707 11633 11674 11678 11696 11704 
+	}
+	manpower=2331000
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=208
+	name="STATE_208"
+	resources={
+		oil=8.000
+	}
+
+	history={
+		owner = OLE
+		add_core_of = OLE
+		buildings = {
+			infrastructure = 1
+
+		}
+		victory_points = {
+			11873 5 
+		}
+
+	}
+
+	provinces={
+		951 3850 3941 6823 6929 7646 11758 11841 11873 11888 
+	}
+	manpower=522698
+	buildings_max_level_factor=1.000
+	state_category=town
+}

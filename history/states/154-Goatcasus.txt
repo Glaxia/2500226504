@@ -1,0 +1,28 @@
+
+state={
+	id=154
+	name="STATE_154"
+	resources={
+		oil = 12
+	}
+
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		victory_points = {
+			6120 5 
+		}
+	}
+
+	provinces={
+		147 171 3583 6028 6120 6464 9412 9567 11151 11233 11467 12885 
+	}
+	manpower=766071
+	buildings_max_level_factor=1.000
+	state_category=town
+}

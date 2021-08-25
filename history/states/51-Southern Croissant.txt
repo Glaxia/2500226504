@@ -1,0 +1,25 @@
+
+state={
+	id=51
+	name="STATE_51"
+	
+	history={
+		owner = MGY
+		add_core_of = MGY
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = {
+			3663 5
+		}
+
+	}
+
+	provinces={
+		660 684 690 3484 3663 3676 9551 9617 9660 11520 11539 11554 11619 11646 11663 11679
+	}
+	manpower=751400
+	buildings_max_level_factor=1.000
+	state_category=town
+}

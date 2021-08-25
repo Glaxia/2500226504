@@ -1,0 +1,25 @@
+
+state={
+	id=159
+	name="STATE_159"
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 2
+
+		}
+		victory_points = {
+			11303 2 
+		}
+
+	}
+
+	provinces={
+		276 804 3242 6925 9255 9350 11218 11238 11257 11303 11378 11844 
+	}
+	manpower=480710
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

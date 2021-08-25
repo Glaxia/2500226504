@@ -1,0 +1,30 @@
+
+state={
+	id=157
+	name="STATE_157"
+	resources={
+		steel=8
+	}
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			industrial_complex = 2
+			arms_factory = 1
+			infrastructure = 4
+
+		}
+		victory_points = {
+			351 20 
+		}
+
+	}
+
+	provinces={
+		219 351 385 6320 6335 6384 7003 9285 9314 9397 11270 11299 11332 
+	}
+	manpower=1832800
+	buildings_max_level_factor=1.000
+	state_category=city
+}

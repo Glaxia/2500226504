@@ -1,0 +1,44 @@
+ideas = {
+
+	country = {
+		
+		GRF_colonial_economy = {
+			allowed = {
+				always = yes
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = great_depression
+			removal_cost = -1
+			modifier = {
+				stability_factor = -0.20
+				war_support_factor = -0.20
+				production_factory_max_efficiency_factor = -0.20
+				industrial_capacity_factory = -0.1
+				production_speed_buildings_factor = -0.1
+				consumer_goods_factor = 0.15
+			}
+		}
+
+		GRF_militias = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = GRF_militias
+			removal_cost = -1
+			modifier = {
+				conscription = 0.01
+				army_morale_factor = 0.05
+				army_org_factor = -0.10
+				planning_speed = -0.10
+			}
+		}
+
+	}
+	
+	
+}	

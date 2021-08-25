@@ -1,0 +1,26 @@
+
+state={
+	id=336
+	name="STATE_336"
+	resources={
+		aluminium=8
+	}
+	history={
+		owner = GRF
+		add_core_of = GRF
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+		}
+		victory_points = {
+			9411 5
+		}
+	}
+
+	provinces={
+		261 300 356 384 429 3376 3421 4512 6222 6420 6493 9266 9313 9411 11149 11214 11242 11347 11368
+	}
+	manpower=567453
+	buildings_max_level_factor=1.000
+	state_category=town
+}

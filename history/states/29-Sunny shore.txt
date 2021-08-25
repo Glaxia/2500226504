@@ -1,0 +1,31 @@
+
+state={
+	id=29
+	name="STATE_29"
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+        victory_points = {
+			11684 10
+		}
+		 victory_points = {
+			9700 2
+		}
+		 victory_points = {
+			10893 2
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			arms_factory = 1
+		}
+	}
+
+	provinces={
+		738 747 1093 1176 1956 3735 8128 9700 9757 9872 10893 11684 11742 11854
+	}
+	manpower=2026900
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

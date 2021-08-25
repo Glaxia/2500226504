@@ -1,0 +1,27 @@
+
+state={
+	id=156
+	name="STATE_156"
+	resources = {
+		tungsten = 8
+	}
+
+	history={
+		owner = STG
+		add_core_of = STG
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			6208 2 
+		}
+
+	}
+
+	provinces={
+		1220 6208 9094 9194 11060 11211 12313 12503 
+	}
+	manpower=326240
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

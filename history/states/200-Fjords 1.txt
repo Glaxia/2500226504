@@ -1,0 +1,25 @@
+
+state={
+	id=200
+	name="STATE_200"
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+		}
+		victory_points = {
+			9306 5
+		}
+
+	}
+
+	provinces={
+		130 161 205 243 388 9035 9185 9306 9387 11082 11288 11316 
+	}
+	manpower=855625
+	buildings_max_level_factor=1.000
+	state_category=town
+}

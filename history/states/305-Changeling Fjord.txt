@@ -1,0 +1,33 @@
+
+state={
+	id=305
+	name="STATE_305"
+	resources={
+		oil=20.000
+	}
+
+	history={
+		owner = CHN
+		add_core_of = CHN
+		buildings = {
+			industrial_complex = 1
+			infrastructure = 4
+			12346 = {
+				naval_base = 4
+
+			}
+
+		}
+		victory_points = {
+			12346 5 
+		}
+
+	}
+
+	provinces={
+		602 777 1534 4757 4784 4869 7794 7834 9740 9802 10370 10621 10718 12346 12463 12701 
+	}
+	manpower=530300
+	buildings_max_level_factor=1.200
+	state_category=town
+}

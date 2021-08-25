@@ -1,0 +1,43 @@
+
+state={
+	id=75
+	name="STATE_75"
+	resources={
+		steel = 30
+		aluminium = 15
+	}
+
+	history={
+		owner = MAN
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 10
+			industrial_complex = 5
+			arms_factory = 5
+			anti_air_building = 1
+			air_base = 4
+			dockyard = 2
+			11710 = {
+				naval_base = 7
+			}
+
+		}
+		victory_points = {
+			758 40 
+		}
+		victory_points = {
+			11710 20 
+		}
+		victory_points = {
+			6734 20 
+		}
+
+	}
+
+	provinces={
+		758 6734 11710 
+	}
+	manpower=5634800
+	buildings_max_level_factor=2.000
+	state_category=megalopolis
+}

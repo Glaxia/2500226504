@@ -1,0 +1,24 @@
+
+state={
+	id=163
+	name="STATE_163"
+
+	history={
+		owner = STG
+		add_core_of = STG
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			434 2
+		}
+
+	}
+
+	provinces={
+		369 409 434 3396 3403 3568 6451 6458 6532 7377 9573 11546 
+	}
+	manpower=225140
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

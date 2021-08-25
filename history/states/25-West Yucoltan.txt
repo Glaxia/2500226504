@@ -1,0 +1,18 @@
+
+state={
+	id=25
+	name="STATE_25"
+
+	history={
+		owner = NMS
+		add_core_of = NMS
+		victory_points = { 13074 2 }
+	}
+
+	provinces={
+		336 3991 4084 4097 7008 7215 7908 8046 11987 12018 12842 13074
+	}
+	manpower=429500
+	buildings_max_level_factor=1.000
+	state_category = rural
+}

@@ -1,0 +1,18 @@
+state={
+	id=340
+	name="STATE_340"
+	history={
+		owner = YAK
+		add_core_of = YAK
+		buildings = {
+			infrastructure = 1
+		}
+
+	}
+	state_category = rural
+	provinces={
+		3349 6191 9180 9270 13165
+	}
+	manpower=159325
+	buildings_max_level_factor=1.000
+}

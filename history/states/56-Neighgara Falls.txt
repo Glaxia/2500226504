@@ -1,0 +1,22 @@
+state={
+	id=56
+	name="STATE_56"
+	state_category = rural
+	resources={
+		tungsten = 8
+	}
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = { 6165 1 }
+	}
+
+	provinces={
+		67 158 192 3034 3048 3179 3193 6076 6163 6165 9160 9167 9186 9189 9226
+	}
+	manpower=326226
+	buildings_max_level_factor=1.000
+}

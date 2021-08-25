@@ -1,0 +1,109 @@
+ideas = {
+
+	city_idea = {
+		law = yes
+		use_list_view = yes
+
+		proper_science_base = {
+			level = 1
+			traits = { science_idea }
+			cost = 40
+ 
+			removal_cost = -1
+			modifier = {
+			}
+			ai_will_do = {
+				factor = 10000
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+
+		big_science_base = {
+			level = 2
+			traits = { science_idea }
+			cost = 40
+ 
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.25
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					has_idea = proper_science_base
+				}
+				modifier = {
+					factor = 10000
+					OR = {
+						has_idea = better_science_base
+						has_idea = poor_science_base
+					}
+				}
+			}
+			cancel_if_invalid = no
+		}
+
+		better_science_base = {
+			level = 3
+			traits = { science_idea }
+			cost = 40
+ 
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.5
+			}
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					factor = 0
+					OR = {
+						has_idea = proper_science_base
+						has_idea = big_science_base
+					}
+				}
+				modifier = {
+					factor = 10000
+					has_idea = poor_science_base
+				}
+			}
+			cancel_if_invalid = no
+		}
+
+		poor_science_base = {
+			level = 4
+			traits = { science_idea }
+			cost = 40
+			removal_cost = -1
+ 
+			modifier = {
+				research_speed_factor = -0.75
+			}
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 0
+					OR = {
+						has_idea = proper_science_base
+						has_idea = big_science_base
+						has_idea = better_science_base
+					}
+				}
+			}
+
+			cancel_if_invalid = no
+		}
+
+		dummy_idea_science = {
+ 
+			visible = {
+				has_idea = dummy_idea_science
+			}
+			available = {
+				has_idea = dummy_idea_science
+			}
+			cancel_if_invalid = no
+		}
+	}
+}

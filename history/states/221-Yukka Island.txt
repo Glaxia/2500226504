@@ -1,0 +1,16 @@
+state={
+	id=221
+	name="STATE_221"
+	state_category = small_island
+
+	history={
+		owner = NMS
+		add_core_of = NMS
+	}
+
+	provinces={
+		177
+	}
+	manpower=11748
+	buildings_max_level_factor=1.000
+}

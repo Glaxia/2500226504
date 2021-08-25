@@ -1,0 +1,17 @@
+
+state={
+	id=71
+	name="STATE_71"
+	state_category = pastoral
+	history={
+		owner = MGY
+		add_core_of = MGY
+
+	}
+
+	provinces={
+		630 4507 6652 6716 7552 9771 9849
+	}
+	manpower=21516
+	buildings_max_level_factor=1.000
+}

@@ -1,0 +1,34 @@
+
+state={
+	id=334
+	name="STATE_334"
+	resources={
+		steel=5
+	}
+
+	history={
+		owner = CRY
+		add_core_of = CRY
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			6497 5 
+		}
+		victory_points = {
+			6593 5 
+		}
+		victory_points = {
+			9466 3 
+		}
+
+	}
+	provinces={
+		441 504 550 6497 6593 9466 11490 11557 
+	}
+	manpower=961580
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

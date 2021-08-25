@@ -1,0 +1,35 @@
+
+state={
+	id=252
+	name="STATE_252"
+	resources={
+		steel=12
+	}	
+	history={
+		owner = CHN
+		add_core_of = CHN
+		victory_points = {
+			11509 30 
+		}
+		buildings = {
+			infrastructure = 10
+			industrial_complex = 3
+			arms_factory = 3
+			dockyard = 3
+			air_base = 1
+			11509 = {
+				naval_base = 5
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		11509 
+	}
+	manpower=2350087
+	buildings_max_level_factor=1.900
+	state_category=metropolis
+}

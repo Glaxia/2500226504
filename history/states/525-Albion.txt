@@ -1,0 +1,39 @@
+
+state={
+	id=525
+	name="STATE_525"
+	resources={
+		steel = 16
+	}
+	history={
+		owner = EQS
+		add_core_of = EQS
+		victory_points = {
+			10359 25	
+		}
+		victory_points = {
+			1493 5		
+		}
+		victory_points = {
+			4928 2	
+		}
+		victory_points = {
+			11671 2	
+		}
+		buildings = {
+			infrastructure = 6		
+			industrial_complex = 2
+			dockyard = 3
+            10359 = {
+				naval_base = 3
+			}
+		}
+	}
+
+	provinces={
+		1493 1576 2374 4599 4928 5073 5089 7573 7635 10351 10359 10485 10510 11671 12359 12465 12748
+	}
+	manpower=2667400
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

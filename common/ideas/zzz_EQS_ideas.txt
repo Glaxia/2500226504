@@ -1,0 +1,2131 @@
+ideas = {
+	political_advisor = {
+		EQS_twilight_sparkle = {
+
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				NOT = { has_country_leader = { ruling_only = yes name = "Princess Twilight Sparkle" } }
+			}
+			picture = twilight_sparkle
+			traits = { element_of_magic }
+			modifier = {
+				research_speed_factor = 0.05
+			}
+			research_bonus = {
+				race_tech = 0.15
+			}
+			
+			ai_will_do = {
+				factor = 2
+			}
+		}
+
+		EQS_cocopommel = {
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			picture = cocopommel
+
+			traits = { captain_of_industry }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		EQS_filthy_rich = {
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			visible = {
+				NOT = { has_completed_focus = EQS_remove_nobles }
+			}
+
+			hidden = {
+				available = {
+				NOT = { has_completed_focus = EQS_remove_nobles }
+				}
+			}
+
+			picture = filthy_rich
+
+			traits = { smooth_talking_charmer }
+			
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		EQS_flim = {
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			picture = flim
+
+			traits = { war_industrialists }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		EQS_raven = {
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			visible = {
+				OR = { 
+					has_country_leader = { ruling_only = yes name = "Princess Twilight Sparkle" } 
+					has_country_leader = { ruling_only = yes name = "Princess Celestia" } 
+					has_country_leader = { ruling_only = yes name = "Princess Luna" } 
+				}
+			}
+
+			available = {
+				OR = { 
+					has_country_leader = { ruling_only = yes name = "Princess Twilight Sparkle" } 
+					has_country_leader = { ruling_only = yes name = "Princess Celestia" } 
+					has_country_leader = { ruling_only = yes name = "Princess Luna" } 
+				}
+			}
+			picture = raven
+
+			traits = { silent_workhorse }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		EQS_blueblood = {
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			visible = {
+				NOT = { has_completed_focus = EQS_remove_nobles }
+			}
+
+			available = {
+				hidden = { NOT = { has_completed_focus = EQS_remove_nobles } }
+				OR = {
+					has_completed_focus = EQS_royal_cabinet
+					has_completed_focus = EQS_ministry_of_defense
+				}
+			}
+			picture = blueblood
+
+			traits = { prince_of_terror }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		EQS_dottedline = {
+			picture = dottedline
+			allowed = {
+				original_tag = EQS
+			}
+
+			available = {
+				OR = {
+					has_completed_focus = EQS_royal_cabinet
+					has_completed_focus = EQS_ministry_of_defense
+				}
+			}
+			traits = { armaments_organizer }
+		}
+
+		EQS_fancy_pants = {
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			visible = {
+				NOT = { has_completed_focus = EQS_remove_nobles }
+			}
+
+			hidden = {
+				available = {
+				NOT = { has_completed_focus = EQS_remove_nobles }
+				}
+			}
+
+			picture = fancy_pants
+
+			traits = { compassionate_gentleman }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		EQS_sweetie_drops = {
+			picture = sweetie_drops
+			allowed = {
+				original_tag = EQS
+				NOT = {
+					has_dlc = "La Resistance"
+				}
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = { agent_of_smile }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		
+		EQS_sweetie_drops_lar = {
+			picture = sweetie_drops
+			name = EQS_sweetie_drops
+			allowed = {
+				original_tag = EQS
+				has_dlc = "La Resistance"
+			}
+			available = {
+				has_intelligence_agency = yes
+			}
+			traits = { agent_of_smile_lar }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		EQS_mayor_mare = {
+			picture = MAN_mayor_mare
+			allowed = {
+				original_tag = EQS
+			}
+			traits = { friendly_colleague }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		EQS_sinnie = {
+			picture = sinnie
+			visible = {
+				has_completed_focus = EQS_left_advisors
+				has_government = social_harmonism
+			}
+		
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				has_completed_focus = EQS_left_advisors
+				has_government = social_harmonism
+			}
+			traits = { sinnie_trait }
+		}
+
+		EQS_vasya = {
+			picture = vasya
+			visible = {
+				has_completed_focus = EQS_left_advisors
+				has_government = social_harmonism
+			}
+			
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				has_completed_focus = EQS_left_advisors
+				has_government = social_harmonism
+			}
+			traits = { vasya_trait }
+		}
+
+		EQS_dark_wing = {
+			picture = dank_wing
+			visible = {
+				has_completed_focus = EQS_left_advisors
+				has_government = social_harmonism
+			}
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				has_completed_focus = EQS_left_advisors
+				has_government = social_harmonism
+			}
+			traits = { smooth_talking_charmer }
+		}
+
+		EQS_starlight = {
+
+			cost = 0
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			visible = {
+				has_completed_focus = EQS_left_advisors
+			}
+
+			available = {
+				has_completed_focus = EQS_left_international
+				has_government = social_harmonism
+			}
+
+			picture = starlight
+
+			traits = { left_revolutionarist }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+
+	air_chief = {
+
+		EQS_rainbowdash = {
+			picture = rainbowdash
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			traits = { element_of_loyalty }
+
+			ai_will_do = {
+				factor = 1
+			}
+
+		}
+
+		EQS_spitfire = {
+			picture = spitfire
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			traits = { air_air_combat_training_3 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	navy_chief = {
+
+		EQS_madoor_stronghammer = {
+			picture = madoor
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				has_completed_focus = EQS_carrier_tech
+			}
+			traits = { navy_chief_naval_aviation_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		EQS_evening_squall = {
+			picture = udy
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				has_completed_focus = EQS_battleship_tech
+			}
+			traits = { navy_chief_decisive_battle_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		
+	}
+
+	army_chief = {
+		EQS_rockhoof = {
+			picture = rockhoof
+
+			allowed = {
+				original_tag = EQS
+			}
+	
+			traits = { army_chief_defensive_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+	
+		}
+
+		EQS_flash_magnus = {
+			picture = flash_magnus
+
+			allowed = {
+				original_tag = EQS
+			}
+	
+			traits = { army_chief_offensive_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+	
+		}
+
+		EQS_fizzlepop = {
+			picture = fizzlepop
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			traits = { army_chief_maneuver_2 }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+
+	theorist = {
+		EQS_wonderbolts_academy = {
+			ledger = air
+			picture = wonderbolts
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				air_doctrine = 0.15
+			}
+
+			traits = { air_warfare_theorist }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		EQS_fluttershy = {
+			ledger = army
+			picture = fluttershy
+
+			available = {
+				has_completed_focus = EQS_secret_plan
+			}
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				nuclear = 0.15
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+
+			traits = { nuclear_scientist }
+		}
+
+		EQS_flakesnow = {
+			ledger = air
+			picture = flakesnow
+
+			available = {
+				has_completed_focus = EQS_secret_plan
+			}
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				rocketry = 0.15
+			}
+
+			traits = { rocket_scientist }
+		}
+
+		EQS_cynosura = {
+			picture = cynosura
+			ledger = nacy
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				naval_doctrine = 0.15
+			}
+
+			traits = { naval_theorist }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+		EQS_zecora = {
+			picture = zecora
+			ledger = army
+
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				land_doctrine = 0.15
+			}
+
+			traits = { military_theorist }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+	}
+
+	tank_manufacturer = {
+		designer = yes
+
+		EQS_mustang = {
+			picture = mustang
+
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { fast_tank_manufacturer }
+		}
+		EQS_shoof = {
+			picture = shoof
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			available = {
+				if = {
+					limit = { has_government = authoritarian_harmonism }
+					has_completed_focus = EQS_unify_home 
+					STG = { exists = no } 
+				}
+				else = {
+					if = {
+						limit = { has_government = liberal_harmonism }
+						AND = { 
+							has_completed_focus = EQS_luna_annex_STG
+							STG = { exists = no }	
+						}			
+					}
+					else = {
+						limit = { has_government = social_harmonism }
+						AND = {		
+							has_completed_focus = EQS_left_annex_STG
+							OR = {
+								STG = { is_subject_of = EQS }
+								STG = { exists = no } 
+							}	
+						}
+					}
+				}
+			}		
+
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { medium_tank_manufacturer }
+
+			modifier = {
+			}
+		}
+		EQS_sirius = {
+			picture = sirius
+
+			allowed = {
+				original_tag = EQS
+			}
+
+						available = {
+				if = {
+					limit = { has_government = authoritarian_harmonism }
+					has_completed_focus = EQS_unify_home 
+					MAN = { exists = no } 
+				}
+				else = {
+					if = {
+						limit = { has_government = liberal_harmonism }
+						AND = { 
+							has_completed_focus = EQS_cooperate_with_capitalists
+							OR = {
+								MAN = { is_subject_of = EQS }
+								MAN = { exists = no } 
+							}	
+						}			
+					}
+					else = {
+						limit = { has_government = social_harmonism }
+						AND = {
+							has_completed_focus = EQS_nationalize_capitals
+							MAN = { exists = no }
+						}
+					}
+				}
+			}
+			research_bonus = {
+				armor = 0.15
+			}
+
+			traits = { heavy_tank_manufacturer }
+
+			modifier = {
+			}
+		}
+	}
+
+	materiel_manufacturer = {
+
+		designer = yes
+
+		EQS_star_energy = {
+			picture = star_energy
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			available = {
+				has_completed_focus = EQS_new_artillery
+			}
+
+			research_bonus = {
+				artillery = 0.15
+			}
+
+			traits = { artillery_manufacturer }
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		EQS_macintosh = {
+			picture = macintosh
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			available = {
+				has_completed_focus = EQS_new_infantry_weapons
+			}
+
+			research_bonus = {
+				infantry_weapons = 0.15
+			}
+
+			traits = { infantry_equipment_manufacturer }
+
+			modifier = {
+			}
+		}
+		EQS_detrot_automobiles = {
+			picture = armoury_of_detrot 
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			available = {
+				has_completed_focus = EQS_new_motorized_equipment
+			}
+
+			research_bonus = {
+				motorized_equipment = 0.15
+			}
+
+			traits = { motorized_equipment_manufacturer }
+
+			modifier = {
+			}
+		}
+	}
+
+	industrial_concern = {
+
+		EQS_rainbow_factory = {
+			picture = rainbow_factory
+			allowed = {
+				original_tag = EQS
+			}
+			research_bonus = {
+				industry = 0.1
+				construction_tech = 0.15
+			}
+			traits = { light_industrial_concern }
+			modifier = {
+			}
+		}
+
+		EQS_manehattan_electronics = {
+			picture = manehattan
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				has_completed_focus = EQS_MAN_company
+			}
+			research_bonus = {
+				electronics = 0.2
+			}
+			traits = { electronics_concern }
+			modifier = {
+			}
+		}
+
+		EQS_stalliongrad_factory = {
+			picture = stalliongard_factory	
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				has_completed_focus = EQS_STG_company
+			}			
+			research_bonus = {
+				industry = 0.2
+			}
+			traits = { industrial_concern }
+			modifier = {
+			}
+		}
+
+		EQS_combined_petroleum = {
+			picture = SCS_general_petroleum
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				industry = 0.1
+				synth_resources = 0.15
+			}
+			traits = { refinery_concern }
+		}
+	}
+
+	aircraft_manufacturer = {
+
+		designer = yes
+		EQS_wonderbolt_research= {
+			picture = wonderbolt_concern
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+			traits = { light_aircraft_manufacturer }
+
+			modifier = {
+			}
+		}
+		EQS_cloudsdale_research = {
+			picture = cloudsdale_research
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+			traits = { medium_aircraft_manufacturer }
+
+			modifier = {
+			}
+		}
+		EQS_northern_air = {
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			picture = northern
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+			traits = { heavy_aircraft_manufacturer }
+
+			modifier = {
+			}
+		}
+		EQS_ultramarine = {
+			picture = ultramarine
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+			traits = { naval_aircraft_manufacturer }
+
+			modifier = {
+			}
+		}
+		EQS_stratus = {
+			picture = stratus
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				air_equipment = 0.15
+			}
+
+			traits = { CAS_manufacturer }
+
+			modifier = {
+			}
+		}
+	}
+
+	naval_manufacturer = {
+
+		designer = yes
+
+		EQS_baltimare_shipyards = {
+			picture = baltimare
+
+
+			allowed = {
+				original_tag = EQS
+			}
+
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			traits = { atlantic_fleet_naval_manufacturer }
+
+			modifier = {
+			}
+		}
+
+		EQS_seaward = {
+			picture = seaward
+
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			traits = { pacific_fleet_naval_manufacturer }
+
+			modifier = {
+			}
+		}
+
+		EQS_laspegasus_shipyards = {
+			picture = LSP_navy_man_3
+
+			allowed = {
+				original_tag = EQS
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			traits = { convoy_escort_naval_manufacturer }
+
+		}
+
+	}
+
+	country = {
+
+		EQS_inefficient_economy1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.30
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				local_resources_factor = -0.3
+			}
+		}
+
+		EQS_inefficient_economy2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.25
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				local_resources_factor = -0.25
+			}
+		}
+
+		EQS_inefficient_economy3 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.2
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				local_resources_factor = -0.2
+			}
+		}
+
+		EQS_inefficient_economy4 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.15
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				local_resources_factor = -0.15
+			}
+		}
+
+		EQS_inefficient_economy5 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				local_resources_factor = -0.1
+			}
+		}
+
+		EQS_inefficient_economy6 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.05
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				local_resources_factor = -0.05
+			}
+		}
+
+		EQS_political_chaos1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.2
+				stability_factor = -0.1
+				war_support_factor = -0.1
+			}
+		}
+
+		EQS_political_chaos2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				political_power_gain = -0.1
+				stability_factor = -0.05
+				war_support_factor = -0.05
+			}
+		}
+
+		EQS_forced_open = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+
+			}
+		}
+
+		EQS_nonmilitary1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.2
+				war_support_factor = -0.2
+				army_org_factor = -0.1
+				army_attack_factor = -0.1
+				army_defence_factor = -0.1
+				ai_focus_defense_factor = 0.5
+				ai_focus_peaceful_factor = 0.5
+			}
+		}
+
+		EQS_nonmilitary2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			modifier = {
+				conscription_factor = -0.1
+				war_support_factor = -0.1
+				army_org_factor = -0.05
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				ai_focus_defense_factor = 0.25
+				ai_focus_peaceful_factor = 0.25
+			}
+		}
+
+		EQS_left_theology_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				social_harmonism_drift = 0.5
+			}
+		}
+
+		EQS_left_army_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				army_morale_factor = 0.05
+			}
+		}
+
+		EQS_left_army_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				land_reinforce_rate = 0.05
+				army_morale_factor = 0.1
+			}
+		}
+
+		EQS_left_party_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				political_power_factor = 0.1
+			}
+		}
+
+		EQS_left_party_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				war_support_weekly = 0.001
+				stability_weekly = 0.001
+				political_power_factor = 0.1
+			}
+		}
+
+		EQS_left_rural_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.02
+			}
+		}
+
+		EQS_left_rural_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.04
+			}
+		}
+
+		EQS_left_rural_idea3 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.06
+			}
+		}
+		EQS_left_rural_idea4 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.08
+			}
+		}
+		EQS_left_rural_idea5 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.1
+			}
+		}
+		EQS_left_rural_idea6 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.12
+			}
+		}
+		EQS_left_rural_idea7 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.14
+			}
+		}
+		EQS_left_rural_idea8 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.16
+			}
+		}
+
+		EQS_left_rural_idea9 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.2
+			}
+		}
+
+		EQS_left_city_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.02
+				industrial_capacity_dockyard = 0.02
+			}
+		}
+		EQS_left_city_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.04
+				industrial_capacity_dockyard = 0.04		
+			}
+		}
+		EQS_left_city_idea3 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.06
+				industrial_capacity_dockyard = 0.06
+			}
+		}
+		EQS_left_city_idea4 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.08
+				industrial_capacity_dockyard = 0.08
+			}
+		}
+		EQS_left_city_idea5 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+			}
+		}
+		EQS_left_city_idea6 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.12
+				industrial_capacity_dockyard = 0.12
+			}
+		}
+		EQS_left_city_idea7 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.14
+				industrial_capacity_dockyard = 0.14
+			}
+		}
+		EQS_left_city_idea8 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.16
+				industrial_capacity_dockyard = 0.16
+			}
+		}
+		EQS_left_city_idea9 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
+			}
+		}	
+
+		EQS_ponies_war_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				war_stability_factor = 0.2
+			}
+		}
+
+		EQS_ponies_war_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				war_stability_factor = 0.2
+				conscription = 0.01
+				resistance_target_on_our_occupied_states = 1
+			}
+		}
+
+		EQS_left_research_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		EQS_left_great_arsenal_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				opinion_gain_monthly_same_ideology_factor = 1
+				license_purchase_cost = -0.50
+				lend_lease_tension = -1
+			}
+		}
+	
+		EQS_left_volunteers_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				send_volunteers_tension = -1
+				send_volunteer_divisions_required = -0.25
+				send_volunteer_size = 2
+			}
+		}
+
+		EQS_royal_army_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.05
+			}
+		}
+		
+		EQS_royal_army_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				army_core_defence_factor = 0.1
+				army_core_attack_factor = 0.1
+			}
+		}
+
+		EQS_stablize_local_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.05
+				war_support_factor = 0.05
+			}
+		}
+
+		EQS_stablize_local_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+
+		EQS_stablize_local_idea3 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				conscription_factor = 0.1
+				political_power_factor = 0.1
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+
+		EQS_bureau_reform_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				trade_laws_cost_factor = -0.2
+				mobilization_laws_cost_factor = -0.2
+				economy_cost_factor = -0.2
+			}
+		}
+
+		EQS_land_reform_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.1
+				consumer_goods_factor = -0.025
+			}
+		}
+
+		EQS_land_reform_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				monthly_population = 0.2
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		EQS_national_capitalism_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		EQS_national_capitalism_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+		}
+
+		EQS_expand_cities_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				global_building_slots_factor = 0.20
+			}
+		}
+
+		EQS_innovate_workshop_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+			}
+		}
+
+		EQS_innovate_workshop_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+			}
+		}
+
+		EQS_laws_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.1
+			}
+		}
+
+		EQS_laws_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				trade_laws_cost_factor = -0.2
+				economy_cost_factor = -0.2
+			}
+		}
+
+		EQS_laws_idea3 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				political_advisor_cost_factor = -0.1
+				trade_laws_cost_factor = -0.2
+				economy_cost_factor = -0.2
+				consumer_goods_factor = -0.05
+			}
+		}
+
+		EQS_national_congress_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				liberal_harmonism_drift = 0.5
+				political_power_gain = 0.25
+			}
+		}
+
+		EQS_ministry_of_defense_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_speed = 0.2
+				training_time_army_factor = -0.1
+			}
+		}
+
+		EQS_ministry_of_defense_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				mobilization_speed = 0.2
+				training_time_army_factor = -0.1
+				conscription = 0.01
+			}
+		}
+
+		EQS_cooperate_with_capitalists_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				industrial_concern_cost_factor = -0.2
+				research_speed_factor = 0.05
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = 0.02
+			}
+		}
+		
+		EQS_intervene_foreign_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+			
+			modifier = {
+				lend_lease_tension = -1
+				send_volunteers_tension = -1
+			}
+		}
+
+		EQS_invest_civilian_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.1
+			}
+		}
+
+		EQS_invest_civilian_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_industrial_complex_factor = 0.2	
+			}
+		}
+
+		EQS_invest_arms_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.1
+				production_speed_dockyard_factor = 0.1
+			}
+		}
+
+		EQS_invest_arms_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_arms_factory_factor = 0.2
+				production_speed_dockyard_factor = 0.2
+			}
+		}
+
+		EQS_invest_resources_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+
+		EQS_invest_resources_idea2 = {
+			allowed = { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				local_resources_factor = 0.2
+			}
+		}
+
+		EQS_beacon_of_harmony_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				weekly_manpower = 5000
+				stability_factor = 0.1
+				war_support_factor = 0.1
+			}
+		}
+
+		EQS_grand_army_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {}
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}	
+			}
+			equipment_bonus = {
+				artillery_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}	
+			}
+		} 
+
+		EQS_elite_army_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {}			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.05
+					instant = yes
+				}	
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}	
+			}	
+		}
+
+		EQS_elite_army_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {}			
+			equipment_bonus = {
+				armor = {
+					build_cost_ic = -0.05
+					instant = yes
+				}	
+			}
+			equipment_bonus = {
+				motorized_equipment = {
+					build_cost_ic = -0.05
+					instant = yes
+				}	
+			}	
+		}
+
+		EQS_supply_bureau_idea = {
+			picture = GFX_goal_arms_dealing
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+		
+			modifier = {
+				army_leader_start_logistics_level = 1
+			}
+		}
+
+		EQS_planning_bureau_idea = {
+			picture = GFX_goal_generic_more_territorial_claims
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+		
+			modifier = {
+				army_leader_start_planning_level = 1
+			}
+		}
+
+		EQS_fort_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+		
+			modifier = {
+				production_speed_bunker_factor = 0.1
+				production_speed_coastal_bunker_factor = 0.1
+				production_speed_anti_air_building_factor = 0.1
+				industry_air_damage_factor = -0.1
+			}
+		}
+
+		EQS_wolf_ss_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+			removal_cost = -1
+
+			modifier = {}			
+			equipment_bonus = {
+				submarine = {
+					build_cost_ic = -0.1
+					instant = yes
+				}	
+			}
+		}
+
+		EQS_spear_torpedo_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				naval_torpedo_screen_penetration_factor = 0.25
+			}
+		}
+
+		EQS_air_mass_production_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {}
+			equipment_bonus = {
+				fighter = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+				cv_fighter_equipment = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+				tactical_bomber = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+				naval_bomber = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+				cv_nav_bomber_equipment = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+				cas = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+				cv_CAS_equipment = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+				strategic_bomber = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+				interceptor = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+				scout_plane_equipment = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+				air_transport = {
+					build_cost_ic = -0.10
+					reliability = -0.05
+					instant = yes
+				}
+			}
+		}
+
+		EQS_air_elite_production_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {}
+			equipment_bonus = {
+				fighter = {
+					reliability = 0.05
+					instant = yes
+				}
+				cv_fighter_equipment = {
+					reliability = 0.05
+					instant = yes
+				}
+				tactical_bomber = {
+					reliability = 0.05
+					instant = yes
+				}
+				naval_bomber = {
+					reliability = 0.05
+					instant = yes
+				}
+				cv_nav_bomber_equipment = {
+					reliability = 0.05
+					instant = yes
+				}
+				cas = {
+					reliability = 0.05
+					instant = yes
+				}
+				cv_CAS_equipment = {
+					reliability = 0.05
+					instant = yes
+				}
+				strategic_bomber = {
+					reliability = 0.05
+					instant = yes
+				}
+				interceptor = {
+					reliability = 0.05
+					instant = yes
+				}
+				scout_plane_equipment = {
+					reliability = 0.05
+					instant = yes
+				}
+				air_transport = {
+					reliability = 0.05
+					instant = yes
+				}
+			}
+		}
+		EQS_budget_pressure_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				consumer_goods_factor = 0.05
+			}
+		}
+
+		EQS_strengthen_SMILE_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			research_bonus = {
+				decryption_tech = 0.1
+				encryption_tech = 0.1
+			}			
+
+			modifier = {
+				decryption_factor = 0.2
+			}
+		}
+
+		EQS_strengthen_SMILE_idea_lar = {
+			allowed =  { always = no }
+			allowed_civil_war = {
+				has_government = democratic
+			}
+
+			removal_cost = -1			
+
+			modifier = {
+				operative_slot = 2
+			}
+		}
+
+		EQS_artillery_school_idea1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				artillery_equipment = {
+					soft_attack = 0.1
+					instant = yes
+				}
+				rocket_artillery_equipment = {
+					soft_attack = 0.1
+					instant = yes
+				}
+			}
+		}
+
+		EQS_artillery_school_idea2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				artillery_equipment = {
+					soft_attack = 0.1
+					instant = yes
+				}
+				rocket_artillery_equipment = {
+					soft_attack = 0.1
+					instant = yes
+				}
+				capital_ship = {
+					lg_attack = 0.1
+					hg_attack = 0.1
+				}
+				screen_ship = {
+					lg_attack = 0.1
+					hg_attack = 0.1
+				}
+			}
+		}
+
+		under_EQS_influence1 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				social_harmonism_drift = 0.05			
+			}
+			
+		}
+
+		under_EQS_influence2 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				authoritarian_harmonism_drift = 0.05			
+			}
+			
+		}
+
+		under_EQS_influence3 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				liberal_harmonism_drift = 0.05			
+			}
+		}
+
+		EQS_OLE_civil_war_volunteer = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				send_volunteer_size = 4		
+			}
+		}
+
+		EQS_saint_antenna_idea = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			targeted_modifier = {
+				tag = CHN
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+			}
+		}
+
+		EQS_academy_idea1 = {
+			picture = unicorn_academy
+
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.05
+			}
+		}
+
+		EQS_academy_idea2 = {
+			picture = unicorn_academy
+
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.1
+			}
+		}
+
+		EQS_academy_idea3 = {
+			picture = unicorn_academy
+
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.1
+			}
+			research_bonus = {
+				race_tech = 0.15
+			}
+		}
+
+		EQS_academy_idea4 = {
+			picture = unicorn_academy
+
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+
+			modifier = {
+				research_speed_factor = 0.15
+				political_power_gain = -0.1
+			}
+		}
+		
+		
+	}		
+}
+
+
+

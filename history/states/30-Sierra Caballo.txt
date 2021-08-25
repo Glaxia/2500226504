@@ -1,0 +1,26 @@
+
+state={
+	id=30
+	name="STATE_30"
+	resources={
+		rubber = 12
+		steel = 6
+	}
+	history={
+		owner = NMS
+		add_core_of = NMS
+		buildings = {
+			infrastructure = 2
+			arms_factory = 1
+		}
+        victory_points = {
+			569 15
+		}
+	}
+
+	provinces={
+		521 569 732 3956 5283 7123 7451 11106 11516
+	}
+	manpower=1247509
+	buildings_max_level_factor=1.000
+	state_category=large_town

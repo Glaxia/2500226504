@@ -1,0 +1,13 @@
+opinion_modifiers = {
+	EQS_contact_yak_opinion = { value = 30 months = 30 decay = 1 }
+	EQS_yak_embassy_opinion = { value = 50 months = 50 decay = 1 }
+	EQS_left_advisors_opinion = { value = 50 months = -1 decay = 0 }
+	EQS_left_party_opinion = { value = 50 months = -1 decay = 0 }
+	EQS_promote_liberty_opinion = { value = 30 months = -1 decay = 0 }
+	EQS_cooperate_with_capitalists_opinion = { value = 70 months = -1 decay = 0 }
+	EQS_threaten_us_opinion = { value = -25 months = -1 decay = 0 }
+	EQS_greatly_threaten_us_opinion = { value = -100 months = -1 decay = 0 }
+	EQS_banish_us_opinion= { value = -100 months = -1 decay = 0 }
+	EQS_refuse_us_opinion= { value = -40 months = -1 decay = 0 }
+}
+	

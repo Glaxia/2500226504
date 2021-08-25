@@ -1,0 +1,1488 @@
+@989 = 0
+@1007 = 0
+@1009 = 2
+@1010 = 4
+@1011 = 6
+@1012 = 8
+@1013 = 10
+@1014 = 12
+@1015 = 14
+@1016 = 16
+@1017 = 18
+@1018 = 20
+@1019 = 22
+@1020 = 24
+@1021 = 26
+@1022 = 28
+@1023 = 30
+@1024 = 32
+@1025 = 34
+@1026 = 36
+@1027 = 38
+
+technologies = {
+
+	pony_race = {
+
+		research_cost = 1
+
+		intel_network_gain_factor = -0.3
+
+		recon = {
+			maximum_speed = 0.6
+		}
+		
+		allow = {
+			always = no
+		}
+
+	}
+
+	earthpony_f = {
+
+		dependencies = {
+			pony_race = 1
+		}
+
+		monthly_population = 0.2
+		supply_consumption_factor = -0.05
+
+		path = {
+			leads_to_tech = earthpony_e1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = earthpony_m1
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 2 y = @1007 }
+		}
+
+		categories = {
+			earthpony_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1008.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1009.1.1"
+			}
+		}
+	}
+
+
+	earthpony_e1 = {
+
+		path = {
+			leads_to_tech = earthpony_d1
+			research_cost_coeff = 1
+		}
+
+		engineer = {
+			entrenchment = 2
+		}
+		engineer_armored = {
+			entrenchment = 2
+		}
+
+		research_cost = 1
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 0 y = @1010 }
+		}
+
+		categories = {
+			earthpony_tech
+			earthpony_engineer_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1014.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1015.1.1"
+			}
+		}
+	}
+
+
+	earthpony_d1 = {
+
+		local_resources_factor = 0.1
+
+		path = {
+			leads_to_tech = earthpony_e2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 0 y = @1013 }
+		}
+
+		categories = {
+			earthpony_tech
+			earthpony_digging_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1017.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1018.1.1"
+			}
+		}
+	}
+
+
+	earthpony_e2 = {
+
+		engineer = {
+			entrenchment = 2
+		}
+		engineer_armored = {
+			entrenchment = 2
+		}
+
+		path = {
+			leads_to_tech = earthpony_d2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 0 y = @1016 }
+		}
+
+		categories = {
+			earthpony_tech
+			earthpony_engineer_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1011.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1012.1.1"
+			}
+		}
+	}
+
+
+	earthpony_d2 = {
+
+		local_resources_factor = 0.1
+
+		path = {
+			leads_to_tech = earthpony_e3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 0 y = @1020 }
+		}
+
+		categories = {
+			earthpony_tech
+			earthpony_digging_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1021.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1022.1.1"
+			}
+		}
+	}
+
+
+	earthpony_e3 = {
+
+		engineer = {
+			entrenchment = 2
+		}
+		engineer_armored = {
+			entrenchment = 2
+		}
+
+		path = {
+			leads_to_tech = earthpony_d3
+			research_cost_coeff = 1
+		}
+	
+		research_cost = 1
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 0 y = @1024 }
+		}
+
+		categories = {
+			earthpony_tech
+			earthpony_engineer_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1025.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1026.1.1"
+			}
+		}
+	}
+
+	earthpony_d3 = {
+
+		local_resources_factor = 0.1
+	
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 0 y = @1027 }
+		}
+
+		categories = {
+			earthpony_tech
+			earthpony_digging_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1025.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1026.1.1"
+			}
+		}
+	}
+
+	earthpony_m1 = {
+
+		field_hospital = {
+			casualty_trickleback = 0.05
+			experience_loss_factor = -0.05
+		}
+
+		path = {
+			leads_to_tech = earthpony_i1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 4 y = @1010 }
+		}
+
+		categories = {
+			earthpony_tech
+			earthpony_medicine_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1014.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1015.1.1"
+			}
+		}
+	}
+
+	earthpony_i1 = {
+		
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		production_speed_buildings_factor = 0.05
+
+		path = {
+			leads_to_tech = earthpony_m2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 4 y = @1013 }
+		}
+
+		categories = {
+			earthpony_tech
+			earthpony_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1017.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1018.1.1"
+			}
+		}
+	}
+
+
+	earthpony_m2 = {
+
+		field_hospital = {
+			casualty_trickleback = 0.05
+			experience_loss_factor = -0.05
+		}
+
+		path = {
+			leads_to_tech = earthpony_i2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 4 y = @1016 }
+		}
+
+		categories = {
+			earthpony_tech
+			earthpony_medicine_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1011.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1012.1.1"
+			}
+		}
+	}
+
+	earthpony_i2 = {
+
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		production_speed_buildings_factor = 0.05
+
+		path = {
+			leads_to_tech = earthpony_m3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 4 y = @1020 }
+		}
+
+		categories = {
+			earthpony_tech
+			earthpony_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1021.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1022.1.1"
+			}
+		}
+	}
+
+	earthpony_m3 = {
+
+		field_hospital = {
+			casualty_trickleback = 0.05
+			experience_loss_factor = -0.05
+		}
+
+		path = {
+			leads_to_tech = earthpony_i3
+			research_cost_coeff = 1
+		}
+	
+		research_cost = 1
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 4 y = @1024 }
+		}
+
+		categories = {
+			earthpony_tech
+			earthpony_medicine_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1025.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1026.1.1"
+			}
+		}
+	}
+	earthpony_i3 = {
+
+		industrial_capacity_factory = 0.05
+		industrial_capacity_dockyard = 0.05
+		production_speed_buildings_factor = 0.05
+	
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 4 y = @1027 }
+		}
+
+		categories = {
+			earthpony_tech
+			earthpony_industry_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1025.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1026.1.1"
+			}
+		}
+	}
+
+
+	pegasi_t1 = {
+		dependencies = {
+			pony_race = 1
+		}
+		path = {
+			leads_to_tech = pegasi_t2
+			research_cost_coeff = 1
+		}
+		enable_subunits = {
+			pegasi
+		}		
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 6 y = @1007 }
+		}
+
+		categories = {
+			pegasi_tech
+			pegasi_troop_tech
+		}
+		ai_will_do = {
+			factor = 4
+
+			modifier = {
+				factor = 1.5
+				date > "1008.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1009.1.1"
+			}
+		}
+	}
+
+
+	pegasi_t2 = {
+
+		pegasi = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+
+		path = {
+			leads_to_tech = pegasi_t3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 6 y = @1010 }
+		}
+
+		categories = {
+			pegasi_tech
+			pegasi_troop_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+
+			modifier = {
+				factor = 1.5
+				date > "1011.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1012.1.1"
+			}
+		}
+	}
+
+	pegasi_t3 = {
+
+		pegasi = {
+			max_organisation = 5
+			breakthrough = 0.05
+		}
+
+		path = {
+			leads_to_tech = pegasi_t4
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 6 y = @1013 }
+		}
+
+		categories = {
+			pegasi_tech
+			pegasi_troop_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 1.5
+				date > "1014.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1015.1.1"
+			}
+		}
+	}
+
+	pegasi_t4 = {
+
+		pegasi = {
+			max_organisation = 5
+			river = {
+				attack = 0.05
+				movement = 0.05
+			}
+			marsh = {
+				attack = 0.05
+				movement = 0.05
+			}
+		}
+
+		path = {
+			leads_to_tech = pegasi_t5
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 6 y = @1016 }
+		}
+
+		categories = {
+			pegasi_tech
+			pegasi_troop_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1017.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1018.1.1"
+			}
+		}
+	}
+
+	pegasi_t5 = {
+
+		pegasi = {
+			max_organisation = 5
+			mountain = {
+				attack = 0.05
+				movement = 0.05
+			}
+			hills = {
+				attack = 0.05
+				movement = 0.05
+			}
+		}
+
+		path = {
+			leads_to_tech = pegasi_t6
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 6 y = @1020 }
+		}
+
+		categories = {
+			pegasi_tech
+			pegasi_troop_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1021.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1022.1.1"
+			}
+		}
+	}
+
+	pegasi_t6 = {
+
+		pegasi = {
+			max_organisation = 5
+			max_strength = 1
+			forest = {
+				attack = 0.05
+				movement = 0.05
+			}
+			jungle = {
+				attack = 0.05
+				movement = 0.05
+			}	
+		
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 6 y = @1024 }
+		}
+
+		categories = {
+			pegasi_tech
+			pegasi_troop_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1025.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1026.1.1"
+			}
+		}
+	}
+
+
+	pegasi_w1 = {
+
+		winter_attrition_factor = -0.1
+		heat_attrition_factor = -0.1
+
+		dependencies = {
+			pony_race = 1
+		}
+		path = {
+			leads_to_tech = pegasi_r1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 10 y = @1007 }
+		}
+
+		categories = {
+			pegasi_tech
+			pegasi_weather_tech
+		}
+		ai_will_do = {
+			factor = 4
+
+			modifier = {
+				factor = 1.5
+				date > "1008.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1009.1.1"
+			}
+		}
+	}
+
+	pegasi_r1 = {
+
+		category_recon = {
+			recon = 2
+		}
+
+		path = {
+			leads_to_tech = pegasi_w2
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 10 y = @1010 }
+		}
+
+		categories = {
+			pegasi_tech
+			pegasi_recon_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+
+			modifier = {
+				factor = 1.5
+				date > "1011.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1012.1.1"
+			}
+		}
+	}
+
+	pegasi_w2 = {
+
+		air_weather_penalty = -0.10
+
+		path = {
+			leads_to_tech = pegasi_r2
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 10 y = @1013 }
+		}
+
+		categories = {
+			pegasi_tech
+			pegasi_weather_tech
+		}
+
+		ai_will_do = {
+			factor = 4
+			modifier = {
+				factor = 1.5
+				date > "1014.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1015.1.1"
+			}
+		}
+	}
+
+	pegasi_r2 = {
+
+		category_recon = {
+			recon = 2
+		}
+		
+		path = {
+			leads_to_tech = pegasi_w3
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 10 y = @1016 }
+		}
+
+		categories = {
+			pegasi_tech
+			pegasi_recon_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1017.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1018.1.1"
+			}
+		}
+	}
+
+	pegasi_w3 = {
+
+		enemy_army_bonus_air_superiority_factor = -0.1
+		air_cas_present_factor = 0.1
+
+		path = {
+			leads_to_tech = pegasi_r3
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 10 y = @1020 }
+		}
+
+		categories = {
+			pegasi_tech
+			pegasi_weather_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1021.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1022.1.1"
+			}
+		}
+	}
+
+	pegasi_r3 = {
+
+		category_recon = {
+			recon = 2
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 10 y = @1024 }
+		}
+
+		categories = {
+			pegasi_tech
+			pegasi_recon_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1025.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1026.1.1"
+			}
+		}
+	}
+
+	unicorn_m = {
+
+		dependencies = {
+			pony_race = 1
+		}
+		enable_equipments = {
+			unicorn_company_equipment_1
+		}
+		enable_subunits = {
+			unicorn_company
+		}
+		path = {
+			leads_to_tech = unicorn_a1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = unicorn_d1
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 14 y = @1007 }
+		}
+
+		categories = {
+			unicorn_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1008.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1009.1.1"
+			}
+		}
+	}
+
+	unicorn_a1 = {
+
+		unicorn_company = {
+			breakthrough = 1
+		}
+
+		path = {
+			leads_to_tech = unicorn_a2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 12 y = @1010 }
+		}
+
+		categories = {
+			unicorn_tech
+			unicorn_attack_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1014.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1015.1.1"
+			}
+		}
+	}
+
+	unicorn_a2 = {
+
+		unicorn_company = {
+			recon = 1
+		}
+
+		path = {
+			leads_to_tech = unicorn_a3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 12 y = @1013 }
+		}
+
+		categories = {
+			unicorn_tech
+			unicorn_attack_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1017.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1018.1.1"
+			}
+		}
+	}
+
+
+
+	unicorn_a3 = {
+
+		unicorn_company = {
+			soft_attack = 0.5
+		}
+
+		path = {
+			leads_to_tech = unicorn_a4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 12 y = @1016 }
+		}
+
+		categories = {
+			unicorn_tech
+			unicorn_attack_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1011.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1012.1.1"
+			}
+		}
+	}
+
+	unicorn_a4 = {
+
+		unicorn_company = {
+			hard_attack = 0.5
+		}
+
+		path = {
+			leads_to_tech = unicorn_a5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 12 y = @1020 }
+		}
+
+		categories = {
+			unicorn_tech
+			unicorn_attack_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1021.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1022.1.1"
+			}
+		}
+	}
+
+	unicorn_a5 = {
+
+		unicorn_company = {
+			ap_attack = 1
+		}
+
+		path = {
+			leads_to_tech = unicorn_a6
+			research_cost_coeff = 1
+		}
+	
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 12 y = @1024 }
+		}
+
+		categories = {
+			unicorn_tech
+			unicorn_attack_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1025.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1026.1.1"
+			}
+		}
+	}
+	unicorn_a6 = {
+
+		unicorn_company = {
+			initiative = 0.5
+		}
+	
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 12 y = @1027 }
+		}
+
+		categories = {
+			unicorn_tech
+			unicorn_attack_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1025.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1026.1.1"
+			}
+		}
+	}
+
+	unicorn_d1 = {
+
+		unicorn_company = {
+			defense = 0.5
+		}
+
+		path = {
+			leads_to_tech = unicorn_d2
+			research_cost_coeff = 1
+		}
+
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 16 y = @1010 }
+		}
+
+		categories = {
+			unicorn_tech
+			unicorn_defense_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1014.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1015.1.1"
+			}
+		}
+	}
+
+	unicorn_d2 = {
+
+		unicorn_company = {
+			armor_value = 5000 
+		}
+
+		path = {
+			leads_to_tech = unicorn_d3
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 16 y = @1013 }
+		}
+
+		categories = {
+			unicorn_tech
+			unicorn_defense_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1017.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1018.1.1"
+			}
+		}
+	}
+
+	unicorn_d3 = {
+
+		unicorn_company = {
+			air_attack = 15000 
+		}
+
+		path = {
+			leads_to_tech = unicorn_d4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 16 y = @1016 }
+		}
+
+		categories = {
+			unicorn_tech
+			unicorn_defense_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1011.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1012.1.1"
+			}
+		}
+	}
+
+	unicorn_d4 = {
+
+		unicorn_company = {
+			entrenchment = 2
+		}
+
+		path = {
+			leads_to_tech = unicorn_d5
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 16 y = @1020 }
+		}
+
+		categories = {
+			unicorn_tech
+			unicorn_defense_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1021.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1022.1.1"
+			}
+		}
+	}
+
+	unicorn_d5 = {
+
+		unicorn_company = {
+			casualty_trickleback = 0.05
+			experience_loss_factor = -0.05
+		}
+
+		path = {
+			leads_to_tech = unicorn_d6
+			research_cost_coeff = 1
+		}
+	
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 16 y = @1024 }
+		}
+
+		categories = {
+			unicorn_tech
+			unicorn_defense_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1025.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1026.1.1"
+			}
+		}
+	}
+	
+	unicorn_d6 = {
+
+		unicorn_company = {
+			max_organisation = 30
+		}
+		
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 16 y = @1027 }
+		}
+
+		categories = {
+			unicorn_tech
+			unicorn_defense_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 1.5
+				date > "1025.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1026.1.1"
+			}
+		}
+	}	
+
+
+}
+

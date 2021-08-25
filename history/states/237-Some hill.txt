@@ -1,0 +1,29 @@
+
+state={
+	id=237
+	name="STATE_237"
+	resources = {
+		steel = 10
+	}
+	history={
+		owner = MAN
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+		}
+		victory_points = {
+			12081 5
+		}
+		victory_points = {
+			10063 5
+		}
+	}
+
+	provinces={
+		1178 1192 4065 6832 6896 9828 9891 10063 12038 12081 12083 
+	}
+	manpower=1840257
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,21 @@
+
+state={
+	id=36
+	name="STATE_36"
+
+	history={
+		owner = NMS
+		add_core_of = NMS
+		victory_points = { 10023 5 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		543 557 1079 6552 6723 7040 9541 10023 11525 11901 12042 13249
+	}
+	manpower=1100140
+	buildings_max_level_factor=1.000
+	state_category=town
+}

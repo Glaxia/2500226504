@@ -1,0 +1,22 @@
+state={
+	id=161
+	name="STATE_161"
+	state_category = town
+
+	history={
+		owner = STG
+		add_core_of = STG
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+		victory_points = { 9369 5 }
+		victory_points = { 3329 3 }
+	}
+
+	provinces={
+		284 303 337 3329 3359 3379 6385 9369 11287 11293 11306
+	}
+	manpower=824710
+	buildings_max_level_factor=1.000
+}

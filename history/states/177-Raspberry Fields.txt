@@ -1,0 +1,28 @@
+
+state={
+	id=177
+	name="STATE_177"
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			10754 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			10754 5 
+		}
+
+	}
+
+	provinces={
+		721 737 1057 1994 3573 4014 4962 5004 7985 10026 10254 10754 10884 11935 12022 12082 12866 
+	}
+	manpower=1130420
+	buildings_max_level_factor=1.000
+	state_category=town
+}

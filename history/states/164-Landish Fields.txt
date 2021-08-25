@@ -1,0 +1,35 @@
+
+state={
+	id=164
+	name="STATE_164"
+	resources={
+		chromium = 8
+		steel = 8
+	}
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+			dockyard = 1
+		}
+		victory_points = {
+			6537 5 
+		}
+		victory_points = {
+			6545 5 
+		}
+		victory_points = {
+			6529 5 
+		}
+	}
+
+	provinces={
+		1346 3546 3560 3629 5291 6529 6537 6545 9505 9638 
+	}
+	manpower=1668880
+	buildings_max_level_factor=1.000
+	state_category=city
+}

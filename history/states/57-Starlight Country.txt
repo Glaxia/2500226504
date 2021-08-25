@@ -1,0 +1,36 @@
+
+state={
+	id=57
+	name="STATE_57"
+	resources={
+		steel=12
+	}
+
+	history={
+		owner = MAN
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 3
+			arms_factory = 3
+			fuel_silo = 1
+		}
+		victory_points = {
+			9787 10 
+		}
+		victory_points = {
+			9689 10
+		}
+		victory_points = {
+			11805 10
+		}
+
+	}
+
+	provinces={
+		799 970 980 3037 3744 3761 3798 3861 4135 6764 6818 6955 9686 9689 9719 9787 11692 11707 11768 11805 
+	}
+	manpower=2575600
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

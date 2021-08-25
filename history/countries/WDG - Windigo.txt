@@ -1,0 +1,36 @@
+﻿capital = 325
+
+set_research_slots = 0
+
+set_technology = {
+	
+}
+actually_fix_weapon_techs = yes 
+
+set_convoys = 0
+set_popularities = {
+	hegemonism = 100
+}
+set_politics = {
+	ruling_party = hegemonism
+	last_election = "1.1.1"
+	election_frequency = 60
+	elections_allowed = no
+}
+
+
+add_ideas = {
+	
+}
+
+set_stability = 0
+set_war_support = 0
+
+
+create_country_leader = {
+	name = "Windigo"
+	expire = "1965.1.1"
+	ideology = hegemonism_sub
+	picture = ""
+	traits = { }
+}

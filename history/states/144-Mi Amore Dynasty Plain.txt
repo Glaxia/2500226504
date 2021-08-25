@@ -1,0 +1,26 @@
+
+state={
+	id=144
+	name="STATE_144"
+
+	history={
+		owner = CRY
+		add_core_of = CRY
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			6319 5 
+		}
+
+	}
+
+	provinces={
+		525 3151 3293 3507 6174 6319 9234 9465 11080 
+	}
+	manpower=773840
+	buildings_max_level_factor=1.000
+	state_category=town
+}

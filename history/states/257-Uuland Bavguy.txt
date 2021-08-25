@@ -1,0 +1,18 @@
+state={
+	id=257
+	name="STATE_257"
+	resources={
+		tungsten = 4
+	}
+	provinces={
+		1719 6713 7611 9399 11204 11621
+	}
+	manpower=43472
+	history={
+		owner = YAK
+		add_core_of = YAK
+	}
+
+	state_category = pastoral
+	buildings_max_level_factor=1.000
+}

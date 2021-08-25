@@ -1,0 +1,163 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_earthpony_f_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_earthpony_e1_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_earthpony_d1_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_earthpony_e2_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_earthpony_d2_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_earthpony_e3_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_earthpony_d3_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_earthpony_m1_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_earthpony_i1_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_earthpony_m2_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_earthpony_i2_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_earthpony_m3_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_earthpony_i3_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+
+	##############
+	SpriteType = {
+		name = "GFX_unicorn_m_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_unicorn_a1_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_unicorn_a2_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_unicorn_a3_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_unicorn_a4_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_unicorn_a5_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_unicorn_a6_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_unicorn_d1_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_unicorn_d2_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_unicorn_d3_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_unicorn_d4_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_unicorn_d5_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_unicorn_d6_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	#)#	
+	#########
+	SpriteType = {
+		name = "GFX_pegasi_t1_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_pegasi_t2_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_pegasi_t3_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_pegasi_t4_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_pegasi_t5_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_pegasi_t6_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+
+	SpriteType = {
+		name = "GFX_pegasi_w1_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_pegasi_r1_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_pegasi_w2_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_pegasi_r2_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_pegasi_w3_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+	SpriteType = {
+		name = "GFX_pegasi_r3_medium"
+		texturefile = "gfx/interface/technologies/engineers.dds"
+	}
+  #)#    
+
+}

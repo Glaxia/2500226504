@@ -1,0 +1,18 @@
+
+state={
+	id=79
+	name="STATE_79"
+	state_category = pastoral
+
+	history={
+		owner = NMS
+		add_core_of = NMS
+		victory_points = { 8035 1 }
+	}
+
+	provinces={
+		379 1145 4131 4146 7166 8035 10779 10875
+	}
+	manpower=81427
+	buildings_max_level_factor=1.000
+}

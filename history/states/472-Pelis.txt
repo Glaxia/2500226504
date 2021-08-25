@@ -1,0 +1,39 @@
+
+state={
+	id=472
+	name="STATE_472"
+
+	resources={
+		steel = 12
+		aluminium = 8
+	}
+
+	history={
+		victory_points = {
+			13129 5
+		}
+		victory_points = {
+			81 20
+		}
+		owner = JER
+		add_core_of = JER
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 2
+			arms_factory = 3
+			dockyard = 1
+			air_base = 2
+			81 = {
+				naval_base = 2
+			}
+		}
+
+	}
+
+	provinces={
+		75 81 129 163 3077 3085 3175 6101 7746 9131 9199 9202 11039 11086 11177 13128 13129 
+	}
+	manpower=846077
+	buildings_max_level_factor=1.000
+	state_category=city
+}

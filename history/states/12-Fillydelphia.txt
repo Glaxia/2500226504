@@ -1,0 +1,34 @@
+
+state={
+	id=12
+	name="STATE_12"
+	resources={
+		steel = 20
+		aluminium = 10
+	}
+	history={
+		owner = MAN
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 10
+			industrial_complex = 4
+			arms_factory = 3
+			fuel_silo = 1
+			950 = {
+				naval_base = 2
+			}
+
+		}
+		victory_points = {
+			950 35 
+		}
+
+	}
+
+	provinces={
+		950 
+	}
+	manpower=3437200
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

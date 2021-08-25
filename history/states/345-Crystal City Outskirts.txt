@@ -1,0 +1,29 @@
+
+state={
+	id=345
+	name="STATE_345"
+
+	history={
+		owner = MGY
+		add_core_of = MGY
+		buildings = {
+			11754 = {
+				naval_base = 1
+			}
+			infrastructure = 3
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			11754 5 
+		}
+
+	}
+
+	provinces={
+		935 949 965 3952 3971 6658 6982 11754 
+	}
+	manpower=605333
+	buildings_max_level_factor=1.000
+	state_category=town
+}

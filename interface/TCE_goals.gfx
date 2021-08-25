@@ -1,0 +1,14 @@
+spriteTypes = {
+	SpriteType = {
+		name = "GFX_goal_celestia"
+		texturefile = "gfx/interface/goals/goal_celestia.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_luna"
+		texturefile = "gfx/interface/goals/goal_luna.dds"
+	}
+	SpriteType = {
+		name = "GFX_goal_twilight"
+		texturefile = "gfx/interface/goals/goal_twilight.dds"
+	}
+}

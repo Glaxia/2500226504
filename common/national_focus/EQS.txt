@@ -1,0 +1,5555 @@
+#1.5 = 10天
+#2.9 = 20天
+#4.3 = 30天
+#5.8 = 40天
+#7.2 = 50天
+#8.6 = 60天
+#10 = 70天
+
+
+
+focus_tree = {
+	id = EQS_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = EQS
+		}
+	}
+	default = no
+
+	continuous_focus_position = { x = 0 y = 3000 }
+
+
+	focus = {
+		id = EQS_alicorn_meeting 
+		icon = GFX_goal_news
+		cost = 1.5
+		x = 11
+		y = 0
+		ai_will_do = {
+			factor = 100
+		}
+
+		completion_reward = {
+			country_event = equestria.1
+		}
+	}
+
+	focus = {
+		id = EQS_twilight_rule
+		icon = GFX_goal_twilight
+		cost = 1.5
+		prerequisite = { focus = EQS_alicorn_meeting }
+		mutually_exclusive = {
+			focus = EQS_celestia_rule
+		}
+		mutually_exclusive = {
+			focus = EQS_luna_rule
+		}
+		relative_position_id = EQS_alicorn_meeting
+		x = -8
+		y = 1
+		available = { 
+			always = no
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EQS_celestia_rule
+		icon = GFX_goal_celestia
+		cost = 1.5
+		prerequisite = { focus = EQS_alicorn_meeting }
+		mutually_exclusive = {
+			focus = EQS_twilight_rule
+		}
+		mutually_exclusive = {
+			focus = EQS_luna_rule
+		}
+		relative_position_id = EQS_alicorn_meeting
+		x = 0
+		y = 1
+		available = { 
+			always = no
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EQS_luna_rule
+		icon = GFX_goal_luna
+		cost = 1.5
+		prerequisite = { focus = EQS_alicorn_meeting }
+		mutually_exclusive = {
+			focus = EQS_twilight_rule
+		}
+		mutually_exclusive = {
+			focus = EQS_celestia_rule
+		}
+		relative_position_id = EQS_alicorn_meeting
+		x = 7
+		y = 1
+		available = { 
+			always = no
+		}
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = EQS_left_theology
+		icon = GFX_goal_HOL_council_communism
+		cost = 4.3
+		prerequisite = { focus = EQS_twilight_rule }
+		relative_position_id = EQS_twilight_rule
+		x = -1
+		y = 1
+		completion_reward = {
+			add_political_power = 25
+			swap_ideas = {
+				remove_idea = EQS_political_chaos1
+				add_idea = EQS_political_chaos2
+			}
+			hidden_effect = {
+				country_event = equestriaflavor.1
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_left_advisors
+		icon = GFX_goal_eqs_stg_relations
+		cost = 1.5
+		prerequisite = { focus = EQS_twilight_rule }
+		relative_position_id = EQS_twilight_rule
+		x = 1
+		y = 1
+		completion_reward = {
+			add_stability = -0.05
+			add_political_power = 50
+			custom_effect_tooltip = EQS_left_advisors_tooltip
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = EQS_sinnie
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = EQS_vasya
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = EQS_dark_wing
+			STG = {
+				add_opinion_modifier = { target = EQS modifier = EQS_left_advisors_opinion }
+				add_political_power = 100
+			}
+			hidden_effect = {
+				country_event = equestriaflavor.2
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_be_with_laborer
+		icon = GFX_goal_generic_propaganda
+		cost = 4.3
+		prerequisite = { focus = EQS_left_theology }
+		relative_position_id = EQS_left_theology
+		x = 1
+		y = 1
+		completion_reward = {
+			add_stability = 0.05
+			add_timed_idea = {
+			idea = EQS_left_theology_idea
+			days = 360
+			}
+			hidden_effect = {
+				country_event = equestriaflavor.3
+			}
+		}
+		
+	}
+
+	focus = {
+		id = EQS_left_army_1
+		icon = GFX_focus_YUG_pan_slavic_congress
+		cost = 4.3
+		prerequisite = { focus = EQS_left_theology }
+		prerequisite = { focus = EQS_left_advisors }
+		relative_position_id = EQS_left_theology
+		x = -1
+		y = 1
+		completion_reward = {
+			add_war_support = 0.025
+			add_ideas = EQS_left_army_idea1
+			hidden_effect = {
+				country_event = equestriaflavor.4
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_left_reeducation
+		icon = GFX_focus_generic_soviet_politics
+		cost = 4.3
+		prerequisite = { focus = EQS_left_advisors }
+		relative_position_id = EQS_left_advisors
+		x = 1
+		y = 1
+		completion_reward = {
+			add_popularity = {
+				ideology = social_harmonism
+				popularity = 0.1
+			}
+			add_political_power = 150		
+			hidden_effect = {
+				country_event = equestriaflavor.5
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_left_party_1
+		icon = GFX_focus_generic_join_comintern
+		cost = 7.2
+		prerequisite = { focus = EQS_be_with_laborer }
+		prerequisite = { focus = EQS_left_army_1 }
+		prerequisite = { focus = EQS_left_reeducation}
+		relative_position_id = EQS_be_with_laborer
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = 25
+			add_ideas = EQS_left_party_idea1 	
+			STG = {
+				add_opinion_modifier = { target = EQS modifier = EQS_left_party_opinion }
+				add_political_power = 100
+			}
+			hidden_effect = {
+				country_event = equestriaflavor.6
+			}
+		}
+	}
+		
+	focus = {
+		id = EQS_prole_harmony
+		icon =  GFX_goal_ideology_communist	
+		cost = 4.3
+		prerequisite = { focus = EQS_left_party_1 }
+		relative_position_id = EQS_left_party_1
+		x = -2
+		y = 1
+		completion_reward = {
+			add_political_power = 25
+			remove_ideas = EQS_political_chaos2
+			hidden_effect = {
+				country_event = equestriaflavor.7
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_worship_TS
+		icon = GFX_goal_tfv_burn_the_royal_portraits
+		cost = 1.5
+		prerequisite = { focus = EQS_left_party_1 }
+		relative_position_id = EQS_left_party_1
+		x = 0
+		y = 1
+		completion_reward = {
+			remove_country_leader_trait = princess_of_ponies
+			add_country_leader_trait = left_princess_of_ponies
+			hidden_effect = {
+				country_event = equestriaflavor.8
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_left_research
+		icon = GFX_focus_generic_socialist_science
+		cost = 5.8
+		prerequisite = { focus = EQS_worship_TS }
+		relative_position_id = EQS_worship_TS
+		x = 0
+		y = 2
+		completion_reward = {
+			add_ideas = { EQS_left_research_idea }
+		}
+	}
+
+	focus = {
+		id = EQS_left_party_2
+		icon = GFX_goal_support_communism
+		cost = 7.2
+		prerequisite = { focus = EQS_prole_harmony }
+		relative_position_id = EQS_prole_harmony
+		x = -1
+		y = 1
+		completion_reward = {
+			add_political_power = 25
+			swap_ideas = {
+				remove_idea = EQS_left_party_idea1
+				add_idea = EQS_left_party_idea2
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_left_annex_STG
+		icon = GFX_goal_stg_eqs
+		cost = 4.3
+		prerequisite = { focus = EQS_prole_harmony }
+		relative_position_id = EQS_prole_harmony 
+		x = 1
+		y = 1
+		available = {
+			STG = {
+				is_subject_of = EQS
+			}
+		}
+		bypass = {
+			STG = { exists = no }
+		}
+		completion_reward = {
+
+
+		}
+	}
+	
+	focus = {
+		id = EQS_left_reform
+		icon = GFX_Socialist_Law
+		cost = 1.5
+		prerequisite = { focus = EQS_left_party_2 }
+		prerequisite = { focus = EQS_left_annex_STG }
+		relative_position_id = EQS_left_annex_STG
+		x = -1
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.1
+		}
+	}
+
+	focus = {
+		id = EQS_left_rural_1
+		icon = GFX_focus_collective_housing
+		cost = 4.3
+		prerequisite = { focus = EQS_left_reform }
+		relative_position_id = EQS_left_reform
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_left_rural_idea1
+		
+		}
+	}
+	focus = {
+		id = EQS_left_rural_2
+		icon = GFX_goal_SOV_tractors
+		cost = 4.3
+		prerequisite = { focus = EQS_left_rural_1 }
+		relative_position_id = EQS_left_rural_1 
+		x = 0
+		y = 1
+		available = {
+			has_idea = EQS_left_rural_idea4
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EQS_left_rural_idea4
+				add_idea = EQS_left_rural_idea5
+			}
+		
+		}
+	}
+	focus = {
+		id = EQS_left_rural_3
+		icon = GFX_focus_prc_agrarian_socialism
+		cost = 8.6
+		prerequisite = { focus = EQS_left_rural_2 }
+		relative_position_id = EQS_left_rural_2
+		x = 0
+		y = 1
+		available = {
+			has_idea = EQS_left_rural_idea8
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EQS_left_rural_idea8
+				add_idea = EQS_left_rural_idea9
+			}
+		
+		}
+	}
+
+	focus = {
+		id = EQS_left_city_1
+		icon = GFX_goal_syndicalist_industry
+		cost = 4.3
+		prerequisite = { focus = EQS_left_reform }
+		relative_position_id = EQS_left_reform	
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_left_city_idea1
+		}
+	}
+
+	focus = {
+		id = EQS_left_city_2
+		icon = GFX_goal_generic_workers_democracy
+		cost = 4.3
+		prerequisite = { focus = EQS_left_city_1 }
+		relative_position_id = EQS_left_city_1
+		x = 0
+		y = 1
+		available = {
+			has_idea = EQS_left_city_idea4
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EQS_left_city_idea4
+				add_idea = EQS_left_city_idea5
+			}
+		
+		}
+	}
+
+	focus = {
+		id = EQS_left_city_3
+		icon = GFX_goal_generic_soviet_construction
+		cost = 8.6
+		prerequisite = { focus = EQS_left_city_2 }
+		relative_position_id = EQS_left_city_2 
+		x = 0
+		y = 1
+		available = {
+			has_idea = EQS_left_city_idea8
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = EQS_left_city_idea8
+				add_idea = EQS_left_city_idea9
+			}	
+		}
+	}
+
+	focus = {
+		id = EQS_left_army_2
+		icon = GFX_goal_soviet_tankie
+		cost = 5.8
+		prerequisite = { focus = EQS_left_party_1 }
+		relative_position_id = EQS_left_party_1
+		x = 2
+		y = 1
+		completion_reward = {
+			add_war_support = 0.025
+			swap_ideas = {
+				remove_idea = EQS_left_army_idea1
+				add_idea = EQS_left_army_idea2
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_remove_nobles
+		icon = GFX_goal_generic_political_pressure
+		cost = 2.9
+		prerequisite = { focus = EQS_left_army_2 }
+		relative_position_id = EQS_left_army_2
+		x = -1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = remove_nobles_tt
+			add_political_power = 200
+			add_stability = -0.05
+		}
+	}
+
+	focus = {
+		id = EQS_left_annex_MAN
+		icon = GFX_goal_purge_opposition
+		cost = 2.9
+		prerequisite = { focus = EQS_left_army_2 }
+		relative_position_id = EQS_left_army_2
+		x = 1
+		y = 1
+		bypass = {
+			MAN = { exists = no }
+		}
+		completion_reward = {
+			add_political_power = 50
+			add_stability = -0.05
+			MAN = {
+				add_opinion_modifier = { target = EQS modifier = EQS_greatly_threaten_us_opinion }
+				add_stability = -0.1
+				add_war_support = 0.05
+			}
+			every_state = {
+				limit = {
+					is_core_of = MAN
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_banish_capitalists
+		icon = GFX_goal_HOL_military_union
+		cost = 5.8
+		prerequisite = { focus = EQS_left_annex_MAN }
+		prerequisite = { focus = EQS_remove_nobles }
+		relative_position_id = EQS_remove_nobles
+		x = 1
+		y = 1
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = EQS_banish_capitalists_tt
+				all_state = {
+					OR = {
+						NOT = { is_core_of = MAN }
+						is_owned_and_controlled_by = EQS
+					}	
+				}
+				525 = { is_owned_and_controlled_by = EQS }
+				231 = { is_owned_and_controlled_by = EQS }
+			}		
+		}
+		completion_reward = {
+			remove_ideas = EQS_forced_open
+			add_ideas = limited_exports
+			75 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			57 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			12 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			237 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			525 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			231 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id =  EQS_ponies_war_1
+		icon = GFX_goal_red_star_guard
+		cost = 4.3
+		prerequisite = { focus = EQS_banish_capitalists }
+		relative_position_id = EQS_banish_capitalists
+		x = -1
+		y = 1
+		completion_reward = {
+			add_war_support = 0.025
+			add_ideas = EQS_ponies_war_idea1
+		}
+	}	
+
+	focus = {
+		id = EQS_ponies_war_2
+		icon = GFX_goal_strasserist_conscription
+		cost = 4.3
+		prerequisite = { focus = EQS_ponies_war_1 }
+		relative_position_id = EQS_ponies_war_1
+		x = 0
+		y = 1
+		completion_reward = {
+			add_war_support = 0.025
+			swap_ideas = {
+				add_idea = EQS_ponies_war_idea2
+				remove_idea = EQS_ponies_war_idea1
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_left_international
+		icon = GFX_goal_red_menace_griffonia
+		cost = 4.3
+		prerequisite = { focus = EQS_banish_capitalists }
+		relative_position_id = EQS_banish_capitalists
+		x = 1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = EQS_starlight
+		}
+	}
+	
+	focus = {
+		id = EQS_left_volunteers
+		icon = GFX_goal_revolution
+		cost = 4.3
+		prerequisite = { focus = EQS_left_international }
+		relative_position_id = EQS_left_international
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = { EQS_left_volunteers_idea }
+		}
+	}
+
+	focus = {
+		id = EQS_left_great_arsenal
+		icon = GFX_goal_red_star_gold_wreath
+		cost = 5.8
+		prerequisite = { focus = EQS_ponies_war_2 }
+		prerequisite = { focus = EQS_left_volunteers }
+		relative_position_id = EQS_ponies_war_2
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = { EQS_left_great_arsenal_idea }
+		}
+	}
+
+	focus = {
+		id = EQS_royal_cabinet
+		icon = GFX_focus_hol_the_foundations_of_defense
+		cost = 4.3
+		prerequisite = { focus = EQS_celestia_rule }
+		relative_position_id = EQS_celestia_rule
+		x = -2
+		y = 1
+		completion_reward = {
+			add_ideas = { EQS_raven }
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = EQS_dottedline
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = EQS_blueblood
+		
+		}
+	}
+
+	focus = {
+		id = EQS_strengthen_belief_1
+		icon = GFX_goal_generic_harmony
+		cost = 5.8
+		prerequisite = { focus = EQS_celestia_rule }
+		relative_position_id = EQS_celestia_rule
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = -25
+			swap_ideas = {
+				remove_idea = EQS_political_chaos1
+				add_idea = EQS_political_chaos2
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_royal_army_1
+		icon = GFX_goal_national_arsenal
+		cost = 4.3
+		prerequisite = { focus = EQS_celestia_rule }
+		relative_position_id = EQS_celestia_rule
+		x = 2
+		y = 1
+		completion_reward = {
+			add_war_support = 0.025
+			add_ideas = { EQS_royal_army_idea1 }
+			STG = {
+				add_opinion_modifier =  { target = EQS modifier = EQS_threaten_us_opinion }
+			}
+			MAN = {
+				add_opinion_modifier =  { target = EQS modifier = EQS_threaten_us_opinion }
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_stablize_local_1
+		icon = GFX_focus_generic_self_management
+		cost = 7.2
+		prerequisite = { focus = EQS_royal_cabinet }
+		prerequisite = { focus = EQS_strengthen_belief_1 }
+		prerequisite = { focus = EQS_royal_army_1 }
+		relative_position_id = EQS_royal_cabinet
+		x = 1
+		y = 1
+		completion_reward = {			
+			add_popularity = {
+				ideology = authoritarian_harmonism
+				popularity = 0.1
+			}
+			add_ideas = { EQS_stablize_local_idea1 }
+		}
+	}
+	
+	focus = {
+		id = EQS_suppress_nobles
+		icon = GFX_goal_demand_sudetenland
+		cost = 5.8
+		prerequisite = { focus = EQS_royal_cabinet }
+		prerequisite = { focus = EQS_strengthen_belief_1 }
+		prerequisite = { focus = EQS_royal_army_1 }
+		relative_position_id = EQS_royal_cabinet
+		x = 3
+		y = 1
+		completion_reward = {
+			add_popularity = {
+			ideology = authoritarian_harmonism
+			popularity = 0.1
+			}
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = EQS_stablize_local_2
+		icon = GFX_COS_Ferrer_Coup
+		cost = 7.2
+		prerequisite = { focus = EQS_suppress_nobles }
+		prerequisite = { focus = EQS_stablize_local_1 }
+		relative_position_id = EQS_stablize_local_1
+		x = 1
+		y = 1
+		completion_reward = {
+			add_popularity = {
+			ideology = authoritarian_harmonism
+			popularity = 0.1
+			}
+			swap_ideas = {
+				add_idea =  EQS_stablize_local_idea2
+				remove_idea = EQS_stablize_local_idea1
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_strengthen_belief_2
+		icon = GFX_goal_generic_equestria
+		cost = 5.8
+		prerequisite = { focus = EQS_stablize_local_2 }
+		relative_position_id = EQS_stablize_local_2
+		x = -2
+		y = 1
+		completion_reward = {
+			add_political_power = -25
+			remove_ideas = { EQS_political_chaos2 }
+		}
+	}
+
+	focus = {
+		id = EQS_bureau_reform
+		icon = GFX_goal_constitutional_guarantees
+		cost = 5.8
+		prerequisite = { focus = EQS_stablize_local_2 }
+		relative_position_id = EQS_stablize_local_2
+		x = 0
+		y = 1
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = { EQS_bureau_reform_idea } 
+		}
+	}
+
+	focus = {
+		id = EQS_abolish_unequal_treaties
+		icon = GFX_goal_treaty_fails
+		cost = 3.2
+		prerequisite = { focus = EQS_royal_army_1 }
+		relative_position_id = EQS_royal_army_1
+		x = 0
+		y = 2
+		completion_reward = {
+			remove_ideas = EQS_forced_open
+			add_ideas = limited_exports
+		}
+	}
+
+	focus = {
+		id = EQS_royal_army_2
+		icon = GFX_focus_generic_tank_production
+		cost = 7.2
+		prerequisite = { focus = EQS_stablize_local_2 }
+		prerequisite = { focus = EQS_abolish_unequal_treaties }
+		relative_position_id = EQS_abolish_unequal_treaties
+		x = 0
+		y = 1
+		completion_reward = {
+			add_war_support = 0.025
+			swap_ideas = {
+				add_idea = EQS_royal_army_idea2
+				remove_idea = EQS_royal_army_idea1
+			}	
+		}
+	}
+
+	focus = {
+		id = EQS_land_reform_1
+		icon = GFX_goal_agriculture
+		cost = 7.2
+		prerequisite = { focus = EQS_strengthen_belief_2 }
+		relative_position_id = EQS_strengthen_belief_2
+		x = -1
+		y = 1
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = { EQS_land_reform_idea1 } 
+		}
+	}
+
+	focus = {
+		id = EQS_innovate_workshop_1
+		icon = GFX_focus_generic_industry_1
+		cost = 7.2
+		prerequisite = { focus = EQS_bureau_reform }
+		prerequisite = { focus = EQS_strengthen_belief_2 }
+		relative_position_id = EQS_strengthen_belief_2
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = { EQS_innovate_workshop_idea1 }
+		}
+	}
+
+	focus = {
+		id = EQS_national_capitalism_1
+		icon = GFX_focus_generic_treaty
+		cost = 7.2
+		prerequisite = { focus = EQS_bureau_reform }
+		relative_position_id = EQS_bureau_reform
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = { EQS_national_capitalism_idea1 } 
+		}
+	}
+
+	focus = {
+		id = EQS_land_reform_2
+		icon = GFX_focus_indy_agriculture_2
+		cost = 7.2
+		prerequisite = { focus = EQS_land_reform_1 }
+		relative_position_id = EQS_land_reform_1
+		x = 0
+		y = 1
+		completion_reward = {
+			add_stability = 0.05
+			swap_ideas = { 
+				add_idea = EQS_land_reform_idea2 
+				remove_idea = EQS_land_reform_idea1
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_innovate_workshop_2
+		icon = GFX_focus_generic_industry_2
+		cost = 7.2
+		prerequisite = { focus = EQS_innovate_workshop_1 }
+		relative_position_id = EQS_innovate_workshop_1
+		x = 0
+		y = 1
+		completion_reward = {
+			swap_ideas = { 
+				add_idea = EQS_innovate_workshop_idea2
+				remove_idea = EQS_innovate_workshop_idea1
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_national_capitalism_2
+		icon = GFX_DAH_Topke
+		cost = 7.2
+		prerequisite = { focus = EQS_national_capitalism_1 }
+		relative_position_id = EQS_national_capitalism_1
+		x = 0
+		y = 1
+		completion_reward = {
+			swap_ideas = {
+				add_idea = EQS_national_capitalism_idea2
+				remove_idea = EQS_national_capitalism_idea1
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_expand_cities
+		icon = GFX_goal_rct_expand_the_city		
+		cost = 5.8
+		prerequisite = { focus = EQS_innovate_workshop_2 }
+		prerequisite = { focus = EQS_national_capitalism_2 }
+		relative_position_id = EQS_innovate_workshop_2
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = { EQS_expand_cities_idea }	
+		}
+	}
+
+	focus = {
+		id = EQS_pleased_civils
+		icon = GFX_focus_AUS_agriculture
+		cost = 5.8
+		prerequisite = { focus = EQS_innovate_workshop_2 }
+		prerequisite = { focus = EQS_land_reform_2 }
+		relative_position_id = EQS_innovate_workshop_2
+		x = -1
+		y = 1
+		completion_reward = {
+			swap_ideas = {
+				add_idea = EQS_stablize_local_idea3
+				remove_idea = EQS_stablize_local_idea2
+			}	
+		}
+	}
+	
+	focus = {
+		id = EQS_unify_home
+		icon = GFX_goal_equestria
+		cost = 4.3
+		prerequisite = { focus = EQS_royal_army_2 }
+		relative_position_id = EQS_royal_army_2
+		x = 0
+		y = 3
+		completion_reward = {
+			STG = {
+				add_opinion_modifier =  { target = EQS modifier = EQS_greatly_threaten_us_opinion }
+			}
+			MAN = {
+				add_opinion_modifier =  { target = EQS modifier = EQS_greatly_threaten_us_opinion }
+			}
+			every_state = {
+				limit = {
+					is_core_of = STG
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+				add_core_of = ROOT
+			}
+			every_state = {
+				limit = {
+					is_core_of = MAN
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_retake_mandate
+		icon = GFX_goal_celestia_raising_the_sun
+		cost = 7.2
+		prerequisite = { focus = EQS_pleased_civils }
+		prerequisite = { focus = EQS_expand_cities }
+		prerequisite = { focus = EQS_unify_home }
+		relative_position_id = EQS_expand_cities
+		x = 0
+		y = 1
+		completion_reward = {
+			remove_country_leader_trait = princess_of_ponies
+			add_country_leader_trait = holy_princess_of_ponies
+		}
+	}
+
+	focus = {
+		id = EQS_crush_superpowers
+		icon = GFX_goal_support_equestria
+		cost = 4.3
+		prerequisite = { focus = EQS_retake_mandate }
+		relative_position_id = EQS_retake_mandate
+		x = 0
+		y = 1
+		completion_reward = {
+			add_war_support = 0.025
+		}
+	}
+
+	focus = {
+		id = EQS_luna_constitution
+		icon = GFX_goal_document
+		cost = 4.3
+		prerequisite = { focus = EQS_luna_rule }
+		relative_position_id = EQS_luna_rule
+		x = 0
+		y = 1
+		completion_reward = {
+			add_stability = 0.05
+			add_ideas = EQS_laws_idea1
+		}
+	}
+
+	focus = {
+		id = EQS_national_congress
+		icon=  GFX_goal_government_icon
+		cost = 5.8
+		prerequisite = { focus = EQS_luna_constitution }
+		relative_position_id = EQS_luna_constitution
+		x = -1
+		y = 1
+		completion_reward = {
+			add_stability = 0.05
+			add_timed_idea = {
+			idea = EQS_national_congress_idea
+			days = 360
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_promote_liberty_1
+		icon = GFX_goal_ideology_social_liberal
+		cost = 7.2
+		prerequisite = { focus = EQS_luna_constitution }
+		relative_position_id = EQS_luna_constitution
+		x = 1
+		y = 1
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = EQS_political_chaos1
+				add_idea = EQS_political_chaos2
+			}
+			MAN = {
+				add_opinion_modifier =  { target = EQS modifier = EQS_promote_liberty_opinion }
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_representative_democracy
+		icon = GFX_goal_generic_elections
+		cost = 5.8
+		prerequisite = { focus = EQS_national_congress }
+		prerequisite = { focus = EQS_promote_liberty_1 }
+		relative_position_id = EQS_promote_liberty_1
+		x = -1
+		y = 1
+		completion_reward = {
+			add_stability = 0.1
+			add_popularity = {
+				ideology = liberal_harmonism
+				popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_promote_liberty_2
+		icon = GFX_focus_indy_democratic_process
+		cost = 7.2
+		prerequisite = { focus = EQS_representative_democracy }
+		relative_position_id = EQS_representative_democracy
+		x = 2
+		y = 1
+		completion_reward = {
+			remove_ideas = EQS_political_chaos2
+		}
+	}
+
+	focus = {
+		id = EQS_luna_abdication
+		icon = GFX_goal_tfv_sever_ties_with_uk
+		cost = 1.5
+		prerequisite = { focus = EQS_representative_democracy }
+		relative_position_id = EQS_representative_democracy
+		x = 0
+		y = 1
+		completion_reward = {
+			remove_country_leader_trait = princess_of_ponies
+			add_country_leader_trait = liberal_princess_of_ponies
+		}
+	}
+
+	focus = {
+		id = EQS_civil_code
+		icon = GFX_goal_DOM_The_Trial
+		cost = 5.8
+		prerequisite = { focus = EQS_promote_liberty_2 }
+		relative_position_id = EQS_promote_liberty_2
+		x = 0
+		y = 1
+		completion_reward = {
+			swap_ideas = { 
+				add_idea = EQS_laws_idea2
+				remove_idea = EQS_laws_idea1			
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_financial_laws
+		icon = GFX_goal_gold_up
+		cost = 4.3
+		prerequisite = { focus = EQS_civil_code }
+		relative_position_id = EQS_civil_code
+		x = -1
+		y = 1
+		completion_reward = {
+			swap_ideas = { 
+				remove_idea = EQS_laws_idea2 
+				add_idea = EQS_laws_idea3
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_national_bank
+		icon = GFX_focus_mex_privatisation
+		cost = 4.3
+		prerequisite = { focus = EQS_civil_code }
+		relative_position_id = EQS_civil_code
+		x = 1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_national_bank_tt
+		}
+	}
+
+	focus = {
+		id = EQS_invest_civilian_1
+		icon = GFX_goal_generic_construct_public_housing
+		cost = 7.2
+		prerequisite = { focus = EQS_national_bank }
+		prerequisite = { focus = EQS_financial_laws }
+		relative_position_id = EQS_national_bank
+		x = -1
+		y = 1
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = EQS_invest_civilian_idea1
+		}
+	}
+
+	focus = {
+		id = EQS_invest_arms_1
+		icon = GFX_goal_factory_complex
+		cost = 7.2
+		prerequisite = { focus = EQS_national_bank }
+		prerequisite = { focus = EQS_financial_laws }
+		relative_position_id = EQS_national_bank
+		x = -3
+		y = 1
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = EQS_invest_arms_idea1
+		}
+	}
+
+	focus = {
+		id = EQS_invest_resources_1
+		icon = GFX_goal_silver_reserve
+		cost = 7.2
+		prerequisite = { focus = EQS_national_bank }
+		prerequisite = { focus = EQS_financial_laws }
+		relative_position_id = EQS_national_bank
+		x = 1
+		y = 1
+		completion_reward = {
+			add_stability = -0.05
+			add_ideas = EQS_invest_resources_idea1
+		}
+	}
+
+	focus = {
+		id = EQS_invest_civilian_2
+		icon = GFX_goal_construction_engineering
+		cost = 7.2
+		prerequisite = { focus = EQS_invest_civilian_1 }
+		relative_position_id = EQS_invest_civilian_1
+		x = 0
+		y = 1
+		completion_reward = {
+			swap_ideas = { 
+				add_idea = EQS_invest_civilian_idea2
+				remove_idea = EQS_invest_civilian_idea1			
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_invest_arms_2
+		icon = GFX_goal_improve_industry
+		cost = 7.2
+		prerequisite = { focus = EQS_invest_arms_1 }
+		relative_position_id = EQS_invest_arms_1
+		x = 0
+		y = 1
+		completion_reward = {
+			swap_ideas = { 
+				add_idea = EQS_invest_arms_idea2
+				remove_idea = EQS_invest_arms_idea1
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_invest_resources_2
+		icon = GFX_goal_gold_reserve
+		cost = 7.2
+		prerequisite = { focus = EQS_invest_resources_1 }
+		relative_position_id = EQS_invest_resources_1
+		x = 0
+		y = 1
+		completion_reward = {
+			swap_ideas = { 
+				add_idea = EQS_invest_resources_idea2
+				remove_idea = EQS_invest_resources_idea1
+			}
+		}
+	}
+
+
+	focus = {
+		id = EQS_beacon_of_harmony
+		icon = GFX_focus_generic_the_giant_wakes
+		cost = 4.3
+		prerequisite = { focus = EQS_invest_civilian_2 }
+		prerequisite = { focus = EQS_invest_arms_2 }
+		prerequisite = { focus = EQS_invest_resources_2 }
+		relative_position_id = EQS_invest_civilian_2
+		x = 0
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_beacon_of_harmony_idea
+		}
+	}
+
+	focus = {
+		id = EQS_ministry_of_defense
+		icon = GFX_goal_foreign_diplomacy
+		cost = 4.3
+		prerequisite = { focus = EQS_representative_democracy }
+		relative_position_id = EQS_representative_democracy
+		x = -2
+		y = 1
+		completion_reward = {
+			add_war_support = 0.025
+			add_ideas = EQS_ministry_of_defense_idea1
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = EQS_dottedline
+			custom_effect_tooltip = available_political_advisor
+			show_ideas_tooltip = EQS_blueblood
+		}
+	}
+
+	focus = {
+		id = EQS_cooperate_with_capitalists
+		icon = GFX_goal_rich_focus
+		cost = 5.8
+		prerequisite = { focus = EQS_ministry_of_defense }
+		relative_position_id = EQS_ministry_of_defense
+		x = 1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_cooperate_with_capitalists_tt
+			add_ideas = EQS_cooperate_with_capitalists_idea
+			MAN = {
+				add_opinion_modifier =  { target = EQS modifier = EQS_cooperate_with_capitalists_opinion }
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_rewrite_unequal_treaties
+		icon = GFX_goal_generic_forceful_treaty
+		cost = 2.9
+		prerequisite = { focus = EQS_cooperate_with_capitalists }
+		relative_position_id = EQS_cooperate_with_capitalists
+		x = 0
+		y = 1
+		completion_reward = {
+			add_political_power = 100
+			remove_ideas = EQS_forced_open
+		}
+	}
+
+	focus = {
+		id = EQS_luna_conscript
+		icon = GFX_focus_generic_little_entente
+		cost = 4.3
+		prerequisite = { focus = EQS_ministry_of_defense }
+		relative_position_id = EQS_ministry_of_defense
+		x = -1
+		y = 1
+		completion_reward = {
+			add_war_support = 0.025
+			swap_ideas = { 
+				add_idea = EQS_ministry_of_defense_idea2
+				remove_idea = EQS_ministry_of_defense_idea1
+			 }
+
+		}
+	}
+
+	focus = {
+		id = EQS_luna_annex_STG
+		icon = GFX_goal_HOL_crackdown_totalist
+		cost = 2.9
+		prerequisite = { focus = EQS_luna_conscript }
+		relative_position_id = EQS_luna_conscript
+		x = 0
+		y = 1
+		bypass = {
+			STG = { exists = no }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_luna_annex_STG_tt
+			add_stability = -0.05
+			STG = {
+				add_opinion_modifier = { target = EQS modifier = EQS_greatly_threaten_us_opinion }
+				add_stability = -0.1
+				add_war_support = 0.05
+			}
+			every_state = {
+				limit = {
+					is_core_of = STG
+					NOT = {
+						is_core_of = ROOT
+					}
+				}
+				add_core_of = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_intervene_foreign
+		icon = GFX_goal_generic_liberty_statue
+		cost = 4.3
+		prerequisite = { focus = EQS_luna_annex_STG }
+		prerequisite = { focus = EQS_rewrite_unequal_treaties }
+		relative_position_id = EQS_luna_annex_STG
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_intervene_foreign_idea
+		}
+	}
+
+	focus = {
+		id = EQS_expand_our_league
+		icon = GFX_goal_anschluss
+		cost = 4.3
+		prerequisite = { focus = EQS_intervene_foreign }
+		relative_position_id = EQS_intervene_foreign
+		x = 0
+		y = 1
+		completion_reward = {
+
+
+		}
+	}
+
+	focus = {
+		id = EQS_crush_tyrants
+		icon = GFX_goal_military_academy
+		cost = 2.9
+		prerequisite = { focus = EQS_expand_our_league }
+		relative_position_id = EQS_expand_our_league
+		x = 0
+		y = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = EQS_begin_military_reform 
+		icon = GFX_goal_planning_bonus
+		cost = 4.3
+		x = 18
+		y = 12
+		completion_reward = {
+			army_experience = 25
+			navy_experience = 25
+			air_experience = 25          
+		}
+	}
+
+	focus = {
+		id = EQS_army_doctrine
+		icon = GFX_goal_generic_army_doctrines
+		cost = 5.8
+		prerequisite = { focus = EQS_begin_military_reform }
+		relative_position_id = EQS_begin_military_reform 
+		x = -14
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_land_doctrine
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}              
+		}
+	}
+
+	focus = {
+		id = EQS_new_infantry_weapons
+		icon = GFX_goal_generic_small_arms
+		cost = 5.8
+		prerequisite = { focus = EQS_army_doctrine }
+		relative_position_id = EQS_army_doctrine
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = available_materiel_manufacturer
+			show_ideas_tooltip = EQS_macintosh
+			if = {
+				limit = { 99 = { is_fully_controlled_by = ROOT } }
+				99 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = EQS_new_infantry_weapons
+				bonus = 1.0
+				uses = 2
+				category = infantry_weapons
+			}          
+		}
+	}
+
+	focus = {
+		id = EQS_new_artillery
+		icon = GFX_goal_generic_army_artillery2
+		cost = 5.8
+		prerequisite = { focus = EQS_army_doctrine }
+		relative_position_id = EQS_army_doctrine
+		x = 2
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = available_materiel_manufacturer
+			show_ideas_tooltip = EQS_star_energy
+			if = {
+				limit = { 74 = { is_fully_controlled_by = ROOT } }
+				74 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = EQS_new_artillery
+				bonus = 1.0
+				uses = 2
+				category = artillery
+			}          
+		}
+	}
+
+	focus = {
+		id = EQS_new_motorized_equipment
+		icon = GFX_goal_generic_army_motorized
+		cost = 5.8
+		prerequisite = { focus = EQS_army_doctrine }
+		relative_position_id = EQS_army_doctrine
+		x = -2
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = available_materiel_manufacturer
+			show_ideas_tooltip = EQS_detrot_automobiles
+			if = {
+				limit = { 349 = { is_fully_controlled_by = ROOT } }
+				349 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = arms_factory
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			add_tech_bonus = {
+				name = EQS_new_motorized_equipment
+				bonus = 1.0
+				uses = 2
+				category = motorized_equipment
+			}          
+		}
+	}
+
+	focus = {
+		id = EQS_support_troops
+		icon = GFX_goal_generic_support_equipment
+		cost = 4.3
+		prerequisite = { focus = EQS_new_motorized_equipment }
+		relative_position_id = EQS_new_motorized_equipment
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_support_troops
+				bonus = 1.0
+				uses = 2
+				category = support_tech
+			}
+			add_equipment_to_stockpile = { type = support_equipment_1 amount = 1000 producer = EQS }
+		}
+	}
+
+	focus = {
+		id = EQS_fort_bureau
+		icon = GFX_goal_generic_fortify_city
+		cost = 4.3
+		prerequisite = { focus = EQS_new_artillery }
+		relative_position_id = EQS_new_artillery
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_fort_bureau
+				bonus = 1.0
+				uses = 1
+				category = construction_tech
+			}
+			add_ideas = EQS_fort_idea
+		}
+	}
+
+	focus = {
+		id = EQS_purchase_new_equipments
+		icon = GFX_DAH_Topke
+		cost = 10
+		prerequisite = { focus = EQS_new_infantry_weapons }
+		prerequisite = { focus = EQS_new_artillery }
+		prerequisite = { focus = EQS_new_motorized_equipment }
+		relative_position_id = EQS_new_infantry_weapons
+		x = 0
+		y = 1
+		available = { NOT = { has_idea = EQS_budget_pressure_idea } }
+		completion_reward = {
+			add_timed_idea = {
+			idea = EQS_budget_pressure_idea
+			days = 180
+			}
+			swap_ideas = { remove_idea = EQS_nonmilitary1 add_idea = EQS_nonmilitary2 }
+			add_equipment_to_stockpile = { type = infantry_equipment_1 amount = 20000 producer = EQS }      
+			add_equipment_to_stockpile = { type = artillery_equipment_1 amount = 1000 producer = EQS } 
+			add_equipment_to_stockpile = { type = motorized_equipment amount = 1000 producer = EQS } 
+		}
+	}
+
+	focus = {
+		id = EQS_elite_army
+		icon = GFX_focus_chi_army_reform
+		cost = 4.3
+		prerequisite = { focus = EQS_purchase_new_equipments }
+		mutually_exclusive = { focus = EQS_grand_army }
+		relative_position_id = EQS_purchase_new_equipments
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_elite_army_idea
+		}
+	}
+
+	focus = {
+		id = EQS_grand_army
+		icon = GFX_goal_generic_axis_build_infantry
+		cost = 4.3
+		prerequisite = { focus = EQS_purchase_new_equipments }
+		mutually_exclusive = { focus = EQS_elite_army }
+		relative_position_id = EQS_purchase_new_equipments
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_grand_army_idea
+		}
+	}
+
+	focus = {
+		id = EQS_introduce_armor
+		icon = GFX_goal_generic_army_tanks
+		cost = 5.8
+		prerequisite = { focus = EQS_elite_army focus = EQS_grand_army }
+		relative_position_id = EQS_grand_army
+		x = -1
+		y = 1
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = EQS_introduce_armor
+				bonus = 1
+				ahead_reduction = 2
+				uses = 2
+				category = cat_light_armor
+			} 
+		}
+	}
+	focus = {
+		id = EQS_medium_tank_focus
+		icon = GFX_goal_generic_army_tank_2
+		cost = 5.8
+		prerequisite = { focus = EQS_introduce_armor }
+		relative_position_id = EQS_introduce_armor
+		x = -1
+		y = 1
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = EQS_medium_tank_focus
+				bonus = 1
+				ahead_reduction = 2
+				uses = 2
+				category = cat_medium_armor
+			} 
+		}
+	}
+	focus = {
+		id = EQS_heavy_tank_focus
+		icon = GFX_goal_Timberwolf_research
+		cost = 5.8
+		prerequisite = { focus = EQS_introduce_armor }
+		relative_position_id = EQS_introduce_armor
+		x = 1
+		y = 1
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = EQS_heavy_tank_focus
+				bonus = 1
+				ahead_reduction = 2
+				uses = 2
+				category = cat_heavy_armor
+			} 
+		}
+	}
+
+	focus = {
+		id = EQS_supply_bureau
+		icon = GFX_goal_arms_dealing
+		cost = 4.3
+		prerequisite = { focus = EQS_elite_army focus = EQS_grand_army }
+		relative_position_id = EQS_grand_army
+		x = -3
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_supply_bureau_idea
+			every_army_leader = {
+				add_logistics = 1
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_planning_bureau
+		icon = GFX_goal_generic_more_territorial_claims
+		cost = 4.3
+		prerequisite = { focus =EQS_supply_bureau }
+		relative_position_id = EQS_supply_bureau
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_planning_bureau_idea
+			every_army_leader = {
+				add_planning = 1
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_race_tech_focus
+		icon = GFX_goal_generic_magic
+		cost = 4.3
+		prerequisite = { focus = EQS_elite_army focus = EQS_grand_army }
+		relative_position_id = EQS_grand_army
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_race_tech_focus
+				bonus = 1
+				uses = 1
+				category = pegasi_tech
+			} 
+			add_tech_bonus = {
+				name = EQS_race_tech_focus
+				bonus = 1
+				uses = 1
+				category = earthpony_tech
+			}
+			add_tech_bonus = {
+				name = EQS_race_tech_focus
+				bonus = 1
+				uses = 1
+				category = unicorn_tech
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_special_forces_tech_focus
+		icon = GFX_goal_generic_special_forces
+		cost = 4.3
+		prerequisite = { focus = EQS_race_tech_focus }
+		relative_position_id = EQS_race_tech_focus
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_special_forces_tech_focus
+				bonus = 1
+				uses = 3
+				category = special_forces_tech
+			} 
+		}
+	}
+
+	focus = {
+		id = EQS_naval_doctrine_focus
+		icon = GFX_goal_generic_navy_doctrines_tactics
+		cost = 7.2
+		prerequisite = { focus = EQS_begin_military_reform }
+		relative_position_id = EQS_begin_military_reform 
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_naval_doctrine_focus
+				bonus = 1.0
+				uses = 2
+				category = naval_doctrine
+			}              
+		}
+	}
+
+	focus = {
+		id = EQS_battleship_tech
+		icon = GFX_goal_generic_navy_battleship
+		cost = 5.8
+		prerequisite = { focus = EQS_naval_doctrine_focus }
+		mutually_exclusive = { focus = EQS_carrier_tech }
+		relative_position_id = EQS_naval_doctrine_focus
+		x = -1
+		y = 1
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = EQS_battleship_tech
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = bb_tech
+			}
+			add_ideas = {EQS_evening_squall}
+		}
+	}
+
+	focus = {
+		id = EQS_carrier_tech
+		icon = GFX_goal_generic_navy_carrier
+		cost = 5.8
+		prerequisite = { focus = EQS_naval_doctrine_focus }
+		mutually_exclusive = { focus = EQS_battleship_tech }
+		relative_position_id = EQS_naval_doctrine_focus
+		x = 1
+		y = 1
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = EQS_carrier_tech
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = cv_tech
+			}          
+			add_ideas = {EQS_madoor_stronghammer}
+		}
+	}
+
+	focus = {
+		id = EQS_add_dockyard
+		icon = GFX_goal_generic_construct_naval_dockyard
+		cost = 4.3
+		prerequisite = { focus = EQS_battleship_tech focus = EQS_carrier_tech }
+		relative_position_id = EQS_battleship_tech
+		x = 1
+		y = 1
+		completion_reward = {
+			13 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			66 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			14 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			67 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_main_naval_base
+		icon = GFX_goal_naval_effort
+		cost = 4.3
+		prerequisite = { focus = EQS_battleship_tech focus = EQS_carrier_tech }
+		relative_position_id = EQS_battleship_tech
+		x = -1
+		y = 1
+		completion_reward = {
+			13 = {
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			75 = {
+				add_building_construction = {
+					type = naval_base
+					level = 3
+					instant_build = yes
+				}
+			}
+			525 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			166 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			67 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = EQS_other_naval_base
+		icon = GFX_goal_generic_build_navy
+		cost = 4.3
+		prerequisite = { focus = EQS_battleship_tech focus = EQS_carrier_tech }
+		relative_position_id = EQS_battleship_tech
+		x = 3
+		y = 1
+		completion_reward = {
+			66 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			14 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			15 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			19 = {
+				add_building_construction = {
+					type = naval_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			351 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			352 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			177 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+				}
+			}
+			134 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_great_ship
+		icon = GFX_goal_BEL_Battleship_Investements
+		cost = 7.2
+		prerequisite = { focus = EQS_add_dockyard }
+		relative_position_id = EQS_add_dockyard
+		x = 0
+		y = 1
+		available = { NOT = { has_idea = EQS_budget_pressure_idea } }
+		completion_reward = {
+			add_timed_idea = {
+			idea = EQS_budget_pressure_idea
+			days = 180
+			}
+			custom_effect_tooltip = EQS_immortal_class_tt
+			hidden_effect = {
+				if = { 
+				limit = { has_completed_focus = EQS_battleship_tech }
+				if = {
+					limit = {
+						not = { has_dlc = "Man the Guns" }
+					}
+					add_tech_bonus = {
+						name = EQS_bb_tech
+						bonus = 3.0
+						uses = 1
+						category = shbb_tech	
+						}
+					}
+				else = {
+					if = {
+						limit = {
+							not = { has_tech = ship_hull_super_heavy }
+						}
+							set_technology = {
+							ship_hull_super_heavy = 1
+						}
+					}
+					create_equipment_variant = {
+						name = "Immortal Class"
+						type = ship_hull_super_heavy_1
+						parent_version = 0
+						modules = {
+						fixed_ship_battery_slot = ship_super_heavy_battery_1
+						fixed_ship_anti_air_slot = ship_anti_air_2
+						fixed_ship_fire_control_system_slot = ship_fire_control_system_1
+						fixed_ship_radar_slot = empty
+						fixed_ship_engine_slot = heavy_ship_engine_2
+						fixed_ship_secondaries_slot = ship_secondaries_2
+						fixed_ship_armor_slot = ship_armor_shbb
+						front_1_custom_slot = ship_anti_air_2
+						front_2_custom_slot = ship_super_heavy_battery_1
+						mid_1_custom_slot = ship_anti_air_2
+						mid_2_custom_slot = ship_secondaries_2
+						mid_3_custom_slot = ship_secondaries_2
+						rear_1_custom_slot = ship_super_heavy_battery_1
+						rear_2_custom_slot = ship_airplane_launcher_1
+						}
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "EQS" 
+							version_name = "Immortal Class"
+						}
+						name = "Celestia" 
+						requested_factories = 1
+						progress = 0.7
+						amount = 1
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "EQS" 
+							version_name = "Immortal Class"
+						}
+						name = "Luna" 
+						requested_factories = 1
+						progress = 0.6
+						amount = 1
+					}
+					add_equipment_production = {
+						equipment = {
+							type = ship_hull_super_heavy_1
+							creator = "EQS" 
+							version_name = "Immortal Class"
+						}
+						name = "Twilight" 
+						requested_factories = 1
+						progress = 0.5
+						amount = 1
+					}
+				}
+			}
+			else = {
+				if = { has_completed_focus = EQS_cv_tech }
+					if = {
+						limit = {
+							not = { has_dlc = "Man the Guns" }
+						}
+						add_tech_bonus = {
+							name = EQS_cv_tech
+							bonus = 3.0
+							uses = 1
+							category = cv_tech	
+							}
+						}
+					else = {
+						if = {
+							limit = {
+								not = { has_tech = basic_ship_hull_carrier }
+							}
+								set_technology = {
+								basic_ship_hull_carrier = 1
+							}
+						}
+						create_equipment_variant = {
+							name = "Immortal Class"
+							type = ship_hull_carrier_1
+							parent_version = 0
+							modules = {
+								fixed_ship_deck_slot_1 = ship_deck_space
+								fixed_ship_deck_slot_2 = ship_deck_space
+								fixed_ship_anti_air_slot = ship_anti_air_2
+								fixed_ship_radar_slot = ship_radar_1
+								fixed_ship_engine_slot = carrier_ship_engine_2
+								fixed_ship_secondaries_slot = ship_secondaries_2
+								front_1_custom_slot = ship_deck_space
+							}
+						}
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_carrier_1
+								creator = "EQS" 
+								version_name = "Immortal Class"
+							}
+							name = "Celestia" 
+							requested_factories = 1
+							progress = 0.9
+							amount = 1
+						}
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_carrier_1
+								creator = "EQS" 
+								version_name = "Immortal Class" 
+							}
+							name = "Luna" 
+							requested_factories = 1
+							progress = 0.8
+							amount = 1
+						}
+						add_equipment_production = {
+							equipment = {
+								type = ship_hull_carrier_1
+								creator = "EQS" 
+								version_name = "Immortal Class" 
+							}
+							name = "Twilight" 
+							requested_factories = 1
+							progress = 0.7
+							amount = 1
+						}
+					}
+				add_equipment_to_stockpile = { type = cv_fighter_equipment_1 amount = 100 producer = EQS }      
+				add_equipment_to_stockpile = { type = cv_nav_bomber_equipment_1 amount = 100 producer = EQS }
+				}		
+			}	          
+		}
+	}
+
+	focus = {
+		id = EQS_clca_tech
+		icon = GFX_goal_generic_navy_cruiser
+		cost = 4.3
+		prerequisite = { focus = EQS_main_naval_base }
+		relative_position_id = EQS_main_naval_base
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_clca_tech
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = ca_tech
+				category = cl_tech
+			}          
+		}
+	}
+
+	focus = {
+		id = EQS_destroyer_tech
+		icon = GFX_focus_generic_destroyer
+		cost = 4.3
+		prerequisite = { focus = EQS_other_naval_base }
+		relative_position_id = EQS_other_naval_base
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_destroyer_tech
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = dd_tech
+			}          
+		}
+	}
+
+	focus = {
+		id = EQS_submarine_tech
+		icon = GFX_goal_generic_navy_submarine
+		cost = 4.3
+		prerequisite = { focus = EQS_destroyer_tech }
+		prerequisite = { focus = EQS_clca_tech }
+		prerequisite = { focus = EQS_great_ship }
+		relative_position_id = EQS_great_ship
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_submarine_tech
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = ss_tech
+			}          
+		}
+	}
+
+	focus = {
+		id = EQS_wolf_ss
+		icon = GFX_goal_generic_wolf_pack
+		cost = 4.3
+		prerequisite = { focus = EQS_submarine_tech }
+		relative_position_id = EQS_submarine_tech
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_wolf_ss_idea
+		}
+	}
+
+	focus = {
+		id = EQS_spear_torpedo
+		icon = GFX_goal_generic_occupy_start_war
+		cost = 4.3
+		prerequisite = { focus = EQS_submarine_tech }
+		relative_position_id = EQS_submarine_tech
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_spear_torpedo_idea      
+		}
+	}
+
+	focus = {
+		id = EQS_air_doctrine_focus
+		icon = GFX_goal_generic_air_doctrine
+		cost = 7.2
+		prerequisite = { focus = EQS_begin_military_reform }
+		relative_position_id = EQS_begin_military_reform 
+		x = 12
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_air_doctrine_focus
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}              
+		}
+	}
+
+	focus = {
+		id = EQS_new_light_fighter
+		icon = GFX_goal_generic_air_fighter
+		cost = 4.3
+		prerequisite = { focus = EQS_air_doctrine_focus }
+		relative_position_id = EQS_air_doctrine_focus
+		x = -2
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_new_light_fighter
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = light_fighter
+			}              
+		}
+	}
+
+	focus = {
+		id = EQS_new_tactical_bomber
+		icon = GFX_goal_generic_air_bomber
+		cost = 4.3
+		prerequisite = { focus = EQS_air_doctrine_focus }
+		relative_position_id = EQS_air_doctrine_focus
+		x = 2
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_new_tactical_bomber
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = tactical_bomber
+			}              
+		}
+	}
+
+	focus = {
+		id = EQS_new_cas_bomber
+		icon = GFX_goal_generic_CAS
+		cost = 4.3
+		prerequisite = { focus = EQS_air_doctrine_focus }
+		relative_position_id = EQS_air_doctrine_focus
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_new_cas_bomber
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = cas_bomber
+			} 
+		}
+	}
+
+	focus = {
+		id = EQS_new_wonderbolts
+		icon = GFX_goal_derpy_conscription_eqs
+		cost = 1.5
+		prerequisite = { focus = EQS_new_tactical_bomber }
+		prerequisite = { focus = EQS_new_light_fighter }
+		prerequisite = { focus = EQS_new_cas_bomber}
+		relative_position_id = EQS_new_cas_bomber
+		x = 0
+		y = 1
+		available = {
+			EQS = { has_full_control_of_state = 68 }
+			has_tech = tactical_bomber1
+			has_tech = fighter1
+			has_tech = CAS1
+			}
+		completion_reward = {
+			air_experience = 50
+			  if = {
+				limit = {
+					EQS = { has_full_control_of_state = 68 }
+				}
+				custom_effect_tooltip = EQS_new_wonderbolts_tt
+				hidden_effect = { load_oob = "EQS_wonderbolts" }
+
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_heavy_fighter_focus
+		icon = GFX_goal_generic_air_fighter2
+		cost = 4.3
+		prerequisite = { focus = EQS_new_tactical_bomber }
+		prerequisite = { focus = EQS_new_light_fighter }
+		prerequisite = { focus = EQS_new_cas_bomber}
+		relative_position_id = EQS_new_cas_bomber
+		x = -2
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_heavy_fighter_focus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = cat_heavy_fighter
+			} 
+		}
+	}
+
+	focus = {
+		id = EQS_strategic_bomber_focus
+		icon = GFX_goal_MAF_Napalm
+		cost = 4.3
+		prerequisite = { focus = EQS_new_tactical_bomber }
+		prerequisite = { focus = EQS_new_light_fighter }
+		prerequisite = { focus = EQS_new_cas_bomber}
+		relative_position_id = EQS_new_cas_bomber
+		x = 2
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_strategic_bomber_focus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = cat_strategic_bomber
+			} 
+		}
+	}
+
+	focus = {
+		id = EQS_air_mass_production
+		icon = GFX_goal_generic_air_production
+		cost = 4.3
+		prerequisite = { focus = EQS_heavy_fighter_focus}
+		prerequisite = { focus = EQS_new_wonderbolts }
+		prerequisite = { focus = EQS_strategic_bomber_focus }
+		mutually_exclusive = { focus = EQS_air_elite_production }
+		relative_position_id = EQS_new_wonderbolts
+		x = -1
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_air_mass_production_idea
+		}
+	}
+
+	focus = {
+		id = EQS_air_elite_production
+		icon = GFX_goal_generic_build_airforce
+		cost = 4.3
+		prerequisite = { focus = EQS_heavy_fighter_focus}
+		prerequisite = { focus = EQS_new_wonderbolts }
+		prerequisite = { focus = EQS_strategic_bomber_focus }
+		mutually_exclusive = { focus = EQS_air_elite_production }
+		relative_position_id = EQS_new_wonderbolts
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_air_elite_production_idea
+		}
+	}
+
+
+	focus = {
+		id = EQS_try_rocket
+		icon = GFX_focus_rocketry
+		cost = 4.3
+		prerequisite = { focus = EQS_air_elite_production focus = EQS_air_mass_production }
+		prerequisite = { focus = EQS_secret_plan }
+		relative_position_id = EQS_air_mass_production
+		x = 1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_try_rocket
+				bonus = 1
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+			} 
+		}
+	}
+
+	focus = {
+		id = EQS_jet_focus
+		icon = GFX_focus_YUG_rogozarski
+		cost = 5.8
+		prerequisite = { focus = EQS_try_rocket }
+		relative_position_id = EQS_try_rocket
+		x = 0
+		y = 1
+		available = { has_tech = jet_engines }
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_jet_strategic_bomber_focus
+				bonus = 1
+				ahead_reduction = 2
+				uses = 2
+				category = jet_technology
+			} 
+		}
+	}
+
+	focus = {
+		id = EQS_united_military_research
+		icon = GFX_goal_technological_supremacy
+		cost = 5.8
+		prerequisite = { focus = EQS_begin_military_reform }
+		relative_position_id = EQS_begin_military_reform
+		x = 6
+		y = 1
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = EQS_naval_air_focus
+		icon = GFX_goal_generic_air_naval_bomber
+		cost = 4.3
+		prerequisite = { focus = EQS_united_military_research }
+		prerequisite = { focus = EQS_air_doctrine_focus }
+		prerequisite = { focus = EQS_naval_doctrine_focus }
+		relative_position_id = EQS_united_military_research
+		x = -2
+		y = 1
+		completion_reward = {
+			navy_experience = 15
+			air_experience = 15
+			add_tech_bonus = {
+				name = EQS_naval_air_focus
+				bonus = 1
+				uses = 3
+				category = naval_air
+			} 
+		}
+	}
+
+	focus = {
+		id = EQS_radar_focus
+		icon = GFX_goal_generic_radar
+		cost = 4.3
+		prerequisite = { focus = EQS_united_military_research }
+		prerequisite = { focus = EQS_air_doctrine_focus }
+		prerequisite = { focus = EQS_naval_doctrine_focus }
+		relative_position_id = EQS_united_military_research
+		x = 2
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_radar_focus
+				bonus = 1
+				uses = 3
+				category = radar_tech
+			} 
+		}
+	}
+
+	focus = {
+		id = EQS_computer_focus
+		icon = GFX_focus_Computer_2
+		cost = 5.8
+		prerequisite = { focus = EQS_united_military_research }
+		relative_position_id = EQS_united_military_research
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_computer_focus
+				bonus = 1
+				uses = 3
+				category = computing_tech
+			} 
+		}
+	}
+
+	focus = {
+		id = EQS_crypto
+		icon = GFX_goal_goal_machine
+		cost = 4.3
+		prerequisite = { focus = EQS_computer_focus }
+		relative_position_id = EQS_computer_focus
+		x = -1
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_crypto
+				bonus = 1
+				uses = 4
+				category = encryption_tech
+				category = decryption_tech
+			} 
+		}
+	}
+
+	focus = {
+		id = EQS_strengthen_SMILE
+		icon = GFX_goal_secret_agents_red
+		cost = 4.3
+		prerequisite = { focus = EQS_crypto }
+		relative_position_id = EQS_crypto
+		x = -1
+		y = 1
+		available = { has_intelligence_agency = yes }
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "La Resistance"
+					}
+				}
+				add_ideas = EQS_strengthen_SMILE_idea
+			}
+			else = {
+				add_ideas = EQS_strengthen_SMILE_idea_lar
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_land_artillery_school
+		icon = GFX_goal_generic_army_artillery
+		cost = 4.3
+		prerequisite = { focus = EQS_computer_focus }
+		relative_position_id = EQS_computer_focus
+		x = 1
+		y = 1
+		completion_reward = {
+			add_ideas = EQS_artillery_school_idea1
+		}
+	}
+
+	focus = {
+		id = EQS_naval_artillery_school
+		icon = GFX_focus_generic_cryptologic_bomb
+		cost = 4.3
+		prerequisite = { focus = EQS_land_artillery_school }
+		relative_position_id = EQS_land_artillery_school
+		x = 1
+		y = 1
+		completion_reward = {
+			swap_ideas = {
+				add_idea = EQS_artillery_school_idea2
+				remove_idea = EQS_artillery_school_idea1
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_secret_plan
+		icon = GFX_goal_supremacy_of_will
+		cost = 1.5
+		prerequisite = { focus = EQS_computer_focus }
+		relative_position_id = EQS_computer_focus
+		x = 0
+		y = 2
+		completion_reward = {
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = EQS_fluttershy
+			custom_effect_tooltip = available_theorist
+			show_ideas_tooltip = EQS_flakesnow		
+		}
+	}
+
+	focus = {
+		id = EQS_miracle_weapon
+		icon = GFX_focus_wonderweapons
+		cost = 4.3
+		prerequisite = { focus = EQS_secret_plan }
+		relative_position_id = EQS_secret_plan
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_miracle_weapon
+				bonus = 3
+				ahead_reduction = 2
+				uses = 1
+				category = nuclear
+			} 	
+		}
+	}
+
+	focus = {
+		id = EQS_sword_of_harmony
+		icon = GFX_goal_magical_nukes
+		cost = 5.8
+		prerequisite = { focus = EQS_miracle_weapon }
+		relative_position_id = EQS_miracle_weapon
+		x = 0
+		y = 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = EQS_sword_of_harmony
+				bonus = 1
+				uses = 1
+				category = nuclear
+			} 	
+			add_tech_bonus = {
+				name = EQS_sword_of_harmony
+				bonus = 1
+				uses = 1
+				category = rocketry
+			} 
+		}
+	}
+
+	focus = {
+		id = EQS_changeling_issue
+		cost = 4.3
+		icon = GFX_goal_generic_changeling
+		prerequisite = { focus = EQS_begin_military_reform }
+		relative_position_id = EQS_begin_military_reform
+		x = -8
+		y = 1
+				available = {
+			CHN = { 
+				exists = yes 
+				has_added_tension_amount > 15 
+				has_government = hegemonism
+				is_subject = no 
+			}
+			NOT = { has_war_with = CHN } 
+			172 = { is_fully_controlled_by = ROOT }
+			136 = { is_fully_controlled_by = ROOT }
+		}
+		bypass = {
+			OR = {
+				has_war_with = CHN
+				CHN = {
+					OR = {
+						exists = no
+						NOT = { has_government = hegemonism }
+						is_subject = yes
+					}
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+			add_war_support = 0.025
+			add_political_power = 50
+			172 = {
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
+				}
+			}
+			136 = {
+				add_building_construction = {
+					type = air_base
+					level = 3
+					instant_build = yes
+				}
+			}		
+		}
+	}
+
+	focus = {
+		id = EQS_changeling_defense
+		icon = GFX_goal_generic_defence
+		cost = 4.3
+		prerequisite = { focus = EQS_changeling_issue }
+		relative_position_id = EQS_changeling_issue
+		x = 0
+		y = 1
+		available = {
+			CHN = { 
+				exists = yes 
+				has_added_tension_amount > 5
+				has_government = hegemonism
+				is_subject = no 
+			}
+			NOT = { has_war_with = CHN } 
+			172 = { is_fully_controlled_by = ROOT }
+			136 = { is_fully_controlled_by = ROOT }
+			14 = { is_fully_controlled_by = ROOT }
+		}
+		bypass = {
+			OR = {
+				has_war_with = CHN
+				CHN = {
+					OR = {
+						exists = no
+						NOT = { has_government = hegemonism }
+						is_subject = yes
+					}
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+		add_war_support = 0.025
+		14 = {
+			add_building_construction = {
+				type = bunker
+				province = 717
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 3686
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		172 = {
+			add_building_construction = {
+				type = bunker
+				province = 705
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 9718
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 9663
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+			}
+		}
+
+		136 = {
+			add_building_construction = {
+				type = bunker
+				province = 748
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 11696
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 9694
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6736
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6721
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+			}
+		}
+		137 = {
+			add_building_construction = {
+				type = bunker
+				province = 3667
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 666
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 6689
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 7661
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 772
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = bunker
+				province = 654
+				level = 2
+				instant_build = yes
+			}
+			add_building_construction = {
+				type = anti_air_building
+				level = 2
+				instant_build = yes
+			}
+		}	
+	}
+	}
+
+	focus = {
+		id = EQS_begin_mobilization
+		icon = GFX_goal_generic_military_sphere
+		cost = 5.8
+		prerequisite = { focus = EQS_changeling_defense }
+		relative_position_id = EQS_changeling_defense
+		x = 0
+		y = 1
+		available = {
+			CHN = { 
+				exists = yes 
+				has_added_tension_amount > 10
+				has_government = hegemonism
+				is_subject = no 
+			}
+			NOT = { has_war_with = CHN }
+		}
+		bypass = {
+			OR = {
+				has_war_with = CHN
+				CHN = {
+					OR = {
+						exists = no
+						NOT = { has_government = hegemonism }
+						is_subject = yes
+					}
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = {	
+					has_war_support < 0.4
+				}
+				add_war_support = 0.1
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_idea = partial_economic_mobilisation
+						has_idea = war_economy
+						has_idea = tot_economic_mobilisation
+					}
+				}
+				add_political_power = 150
+			}
+			else = {
+				add_ideas = partial_economic_mobilisation
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_saint_antenna
+		icon = GFX_focus_generic_strike_at_democracy1
+		cost = 4.3
+		prerequisite = { focus = EQS_begin_mobilization }
+		relative_position_id = EQS_begin_mobilization
+		x = 0
+		y = 1
+		available = {
+			CHN = { 
+				exists = yes 
+				has_added_tension_amount > 10
+				has_government = hegemonism
+				is_subject = no 
+			}
+			NOT = { has_war_with = CHN } 
+		}
+		bypass = {
+			OR = {
+				has_war_with = CHN
+				CHN = {
+					OR = {
+						exists = no
+						NOT = { has_government = hegemonism }
+						is_subject = yes
+					}
+				}
+			}
+		}
+		completion_reward = {
+			add_ideas = EQS_saint_antenna_idea
+			custom_effect_tooltip = EQS_saint_antenna_tt
+		}
+	}
+
+	focus = {
+		id = EQS_attack_CHN
+		icon = GFX_goal_generic_major_war
+		cost = 1.5
+		prerequisite = { focus = EQS_saint_antenna }
+		relative_position_id = EQS_saint_antenna
+		x = -1
+		y = 1
+		available = {
+			CHN = { 
+				exists = yes 
+				has_added_tension_amount > 20
+				has_government = hegemonism
+				is_subject = no 
+				has_civil_war = no
+			}
+			NOT = { has_war_with = CHN } 
+			has_war_support > 0.5
+		}
+		bypass = {
+			OR = {
+				has_war_with = CHN
+				CHN = {
+					OR = {
+						exists = no
+						NOT = { has_government = hegemonism }
+						is_subject = yes
+					}
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+			create_wargoal = {
+				type = puppet_wargoal_focus
+				target = CHN
+			}	
+		}
+	}
+
+	focus = {
+		id = EQS_support_thorax
+		icon = GFX_goal_generic_military_deal_pony
+		cost = 1.5
+		prerequisite = { focus = EQS_saint_antenna }
+		relative_position_id = EQS_saint_antenna
+		x = 1
+		y = 1
+		available = {
+			CHN = { 
+				exists = yes 
+				has_added_tension_amount > 20
+				has_government = hegemonism
+				is_subject = no 
+				has_civil_war = yes
+			}
+			NOT = { has_war_with = CHN } 
+			has_war_support > 0.5
+		}
+		bypass = {
+			OR = {
+				has_war_with = CHN
+				CHN = {
+					OR = {
+						exists = no
+						NOT = { has_government = hegemonism }
+						is_subject = yes
+					}
+				}
+			}
+		}
+		cancel_if_invalid = yes
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = EQS_contact_yak
+		icon = GFX_goal_pinkie_envoy
+		cost = 1.5
+		prerequisite = { focus = EQS_changeling_issue }
+		relative_position_id = EQS_changeling_issue
+		x = -2
+		y = 1
+		available = {
+			NOT = { has_war_with = YAK }
+			YAK = { exists = yes is_subject = no }
+			is_subject = no
+		}
+		bypass = {
+			YAK = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}		
+		}
+		completion_reward = {
+			YAK = {
+				add_opinion_modifier = { target = EQS modifier = EQS_contact_yak_opinion }
+				add_stability = 0.05
+				add_stability = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_yak_embassy
+		icon = GFX_goal_embassy_yakistan
+		cost = 4.3
+		prerequisite = { focus = EQS_contact_yak }
+		relative_position_id = EQS_contact_yak
+		x = 0
+		y = 1
+		available = {
+			NOT = { has_war_with = YAK }
+			YAK = { exists = yes  is_subject = no }
+			is_subject = no
+		}
+		bypass = {
+			YAK = {
+				OR = {
+					exists = no
+					is_subject = yes
+				}
+			}		
+		}
+		completion_reward = {
+			YAK = {
+				add_opinion_modifier = { target = EQS modifier = EQS_yak_embassy_opinion }
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_invite_yak
+		icon = GFX_focus_generic_home_defense
+		cost = 1.5
+		prerequisite = { focus = EQS_yak_embassy }
+		relative_position_id = EQS_yak_embassy
+		x = 0
+		y = 1
+		available = {
+			NOT = { has_war_with = YAK }
+			YAK = { 
+				exists = yes
+				is_in_faction = no
+			}
+		}
+		bypass = {
+			YAK = {
+				OR = {
+					exists = no
+					is_in_faction_with = EQS
+				}
+			}		
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = EQS_shelter_velvet
+		icon = GFX_goal_ole_velvet_portrait
+		cost = 2.9
+		prerequisite = { focus = EQS_changeling_issue }
+		relative_position_id = EQS_changeling_issue
+		x = 3
+		y = 1
+		available = {
+			NOT = { has_war_with = OLE }
+			OLE = { 
+				exists = yes 
+				NOT = { has_country_leader = { ruling_only = yes name = "Queen Velvet" } }
+			}
+			is_subject = no
+		}
+		bypass = { 
+			OLE = {
+				OR = {
+					exists = no
+					has_country_leader = { ruling_only = yes name = "Queen Velvet" }
+					is_subject = yes
+				}
+			}
+		}
+		completion_reward = {
+			if = {
+				limit = { has_government = social_harmonism }
+				OLE = { 
+					add_timed_idea = {
+						days = 720
+						idea = under_EQS_influence1
+					}
+				}
+			}
+			else_if = {
+				limit = { has_government = authoritarian_harmonism }
+				OLE = { 
+					add_timed_idea = {
+						days = 720
+						idea = under_EQS_influence2
+					}
+				}
+			}
+			else = {
+				OLE = { 
+					add_timed_idea = {
+						days = 720
+						idea = under_EQS_influence3
+					}
+				}
+			}
+
+		}
+	}
+
+	focus = {
+		id = EQS_legitimate_OLE_monarchy
+		icon = GFX_goal_crown_and_swords
+		cost = 4.3
+		prerequisite = { focus = EQS_shelter_velvet }
+		relative_position_id = EQS_shelter_velvet
+		x = 0
+		y = 1
+		available = {
+			NOT = { has_war_with = OLE }
+			OLE = { 
+				exists = yes 
+				NOT = { has_country_leader = { ruling_only = yes name = "Queen Velvet" } }
+			}
+			is_subject = no
+		}
+		bypass = { 
+			OLE = {
+				OR = {
+					exists = no
+					has_country_leader = { ruling_only = yes name = "Queen Velvet" }
+					is_subject = yes
+				}
+			}
+		}
+		completion_reward = {
+			OLE = {
+				add_stability = -0.1
+				add_war_support = -0.1
+			}
+			if = {
+				limit = { has_government = social_harmonism }
+				OLE = { add_popularity = { ideology = social_harmonism popularity = 0.1 } }
+			}
+			else_if = {
+				limit = { has_government = authoritarian_harmonism }
+				OLE = { add_popularity = { ideology = authoritarian_harmonism popularity = 0.1 } }
+			}
+			else = {
+				Limit = { has_government = liberal_harmonism }
+				OLE = { add_popularity = { ideology = liberal_harmonism popularity = 0.1 } }
+			}
+
+		}
+	}
+
+	focus = {
+		id = EQS_indirect_support_velvet
+		icon = GFX_focus_secret_rearmament
+		cost = 1.5
+		prerequisite = { focus = EQS_legitimate_OLE_monarchy }
+		mutually_exclusive = { focus = EQS_direct_support_velvet }
+		relative_position_id = EQS_legitimate_OLE_monarchy
+		x = 1
+		y = 1
+		available = {
+			NOT = { has_war_with = OLE }
+			OLE = { 
+				exists = yes 
+				has_civil_war = yes
+			}
+			has_equipment = { infantry_equipment > 1999 }
+		}
+		bypass = { 
+			OLE = {
+				OR = {
+					exists = no
+					has_country_leader = { ruling_only = yes name = "Queen Velvet" }
+					is_subject = yes
+				}
+			}
+		}
+		completion_reward = {
+			add_timed_idea = {
+				idea = EQS_OLE_civil_war_volunteer
+				days = 120
+			}
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 2000
+				target = OLE
+			}	
+		}
+	}
+
+	focus = {
+		id = EQS_direct_support_velvet
+		icon = GFX_goal_kill_johan
+		cost = 1.5
+		prerequisite = { focus = EQS_legitimate_OLE_monarchy }
+		mutually_exclusive = { focus = EQS_indirect_support_velvet }
+		relative_position_id = EQS_legitimate_OLE_monarchy
+		x = -1
+		y = 1
+		available = {
+			NOT = { has_war_with = OLE }
+			OLE = { 
+				exists = yes 
+				has_civil_war = yes
+			}
+		}
+		bypass = { 
+			OLE = {
+				OR = {
+					exists = no
+					has_country_leader = { ruling_only = yes name = "Queen Velvet" }
+					is_subject = yes
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = EQS_invite_OLE
+		icon = GFX_goal_ole_velvet
+		cost = 1.5
+		prerequisite = { focus = EQS_indirect_support_velvet }
+		relative_position_id = EQS_indirect_support_velvet
+		x = 0
+		y = 1
+		available = {
+			OLE = { 
+				exists = yes 
+				has_civil_war = no
+				has_country_leader = { ruling_only = yes name = "Queen Velvet" }
+				is_in_faction = no
+			}
+		}
+		bypass = {
+			OLE = {
+				OR = {
+					exists = no
+					is_subject = yes
+					is_in_faction_with = EQS
+				}
+			}
+		}
+		completion_reward = {
+			
+		}
+	}
+
+	focus = {
+		id = EQS_begin_modernization
+		icon = GFX_goal_industrial_pony
+		cost = 2.9
+		x = 40
+		y = 0
+		completion_reward = {
+           
+		}
+	}
+
+	focus = {
+		id = EQS_develop_the_south
+		icon = GFX_goal_OTT_Land_Reform
+		cost = 4.3
+		prerequisite = { focus = EQS_begin_modernization }
+		relative_position_id = EQS_begin_modernization
+		x = -10
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add10_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 10
+            }
+			add_tech_bonus = {
+				name = EQS_develop_the_south
+				bonus = 1.0
+				uses = 1
+				category = excavation_tech
+			}
+		    add_tech_bonus = {
+				name = EQS_develop_the_south
+				bonus = 1.0
+				uses = 1
+				category = construction_tech
+	   	   	}
+			
+           
+		}
+	}
+
+	focus = {
+		id = EQS_deepsouth_railroad
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 4.3
+		prerequisite = { focus = EQS_develop_the_south }
+		relative_position_id = EQS_develop_the_south
+		x = -2
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+           
+		}
+	}
+
+	focus = {
+		id = EQS_deepsouth_minerals
+		icon = GFX_goal_generic_construction2
+		cost = 4.3
+		prerequisite = { focus = EQS_deepsouth_railroad }
+		relative_position_id = EQS_deepsouth_railroad
+		x = 0
+		y = 1
+		available = {
+			19 = { is_owned_and_controlled_by = ROOT }
+			15 = { is_owned_and_controlled_by = ROOT }
+			35 = { is_owned_and_controlled_by = ROOT }
+			23 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+			add_resource = {
+				type = aluminium
+				amount = 8
+				state = 19
+			}
+			add_resource = {
+				type = chromium
+				amount = 8
+				state = 15
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 15
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 35
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 23
+			}
+           
+		}
+	}
+
+	focus = {
+		id = EQS_deepsouth_industry
+		icon = GFX_goal_improve_industry
+		cost = 4.3
+		prerequisite = { focus = EQS_deepsouth_minerals }
+		relative_position_id = EQS_deepsouth_minerals
+		x = 0
+		y = 1
+		available = {
+			19 = { is_owned_and_controlled_by = ROOT }
+			15 = { is_owned_and_controlled_by = ROOT }
+			22 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add30_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 30
+            }
+			19 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			15 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			22 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+           
+		}
+	}
+
+	focus = {
+		id = EQS_jungle_railroad
+		icon = GFX_goal_KTG_Jungle_Railroad
+		cost = 4.3
+		prerequisite = { focus = EQS_develop_the_south }
+		relative_position_id = EQS_develop_the_south
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+		}
+	}
+
+	focus = {
+		id = EQS_jungle_industry
+		icon = GFX_IRE_medium_industry
+		cost = 4.3
+		prerequisite = { focus = EQS_jungle_railroad }
+		relative_position_id = EQS_jungle_railroad
+		x = 0
+		y = 1
+		available = {
+			OR = {
+				30 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 30
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				36 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 36
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				350 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 350
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				352 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 352
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				16 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 16
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				24 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 24
+					is_subject_of = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add10_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 10
+            }
+			30 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			36 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			350 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			352 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			16 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			24 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}         
+		}
+	}
+
+	focus = {
+		id = EQS_jungle_rubber
+		icon = GFX_goal_KTG_Rubber_Farming
+		cost = 4.3
+		prerequisite = { focus = EQS_jungle_industry }
+		relative_position_id = EQS_jungle_industry
+		x = 0
+		y = 1
+		available = {
+			OR = {
+				36 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 36
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				350 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 350
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				352 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 352
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				24 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 16
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				25 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 24
+					is_subject_of = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add10_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 10
+            }
+			add_resource = {
+				type = rubber
+				amount = 8
+				state = 36
+			}
+			add_resource = {
+				type = rubber
+				amount = 8
+				state = 350
+			}
+			add_resource = {
+				type = rubber
+				amount = 8
+				state = 352
+			}
+			add_resource = {
+				type = rubber
+				amount = 8
+				state = 24
+			}
+			add_resource = {
+				type = rubber
+				amount = 8
+				state = 25
+			}      
+		}
+	}
+
+	focus = {
+		id = EQS_influence_subjects
+		icon = GFX_goal_improve_relations_pony_pony
+		cost = 4.3
+		prerequisite = { focus = EQS_jungle_rubber }
+		prerequisite = { focus = EQS_MGY_oil }
+		prerequisite = { focus = EQS_desert_oil }
+		relative_position_id = EQS_jungle_rubber
+		x = 2
+		y = 1
+		completion_reward = {
+           
+		}
+	}
+
+	focus = {
+		id = EQS_rid_of_poverty
+		icon = GFX_focus_usa_guarantee_the_american_dream
+		cost = 4.3
+		prerequisite = { focus = EQS_deepsouth_industry }
+		prerequisite = { focus = EQS_influence_subjects }
+		relative_position_id = EQS_deepsouth_industry
+		x = 0
+		y = 2
+		completion_reward = {
+			swap_ideas = {
+				add_idea = no_poverty
+				remove_idea = poverty5
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_canterlot_industry
+		icon = GFX_goal_factory_complex
+		cost = 4.3
+		prerequisite = { focus = EQS_begin_modernization }
+		relative_position_id = EQS_begin_modernization
+		x = 0
+		y = 1
+		available = {
+			3 = { is_owned_and_controlled_by = ROOT }
+			2 = { is_owned_and_controlled_by = ROOT }
+			68 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+			3 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				set_state_category = metropolis
+			}
+			2 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			68 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+         
+		}
+	}
+
+	focus = {
+		id = EQS_southwestern_railroad
+		icon = GFX_goal_GRI_northrail
+		cost = 4.3
+		prerequisite = { focus = EQS_canterlot_industry }
+		relative_position_id = EQS_canterlot_industry
+		x = -3
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+		}
+	}
+
+	focus = {
+		id = EQS_southeastern_railroad
+		icon = GFX_goal_GRI_shitforest
+		cost = 4.3
+		prerequisite = { focus = EQS_canterlot_industry }
+		relative_position_id = EQS_canterlot_industry
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+		}
+	}
+
+	focus = {
+		id = EQS_oil_company
+		icon = GFX_idea_SCS_general_petroleum
+		cost = 4.3
+		prerequisite = { focus = EQS_develop_the_south }
+		relative_position_id = EQS_develop_the_south
+		x = 4
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = EQS_combined_petroleum
+			add_political_power = 60
+		}
+	}
+
+	focus = {
+		id = EQS_desert_railroad
+		icon = GFX_goal_rct_train
+		cost = 2.9
+		prerequisite = { focus = EQS_oil_company }
+		relative_position_id = EQS_oil_company
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add10_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 10
+            }
+		}
+	}
+
+	focus = {
+		id = EQS_desert_oil
+		icon = GFX_goal_trade_oil_pony_pony
+		cost = 2.9
+		prerequisite = { focus = EQS_desert_railroad }
+		relative_position_id = EQS_desert_railroad
+		x = 0
+		y = 1
+		available = {	
+			OR = {
+				89 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 89
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				21 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 21
+					is_subject_of = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add10_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 10
+            }
+			add_resource = {
+				type = oil
+				amount = 12
+				state = 89
+			}
+			add_resource = {
+				type = oil
+				amount = 8
+				state = 21
+			}
+		   
+		}
+	}
+
+	focus = {
+		id = EQS_MGY_railroad
+		icon = GFX_goal_rct_train
+		cost = 4.3
+		prerequisite = { focus = EQS_oil_company }
+		relative_position_id = EQS_oil_company
+		x = -2
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+		   
+		}
+	}
+
+	focus = {
+		id = EQS_MGY_oil
+		icon = GFX_goal_oil
+		cost = 2.9
+		prerequisite = { focus = EQS_MGY_railroad }
+		relative_position_id = EQS_MGY_railroad
+		x = 0
+		y = 1
+		available = {	
+			OR = {
+				49 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 49
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				51 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 51
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				345 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 345
+					is_subject_of = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add10_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 10
+            }
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 49
+			}
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 51
+			}
+			add_resource = {
+				type = oil
+				amount = 6
+				state = 345
+			}
+		   
+		}
+	}
+
+	focus = {
+		id = EQS_southwestern_industry
+		icon = GFX_IRE_heavy_industry
+		cost = 4.3
+		prerequisite = { focus = EQS_oil_company }
+		prerequisite = { focus = EQS_southwestern_railroad }
+		relative_position_id = EQS_oil_company
+		x = 2
+		y = 1
+		available = {
+			66 = { is_owned_and_controlled_by = ROOT }
+			154 = { is_owned_and_controlled_by = ROOT }
+			38 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add30_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 30
+            }
+			66 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			154 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			38 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		   
+		}
+	}
+
+	focus = {
+		id = EQS_southwestern_oil
+		icon = GFX_goal_oil_derrick
+		cost = 4.3
+		prerequisite = { focus = EQS_southwestern_industry }
+		relative_position_id = EQS_southwestern_industry
+		x = 0
+		y = 1
+		available = {
+			38 = { is_owned_and_controlled_by = ROOT }
+			66 = { is_owned_and_controlled_by = ROOT }
+			100 = { is_owned_and_controlled_by = ROOT }
+			94 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+			38 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery 
+					level = 2
+					instant_build = yes
+				}
+			}
+			66 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery 
+					level = 2
+					instant_build = yes
+				}
+			}
+			 add_tech_bonus = {
+				name = EQS_southwestern_oil
+				bonus = 1.0
+				uses = 1
+				category = synth_resources
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_southwestern_farming
+		icon = GFX_goal_GRI_mechfarming
+		cost = 4.3
+		prerequisite = { focus = EQS_southwestern_oil }
+		relative_position_id = EQS_southwestern_oil
+		available = {
+			200 = { is_owned_and_controlled_by = ROOT }
+			41 = { is_owned_and_controlled_by = ROOT }
+			95 = { is_owned_and_controlled_by = ROOT }
+			114 = { is_owned_and_controlled_by = ROOT }
+			119 = { is_owned_and_controlled_by = ROOT }
+			154 = { is_owned_and_controlled_by = ROOT }
+			118 = { is_owned_and_controlled_by = ROOT }
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+			200 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			41 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			95 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			114 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			119 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			154 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			118 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_southern_railroad
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 4.3
+		prerequisite = { focus = EQS_southwestern_railroad }
+		prerequisite = { focus = EQS_southeastern_railroad}
+		relative_position_id = EQS_southwestern_railroad
+		x = 1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+		   
+		}
+	}
+
+	focus = {
+		id = EQS_southeastern_industry
+		icon = GFX_goal_generic_consumer_goods
+		cost = 4.3
+		prerequisite = { focus = EQS_southeastern_railroad }
+		relative_position_id = EQS_southeastern_railroad
+		x = 0
+		y = 1
+		available = {
+			65 = { is_owned_and_controlled_by = ROOT }
+			107 = { is_owned_and_controlled_by = ROOT }
+			109 = { is_owned_and_controlled_by = ROOT }
+			106 = { is_owned_and_controlled_by = ROOT }
+			116 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add30_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 30
+            }
+			65 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			107 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			109 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			106 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			116 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 106
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 116
+			}
+			
+		}
+	}
+
+	focus = {
+		id = EQS_southern_industry
+		icon = GFX_goal_generic_construct_civ_factory
+		cost = 5.8
+		prerequisite = { focus = EQS_southeastern_industry }
+		prerequisite = { focus = EQS_southern_railroad }
+		relative_position_id = EQS_southeastern_industry
+		x = -1
+		y = 1
+		available = {
+			111 = { is_owned_and_controlled_by = ROOT }
+			101 = { is_owned_and_controlled_by = ROOT }
+			97 = { is_owned_and_controlled_by = ROOT }
+			123 = { is_owned_and_controlled_by = ROOT }
+			121 = { is_owned_and_controlled_by = ROOT }
+			117 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add30_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 30
+            }
+			111 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			107 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			97 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			123 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			121 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			117 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 101
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 97
+			}
+		   
+		}
+	}
+
+	focus = {
+		id = EQS_southern_urbanization
+		icon = GFX_goal_rct_expand_the_city
+		cost = 5.8
+		prerequisite = { focus = EQS_southern_industry }
+		relative_position_id = EQS_southern_industry
+		x = 0
+		y = 1
+		available = {
+			70 = { is_owned_and_controlled_by = ROOT }
+			179 = { is_owned_and_controlled_by = ROOT }
+			103 = { is_owned_and_controlled_by = ROOT }
+			104 = { is_owned_and_controlled_by = ROOT }
+			105 = { is_owned_and_controlled_by = ROOT }
+			40 = { is_owned_and_controlled_by = ROOT }
+			29 = { is_owned_and_controlled_by = ROOT }
+			95 = { is_owned_and_controlled_by = ROOT }
+			114 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add50_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 50
+            }
+			68 = { set_state_category = city }	
+			2 = { set_state_category = city }	
+			101 = { set_state_category = city }	
+			111 = { set_state_category = large_town }	
+			116 = { set_state_category = large_town }	
+			28 = { set_state_category = city }	
+			29 = { set_state_category = city }	
+			95 = { set_state_category = large_town }	
+			114 = { set_state_category = large_town }	
+			custom_effect_tooltip = EQS_southern_urbanization_tt
+			hidden = {
+				set_victory_points = {
+					province = 11672
+					value = 20
+				}
+				set_victory_points = {
+					province = 9741
+					value = 20
+				}
+				set_victory_points = {
+					province = 6661
+					value = 10
+				}
+				set_victory_points = {
+					province = 9388
+					value = 5
+				}
+				set_victory_points = {
+					province = 11689
+					value = 5
+				}
+				set_victory_points = {
+					province = 402
+					value = 5
+				}
+				set_victory_points = {
+					province = 9710
+					value = 5
+				}
+				set_victory_points = {
+					province = 9867
+					value = 10
+				}
+				set_victory_points = {
+					province = 10893
+					value = 10
+				}
+				set_victory_points = {
+					province = 11838
+					value = 20
+				}
+				set_victory_points = {
+					province = 9470
+					value = 10
+				}
+				set_victory_points = {
+					province = 7758
+					value = 5
+				}
+				set_victory_points = {
+					province = 9347
+					value = 10
+				}
+			}
+		}	
+	}
+
+	focus = {
+		id = EQS_southern_sphere
+		icon = GFX_goal_GRI_industryzone
+		cost = 7.2
+		prerequisite = { focus = EQS_southern_urbanization }
+		prerequisite = { focus = EQS_southwestern_farming }
+		relative_position_id = EQS_southern_urbanization
+		x = -2
+		y = 1
+		completion_reward = {
+		   
+		}
+	}
+
+	focus = {
+		id = EQS_northern_railroad
+		icon = GFX_goal_crystal_empire
+		cost = 4.3
+		prerequisite = { focus = EQS_canterlot_industry }
+		relative_position_id = EQS_canterlot_industry
+		x = 2
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+		   
+		}
+	}
+
+	focus = {
+		id = EQS_northern_industry
+		icon = GFX_goal_generic_construct_mil_factory
+		cost = 5.8
+		prerequisite = { focus = EQS_northern_railroad }
+		relative_position_id = EQS_northern_railroad
+		x = 0
+		y = 1
+		available = {
+			70 = { is_owned_and_controlled_by = ROOT }
+			179 = { is_owned_and_controlled_by = ROOT }
+			103 = { is_owned_and_controlled_by = ROOT }
+			105 = { is_owned_and_controlled_by = ROOT }
+			181 = { is_owned_and_controlled_by = ROOT }
+			129 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add30_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 30
+            }
+			70 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			179 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			103 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			105 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			181 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			129 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = aluminium
+				amount = 8
+				state = 70
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 179
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 129
+			}
+		   
+			
+		}
+	}
+
+	focus = {
+		id = EQS_CRY_industry
+		cost = 5.8
+		icon = GFX_goal_cry_factory_cel
+		prerequisite = { focus = EQS_northern_industry }
+		relative_position_id = EQS_northern_industry
+		x = -1
+		y = 1
+		available = {
+			OR = {
+				344 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 344
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				53 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 53
+					is_subject_of = ROOT
+				}
+			}
+			OR = {
+				334 = { is_owned_and_controlled_by = ROOT }
+				any_country = {
+					has_full_control_of_state = 334
+					is_subject_of = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add30_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 30
+            }
+			344 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			53 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			334 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = aluminium
+				amount = 8
+				state = 344
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 53
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 334
+			}
+			CRY = {
+				add_political_power = 100
+			}
+	   
+		}
+	}
+
+	focus = {
+		id = EQS_CRY_research
+		icon = GFX_goal_cryacademy
+		cost = 4.3
+		prerequisite = { focus = EQS_CRY_industry }
+		relative_position_id = EQS_CRY_industry
+		x = 0
+		y = 1
+		available = {
+			CRY = {
+				OR = { is_subject_of = ROOT is_in_faction_with = ROOT }
+			} 
+		}
+		bypass = {
+			CRY = {
+				NOT = {
+					OR = { is_subject_of = ROOT is_in_faction_with = ROOT }
+				}
+			} 
+		}
+		completion_reward = {
+			CRY = {
+				add_research_slot = 1
+				add_stability = 0.05
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_northern_urbanization
+		icon = GFX_goal_rct_expand_the_city
+		cost = 5.8
+		prerequisite = { focus = EQS_northern_industry }
+		relative_position_id = EQS_northern_industry
+		x = 1
+		y = 1
+		available = {
+			70 = { is_owned_and_controlled_by = ROOT }
+			179 = { is_owned_and_controlled_by = ROOT }
+			103 = { is_owned_and_controlled_by = ROOT }
+			104 = { is_owned_and_controlled_by = ROOT }
+			105 = { is_owned_and_controlled_by = ROOT }
+			40 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add50_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 50
+            }
+			70 = { set_state_category = large_city }	
+			179 = { set_state_category = city }	
+			103 = { set_state_category = city }	
+			104 = { set_state_category = city }	
+			105 = { set_state_category = city }	
+			40 = { set_state_category = city }		
+			custom_effect_tooltip = EQS_southern_urbanization_tt
+			hidden = {
+				set_victory_points = {
+					province = 3096
+					value = 5
+				}
+				set_victory_points = {
+					province = 3180
+					value = 5
+				}
+				set_victory_points = {
+					province = 105
+					value = 15
+				}
+				set_victory_points = {
+					province = 6023
+					value = 20
+				}
+				set_victory_points = {
+					province = 6042
+					value = 5
+				}
+				set_victory_points = {
+					province = 3380
+					value = 20
+				}
+				set_victory_points = {
+					province = 6598
+					value = 20
+				}
+			}
+		}	
+	}
+
+	focus = {
+		id = EQS_into_the_forest
+		icon = GFX_goal_generic_forestry
+		cost = 4.3
+		prerequisite = { focus = EQS_northern_urbanization }
+		relative_position_id = EQS_northern_urbanization
+		x = 0
+		y = 1
+		available = {
+			131 = { is_owned_and_controlled_by = ROOT }
+			54 = { is_owned_and_controlled_by = ROOT }
+			130 = { is_owned_and_controlled_by = ROOT }
+			61 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add30_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 30
+            }
+			131 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = chromium
+				amount = 8
+				state = 54
+			}
+			add_resource = {
+				type = chromium
+				amount = 8
+				state = 130
+			}
+			add_resource = {
+				type = tungsten
+				amount = 12
+				state = 61
+			}
+			
+		}
+	}
+
+	focus = {
+		id = EQS_northern_sphere
+		icon = GFX_goal_GRI_industryzone
+		cost = 7.2
+		prerequisite = { focus = EQS_into_the_forest }
+		prerequisite = { focus = EQS_university_reform }
+		prerequisite = { focus = EQS_CRY_research }
+		relative_position_id = EQS_into_the_forest
+		x = 0
+		y = 1
+		completion_reward = {
+		   
+		}
+	}
+
+	focus = {
+		id = EQS_industrial_revolution
+		icon = GFX_goal_generic_intelligence_exchange_pony
+		cost = 4.3
+		prerequisite = { focus = EQS_begin_modernization }
+		relative_position_id = EQS_begin_modernization
+		x = 10
+		y = 1
+		completion_reward = {
+            add_tech_bonus = {
+				name = EQS_industrial_revolution
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		    add_tech_bonus = {
+				name = EQS_industrial_revolution
+				bonus = 1.0
+				uses = 1
+				category = electronics
+	   	   	}
+		}
+	}
+
+	focus = {
+		id = EQS_MAN_company
+		icon = GFX_idea_manehattan
+		cost = 4.3
+		prerequisite = { focus = EQS_industrial_revolution }
+		relative_position_id = EQS_industrial_revolution
+		x = -1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add50_industrial_points	
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = EQS_manehattan_electronics
+			add_tech_bonus = {
+				name = EQS_MAN_company
+				bonus = 1.0
+				uses = 1
+				category = electronics
+			}	   
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 50
+            }
+		}
+	}
+
+	focus = {
+		id = EQS_STG_company
+		icon = GFX_idea_stalliongard_factory
+		cost = 4.3
+		prerequisite = { focus = EQS_industrial_revolution }
+		relative_position_id = EQS_industrial_revolution
+		x = 1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add50_industrial_points	   
+			custom_effect_tooltip = available_industrial_concern
+			show_ideas_tooltip = EQS_stalliongrad_factory
+            add_tech_bonus = {
+				name = EQS_STG_company
+				bonus = 1.0
+				uses = 1
+				category = industry
+		    }
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 50
+            }			
+		}
+	}
+
+	focus = {
+		id = EQS_new_steel
+		icon = GFX_focus_generic_steel
+		cost = 5.8
+		prerequisite = { focus = EQS_MAN_company }
+		prerequisite = { focus = EQS_STG_company }
+		relative_position_id = EQS_MAN_company
+		x = -1
+		y = 1
+		available = {
+			525 = { is_owned_and_controlled_by = ROOT }
+			231 = { is_owned_and_controlled_by = ROOT }
+			66 = { is_owned_and_controlled_by = ROOT }
+			3 = { is_owned_and_controlled_by = ROOT }
+			13 = { is_owned_and_controlled_by = ROOT }
+			99 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add30_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 30
+            }
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 525
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 231
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 66
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 3
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 13
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 99
+			}			   
+		}
+	}
+
+	focus = {
+		id = EQS_northern_coastal_industry
+		icon = GFX_goal_generic_trade
+		cost = 7.2
+		prerequisite = { focus = EQS_MAN_company }
+		prerequisite = { focus = EQS_STG_company }
+		relative_position_id = EQS_MAN_company
+		x = 3
+		y = 1
+		available = {
+			525 = { is_owned_and_controlled_by = ROOT }
+			231 = { is_owned_and_controlled_by = ROOT }
+			67 = { is_owned_and_controlled_by = ROOT }
+			157 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add50_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 50
+            }
+			525 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard 
+					level = 1
+					instant_build = yes
+				}
+			}
+			231 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			67 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard 
+					level = 2
+					instant_build = yes
+				}
+			}
+			157 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = oil
+				amount = 8
+				state = 67
+			}
+			add_resource = {
+				type = chromium
+				amount = 8
+				state = 525
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 157
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_detrot_industry
+		icon = GFX_goal_eqs_fillydelphia_cars
+		cost = 5.8
+		prerequisite = { focus = EQS_MAN_company }
+		prerequisite = { focus = EQS_STG_company }
+		relative_position_id = EQS_MAN_company
+		x = 1
+		y = 1
+		available = {
+			349 = { is_owned_and_controlled_by = ROOT }
+			187 = { is_owned_and_controlled_by = ROOT }
+			188 = { is_owned_and_controlled_by = ROOT }
+			223 = { is_owned_and_controlled_by = ROOT }
+			226 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add30_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 30
+            }
+			349 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			187 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			188 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			223 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			226 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 187
+			}
+			add_resource = {
+				type = steel
+				amount = 12
+				state = 349
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_solar_river_industry
+		icon = GFX_goal_solar_military_factory
+		cost = 7.2
+		prerequisite = { focus = EQS_detrot_industry }
+		prerequisite = { focus = EQS_new_steel }
+		relative_position_id = EQS_detrot_industry
+		x = -1
+		y = 1
+		available = {
+			183 = { is_owned_and_controlled_by = ROOT }
+			182 = { is_owned_and_controlled_by = ROOT }
+			178 = { is_owned_and_controlled_by = ROOT }
+			40 = { is_owned_and_controlled_by = ROOT }
+			104 = { is_owned_and_controlled_by = ROOT }
+			74 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add50_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 50
+            }
+			183 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			182 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			178 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			40 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			104 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			74 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = aluminium
+				amount = 12
+				state = 74
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 182
+			}
+			add_resource = {
+				type = steel
+				amount = 8
+				state = 40
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_southern_coastal_industry
+		icon = GFX_goal_generic_positive_trade_relations
+		cost = 7.2
+		prerequisite = { focus = EQS_detrot_industry }
+		prerequisite = { focus = EQS_northern_coastal_industry }
+		relative_position_id = EQS_detrot_industry
+		x = 1
+		y = 1
+		available = {
+			28 = { is_owned_and_controlled_by = ROOT }
+			29 = { is_owned_and_controlled_by = ROOT }
+			164 = { is_owned_and_controlled_by = ROOT }
+			13 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add50_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 50
+            }
+			28 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			29 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			164 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			13 = {
+				add_extra_state_shared_building_slots = 6
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 3
+					instant_build = yes
+				}
+			}
+			add_resource = {
+				type = steel 
+				amount = 16
+				state = 13
+			}
+			add_resource = {
+				type = aluminium
+				amount = 8
+				state = 13
+			}
+			add_resource = {
+				type = steel 
+				amount = 6
+				state = 29
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_university_reform
+		icon = GFX_focus_research2
+		cost = 5.8
+		prerequisite = { focus = EQS_southern_coastal_industry }
+		prerequisite = { focus = EQS_solar_river_industry }
+		relative_position_id = EQS_southern_coastal_industry
+		x = -1
+		y = 1
+		completion_reward = {
+			add_research_slot = 1
+           
+		}
+	}
+
+	focus = {
+		id = EQS_the_five_customs
+		cost = 5.8
+		prerequisite = { focus = EQS_university_reform }
+		relative_position_id = EQS_university_reform
+		x = 0
+		y = 1
+		available = {
+			13 = { is_owned_and_controlled_by = ROOT }
+			12 = { is_owned_and_controlled_by = ROOT }
+			75 = { is_owned_and_controlled_by = ROOT }
+			525 = { is_owned_and_controlled_by = ROOT }
+			166 = { is_owned_and_controlled_by = ROOT }
+			NOT = { has_idea = EQS_forced_open }
+		}
+		completion_reward = {
+			
+           
+		}
+	}
+
+	focus = {
+		id = EQS_talltale_farming
+		icon = GFX_breadgrain
+		cost = 2.9
+		prerequisite = { focus = EQS_canterlot_industry }
+		relative_position_id = EQS_canterlot_industry
+		x = 5
+		y = 1
+		59 = { is_owned_and_controlled_by = ROOT}
+		177 = { is_owned_and_controlled_by = ROOT}
+		45 = { is_owned_and_controlled_by = ROOT}
+		134 = { is_owned_and_controlled_by = ROOT}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add10_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 10
+            }         
+			59 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 3
+					instant_build = yes
+				}
+			}
+			177 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			45 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			134 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_vanhoover_industry
+		icon = GFX_goal_generic_lau_industry
+		cost = 2.9
+		prerequisite = { focus = EQS_talltale_farming }
+		relative_position_id = EQS_talltale_farming
+		x = -1
+		y = 1
+		available = {
+			14 = { is_owned_and_controlled_by = ROOT }
+			162 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }
+			14 = {
+				add_extra_state_shared_building_slots = 4
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			162 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = EQS_arconage_industry
+		icon = GFX_focus_generic_combined_arms
+		cost = 2.9
+		prerequisite = { focus = EQS_talltale_farming }
+		relative_position_id = EQS_talltale_farming
+		x = 1
+		y = 1
+		available = {
+			136 = { is_owned_and_controlled_by = ROOT }
+			172 = { is_owned_and_controlled_by = ROOT }
+		}
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }     
+			136 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+			172 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}   
+		}
+	}
+
+	focus = {
+		id = EQS_western_coastal_railroad
+		icon = GFX_goal_rct_fancy_train
+		cost = 4.3
+		prerequisite = { focus = EQS_arconage_industry }
+		prerequisite = { focus = EQS_vanhoover_industry }
+		relative_position_id = EQS_arconage_industry
+		x = -1
+		y = 1
+		completion_reward = {
+			custom_effect_tooltip = EQS_add20_industrial_points
+			add_to_variable = {
+                var = EQS_industrial_points
+                value = 20
+            }         
+		}
+	}
+
+	focus = {
+		id = EQS_western_coastal_customs
+		icon = GFX_goal_generic_coastal_navy
+		cost = 4.3
+		prerequisite = { focus = EQS_western_coastal_railroad }
+		relative_position_id = EQS_western_coastal_railroad
+		x = 0
+		y = 1
+		completion_reward = {
+
+		}
+	}
+
+	focus = {
+		id = EQS_unicorn_academy
+		icon = GFX_goal_unicorn_academy
+		cost = 4.3
+		prerequisite = { focus = EQS_begin_modernization }
+		relative_position_id = EQS_begin_modernization
+		x = 14
+		y = 1
+		completion_reward = {
+           add_ideas = EQS_academy_idea1
+		}
+	}
+
+	focus = {
+		id = EQS_luna_academy
+		icon = GFX_goal_luna_nova
+		cost = 4.3
+		prerequisite = { focus = EQS_unicorn_academy }
+		relative_position_id = EQS_unicorn_academy
+		x = 0
+		y = 1
+		completion_reward = {
+           swap_ideas = {
+			   add_idea = EQS_academy_idea2
+			   remove_idea = EQS_academy_idea1
+		   }
+		}
+	}
+
+	focus = {
+		id = EQS_fund_public_schools
+		icon = GFX_goal_eqs_public_schools
+		cost = 5.8
+		prerequisite = { focus = EQS_luna_academy }
+		relative_position_id = EQS_luna_academy
+		x = 0
+		y = 1
+		completion_reward = {
+           swap_ideas = {
+			   add_idea = no_lack_of_scientists
+			   remove_idea = lack_of_scientists3
+		   }
+		}
+	}
+
+	focus = {
+		id = EQS_canterlot_research
+		icon = GFX_goal_eqs_canterlot
+		cost = 5.8
+		prerequisite = { focus = EQS_fund_public_schools }
+		relative_position_id = EQS_fund_public_schools
+		x = 0
+		y = 1
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = EQS_support_EEA
+		icon = GFX_goal_EEA
+		cost = 4.3
+		prerequisite = { focus = EQS_canterlot_research }
+		mutually_exclusive = { focus = EQS_restrict_EEA }
+		relative_position_id = EQS_canterlot_research
+		x = -1
+		y = 1
+		completion_reward = {
+			swap_ideas = {
+				add_idea = EQS_academy_idea4
+				remove_idea = EQS_academy_idea2
+			}
+			add_political_power = 80		   
+		}
+	}
+
+	focus = {
+		id = EQS_restrict_EEA
+		icon = GFX_goal_ease_EEA
+		cost = 4.3
+		prerequisite = { focus = EQS_canterlot_research }
+		mutually_exclusive = { focus = EQS_support_EEA }
+		relative_position_id = EQS_canterlot_research
+		x = 1
+		y = 1
+		completion_reward = {	
+			swap_ideas = {
+				add_idea = EQS_academy_idea3
+				remove_idea = EQS_academy_idea2
+			}
+			add_tech_bonus = {
+				name = EQS_support_EEA
+				bonus = 1.0
+				uses = 1
+				category = race_tech
+			}
+		}
+	}
+
+
+
+}
+

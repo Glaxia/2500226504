@@ -1,0 +1,24 @@
+
+state={
+	id=306
+	name="STATE_306"
+
+	history={
+		owner = CHN
+		add_core_of = CHN
+		buildings = {
+			arms_factory = 1
+			infrastructure = 4
+		}
+		victory_points = {
+			1527 2
+		}
+	}
+
+	provinces={
+		1527 7829 10339 10393 10618 
+	}
+	manpower=408939
+	buildings_max_level_factor=1.000
+	state_category=town
+}

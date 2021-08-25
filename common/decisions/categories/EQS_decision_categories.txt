@@ -1,0 +1,38 @@
+EQS_left_economy_category = {
+	icon = generic_economy
+
+	allowed = {
+		tag = EQS
+	}
+
+	visible = {
+		has_completed_focus = EQS_left_reform
+	}		
+}
+
+EQS_luna_economy_category = {
+	icon = generic_economy
+
+	allowed = {
+		tag = EQS
+	}
+
+	visible = {
+		has_completed_focus = EQS_national_bank
+	}		
+}
+
+EQS_begin_modernization_category = {
+	icon = generic_economy
+
+	allowed = {
+		tag = EQS
+	}
+
+	visible = {
+		has_completed_focus = EQS_begin_modernization
+	}		
+}
+
+
+

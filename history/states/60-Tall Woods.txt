@@ -1,0 +1,23 @@
+
+state={
+	id=60
+	name="STATE_60"
+	state_category = rural
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 3
+		}
+		victory_points = {
+			9209 3
+		}
+	}
+
+	provinces={
+		511 2049 6578 6945 7065 8077 9209 9308 9680 9976 10041 11215 11397 11917 12001
+	}
+	manpower=609447
+	buildings_max_level_factor=1.000
+}

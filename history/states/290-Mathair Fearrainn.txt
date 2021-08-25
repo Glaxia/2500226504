@@ -1,0 +1,18 @@
+
+state={
+	id=290
+	name="STATE_290"
+
+	history={
+		owner = YAK
+		add_core_of = YAK
+
+	}
+
+	provinces={
+		926 1424 1760 1769 1831 1849 3699 4029 4166 4422 4444 4834 4875 6737 7536 7543 7776 9657 9682 10719 11571 11589 12312 12368 12458 12489 12550 12588 12597 12687 12693 13159 13161 
+	}
+	manpower=18662
+	buildings_max_level_factor=1.000
+	state_category=wasteland
+}

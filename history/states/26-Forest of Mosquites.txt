@@ -1,0 +1,21 @@
+
+state={
+	id=26
+	name="STATE_26"
+
+	history={
+		owner = NMS
+		add_core_of = NMS
+		victory_points = {
+			13248 1 
+		}
+
+	}
+
+	provinces={
+		482 692 3705 6470 6487 6725 9416 9497 9652 9681 11402 11468 12505 13116 13248 
+	}
+	manpower=308868
+	buildings_max_level_factor=1.000
+	state_category=pastoral
+}

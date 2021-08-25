@@ -1,0 +1,52 @@
+
+state={
+	id=3
+	name="STATE_3"
+	resources={
+		aluminium = 12
+		steel = 12
+	}
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 6
+			air_base = 10
+			arms_factory = 2
+			industrial_complex = 4
+			anti_air_building = 5
+			179 = {
+				bunker = 1
+
+			}
+
+		}
+		victory_points = {
+			179 50 
+		}
+		victory_points = {
+			3959 15 
+		}
+		victory_points = {
+			9738 5 
+		}
+		victory_points = {
+			6975 2 
+		}
+		victory_points = {
+			3773 5 
+		}
+		victory_points = {
+			6784 3 
+		}
+
+	}
+
+	provinces={
+		156 179 911 1173 3764 3773 3928 3959 6609 6784 6788 6975 9138 9182 9218 9738 9909 11114 11535 13058 
+	}
+	manpower=3235000
+	buildings_max_level_factor=2.000
+	state_category=large_city
+}

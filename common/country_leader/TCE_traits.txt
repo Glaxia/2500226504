@@ -1,0 +1,95 @@
+leader_traits = {
+
+	element_of_loyalty = {
+		foreign_subversive_activites = -0.25
+		army_bonus_air_superiority_factor = 0.10
+		ai_will_do = {
+			factor = 500
+		}
+	}
+
+	element_of_magic = {
+		ai_will_do = {
+			factor = 7
+		}
+
+	}
+
+	friendly_colleague = {
+		random = no
+		political_advisor_cost_factor = -0.1
+		high_command_cost_factor = -0.1
+		air_chief_cost_factor = -0.1
+		army_chief_cost_factor = -0.1
+		navy_chief_cost_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	light_industrial_concern = {
+		random = no
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	
+	left_princess_of_ponies = {
+		random = no
+		political_power_gain = 1
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	holy_princess_of_ponies = {
+		random = no
+		stability_factor = 0.1
+		war_support_factor = 0.1
+		political_power_gain = 0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	liberal_princess_of_ponies = {
+		random = no
+		stability_factor = 0.2
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	sinnie_trait = {
+		random = no
+		production_factory_max_efficiency_factor = 0.05
+		production_factory_start_efficiency_factor = 0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	vasya_trait = {
+		random = no
+		consumer_goods_factor = -0.05
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	left_revolutionarist = {
+		random = no
+		subversive_activites_upkeep = -0.5
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

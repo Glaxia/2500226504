@@ -1,0 +1,30 @@
+
+state={
+	id=349
+	name="STATE_349"
+	resources={
+		steel=10.000
+	}
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+		victory_points = {
+			11877 20
+		}
+
+	}
+
+	provinces={
+		958 9840 10056 11819 11821 11849 11877 
+	}
+	manpower=1260300
+	buildings_max_level_factor=1.000
+	state_category=city
+}

@@ -1,0 +1,25 @@
+version="1.10.*"
+tags={
+	"Alternative History"
+}
+name="The Celestial Empire"
+replace_path="common/ai_equipment"
+replace_path="common/ai_focuses"
+replace_path="common/ai_peace"
+replace_path="common/ai_strategy"
+replace_path="common/ai_strategy_plans"
+replace_path="common/ai_templates"
+replace_path="common/autonomous_states"
+replace_path="common/ideas"
+replace_path="common/on_actions"
+replace_path="common/decisions"
+replace_path="common/decisions/categories"
+replace_path="common/national_focus"
+replace_path="history/countries"
+replace_path="events"
+dependencies={
+	"Equestria at War"
+	"EaWCN"
+}
+supported_version="1.10.*"
+remote_file_id="2500226504"

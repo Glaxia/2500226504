@@ -1,0 +1,32 @@
+
+state={
+	id=49
+	name="STATE_49"
+	state_category = large_town
+
+    resources = {
+        oil = 8
+		steel = 8
+	}
+
+
+	history={
+		owner = MGY
+		add_core_of = MGY
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 2
+			11583 = { naval_base = 1 }
+		}
+		victory_points = {
+			11583 15
+		}
+	}
+
+	provinces={
+		662 676 699 1643 6634 6913 6940 6998 7196 9602 9756 9874 11583 11586 11608 11887
+	}
+	manpower=1321700
+	buildings_max_level_factor=1.000
+}

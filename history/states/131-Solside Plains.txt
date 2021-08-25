@@ -1,0 +1,24 @@
+
+state={
+	id=131
+	name="STATE_131"
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		victory_points = { 11341 5 }
+		victory_points = { 9404 5 }
+		victory_points = { 3759 5 }
+	}
+
+	provinces={
+		277 535 577 1233 3267 3309 3556 3577 3759 4720 6340 6579 6589 9359 9404 10855 11216 11341 11355 11370 11498 13296 
+	}
+	manpower=1614270
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

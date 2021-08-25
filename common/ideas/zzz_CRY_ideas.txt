@@ -1,0 +1,71 @@
+ideas = {
+
+	country = {
+	
+	CRY_royal_family = {
+		picture = royal_family
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = no
+		}
+		removal_cost = -1
+		modifier = {
+			stability_factor = 0.03
+			war_support_factor = 0.03
+			political_power_gain = 0.05
+		}
+	}
+
+	CRY_royal_family2 = {
+		picture = royal_family
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = no
+		}
+		removal_cost = -1
+		modifier = {
+			stability_factor = 0.06
+			war_support_factor = 0.06
+			political_power_gain = 0.1
+		}
+	}
+
+	CRY_royal_family3 = {
+		picture = royal_family
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = no
+		}
+		removal_cost = -1
+		picture = royal_family
+		modifier = {
+			stability_factor = 0.1
+			war_support_factor = 0.1
+			political_power_gain = 0.15
+		}
+	}
+	
+	CRY_sombra_threat = {
+		picture = sombra_threat
+		allowed = {
+			always = yes
+		}
+		allowed_civil_war = {
+			always = no
+		}
+		removal_cost = -1
+		modifier = {
+			stability_factor = -0.15
+			war_support_factor = -0.15
+			political_power_gain = -0.25
+			}
+		}
+	}
+
+}

@@ -1,0 +1,28 @@
+
+state={
+	id=198
+	name="STATE_198"
+	
+	history={
+		owner = OLE
+		add_core_of = OLE
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			3602 = {
+				naval_base = 1
+			}
+		}
+		victory_points = {
+			3602 5 
+		}
+
+	}
+
+	provinces={
+		3602 3605 3710 3925 5455 6882 11738 13157 
+	}
+	manpower=642571
+	buildings_max_level_factor=1.000
+	state_category=town
+}

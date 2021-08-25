@@ -1,0 +1,30 @@
+
+state={
+	id=114
+	name="STATE_114"
+	resources={
+		tungsten = 8
+	}
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+		}
+		victory_points = {
+			11466 5 
+		}
+		victory_points = {
+			6511 5 
+		}
+	}
+
+	provinces={
+		374 3326 3368 3458 3532 3544 6218 6484 6511 6580 9347 9494 11331 11466 
+	}
+	manpower=1294200
+	buildings_max_level_factor=1.000
+	state_category=town
+}

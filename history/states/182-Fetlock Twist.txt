@@ -1,0 +1,32 @@
+
+state={
+	id=182
+	name="STATE_182"
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
+		}
+		victory_points = {
+			3844 10
+		}
+		victory_points = {
+			11135 5
+		}
+		victory_points = {
+			202 1
+		}
+
+	}
+
+	provinces={
+		111 202 976 1106 1109 1205 3105 3191 3844 6111 6173 9032 9135 9173 10163 11113 11135 11818 13286 13288 13291 
+	}
+	manpower=1758786
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

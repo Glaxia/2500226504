@@ -1,0 +1,87 @@
+﻿capital = 49
+
+set_research_slots = 2
+
+set_technology = {
+	pony_race = 1
+	infantry_weapons = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+}
+actually_fix_weapon_techs = yes 
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+generic_SS_template = yes
+
+set_cosmetic_tag = EQS_empire
+set_convoys = 20
+set_popularities = {
+	authoritarian_harmonism = 60
+	liberal_harmonism = 20
+	despotism = 20
+}
+set_politics = {
+
+	ruling_party = authoritarian_harmonism 
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+add_ideas = {
+	pre_industrial_society
+	lack_of_scientists1
+	better_science_base
+	poverty3
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 200
+	producer = MGY
+}
+
+add_equipment_to_stockpile = {
+	type = melee_equipment_1
+	amount = 800
+	producer = MGY
+}
+set_stability = 0.6
+set_war_support = 0.6
+
+create_country_leader = {
+	name = "Hatshepsut VI"
+	expire = "1965.1.1"
+	ideology = authoritarian_harmonism_sub
+	traits = {
+	}
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}

@@ -1,0 +1,35 @@
+
+state={
+	id=22
+	name="STATE_22"
+	resources={
+		steel=12.000
+	}
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		victory_points = {
+			11427 25 
+		}
+		victory_points = {
+			9454 3
+		}
+		victory_points = {
+			11479 5
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 2
+		}
+
+	}
+
+	provinces={
+		491 584 819 3703 9454 9558 9650 9679 11427 11479 11651 12512 
+	}
+	manpower=2443200
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

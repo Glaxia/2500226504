@@ -1,0 +1,33 @@
+
+state={
+	id=70
+	name="STATE_70"
+	resources={
+		steel = 12
+	}
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+		victory_points = {
+			9887 20 
+		}
+		victory_points = {
+			476 1 
+		}
+
+	}
+
+	provinces={
+		101 476 3526 4112 6055 6130 6550 6990 9178 9481 9799 9818 9887 11778 
+	}
+	manpower=2521800
+	buildings_max_level_factor=1.000
+	state_category=city
+}

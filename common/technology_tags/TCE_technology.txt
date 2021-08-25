@@ -1,0 +1,18 @@
+
+technology_categories = {
+	earthpony_tech
+	earthpony_digging_tech
+	earthpony_engineer_tech
+	earthpony_medicine_tech
+	earthpony_industry_tech
+	pegasi_tech
+	pegasi_troop_tech
+	pegasi_weather_tech
+	pegasi_recon_tech
+	unicorn_tech
+	unicorn_attack_tech
+	unicorn_defense_tech
+}
+
+
+

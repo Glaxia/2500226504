@@ -1,0 +1,31 @@
+
+state={
+	id=332
+	name="STATE_332"
+
+	history={
+		owner = STG
+		add_core_of = STG
+		victory_points = {
+			119 15
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+			119 = {
+				naval_base = 2
+			}
+
+		}
+
+	}
+
+	provinces={
+		119 196 3112 3186 6133 9133 9310 11192
+	}
+	manpower=1563900
+	buildings_max_level_factor=1.000
+	state_category=city
+}

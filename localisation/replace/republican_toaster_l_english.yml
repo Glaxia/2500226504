@@ -1,0 +1,17 @@
+﻿l_english:
+##########这里是补充一些缺漏条目和bug条目的文件，欢迎在群内反映更多缺漏、bug条目
+ OK:0 "确定"
+ CANCEL:0 "取消"
+ SELECT:0 "选择"
+ generic.14.t:0 "[From.GetName]提出了外交抗议"
+ generic.14.d:0 "[From.GetAdjective]的特使就我们的顾问在那些当前与他们有军事冲突的国家的存在向我国政府提出了强烈的外交抗议。他们要求立刻撤销我们的军事任务。"
+ generic.14.a:0 "这是一个合理的请求。"
+ generic.14.b:0 "我们的顾问派到哪里跟你有锤子关系？"
+ COUNTRY_autonomy_collaboration_government:0 "$OVERLORDADJ$属$NONIDEOLOGY$"
+ COUNTRY_autonomy_collaboration_government_DEF:0 "$OVERLORDADJ$属$NONIDEOLOGY$"
+ COUNTRY_autonomy_collaboration_government_ADJ:0 "$OVERLORDADJ$属$NONIDEOLOGY$"
+ EAW_WS_TAB_4_HEADER:0 "The Celestial Empire Dev版本"
+ EAW_WS_TAB_4_TXT_HEADER_1:0 "一个简陋的dev版本"
+ EAW_WS_TAB_4_TXT:0 "\n\n鸣谢EaW汉化组提供的汉化。\n\n\n\n——汉化组成员——\n\n§R~组长~§!\n\nDerpy2\n\n§O~管理员~\n\n§!马国博士\n\nRainy_Blaze/Tricolor-Griff\n\n§Y~校对~\n\n§!騎馬撞羅馬\n\nTek\n\n帝国真理报资深主编\n\n交感\n\nrap456\n\nMarcsiv\n\n§r~主要翻译成员~§!\n\n昆夕·麦\n\nGlowingone\n\nCruiser-Aurora\n\nhdy139\n\nStarmist\n\nioppp1\n\n蓝海豚J\n\nComradeSpark\n\nataravarice\n\n食语虫\n\nScott-Kelwell\n\nSYT苏\n\nCaramelKinase\n\nRaptorPass\n\nSimdge\n\nmeteor000\n\nWiFi_Sunglow\n\nCKRainbow\n\n神圣小马帝国\n\nThedawn12345\n\nTropicogarden\n\npassnight\n\nPsychopony\n\ncrownedstag\n\n月宫食客伊莫库\n\nyymyjf\n\nFloatingLight\n\nmiike90§!\n\n§C~其他成员~\n\n§!§Wysdxyx\n\nRavenSkipper\n\nmasibi\n\nNarakuFlower\n\nKamenKaiser\n\nComradeLight\n\ncupsmoke\n\nalicehamilton\n\nICantHearYou\n\nmorizzz\n\nStarsSpring等\n\n§!§G~特别感谢~\n\n§!§WVKorpela（EaW中文Wiki站长）\n\n一只野生上游（TBC组织者）\n\n未列入名单，但是为EaW圈子的扩展出了一份力的人们\n\n\n\n以及，\n\n\n\n坐在屏幕前的你。§!"
+
+ 

@@ -1,0 +1,16 @@
+spriteTypes = {
+
+	SpriteType = { 
+		name = "GFX_idea_madoor"
+		texturefile = "gfx/interface/ideas/madoor.dds"
+	}
+
+    SpriteType = { 
+		name = "GFX_idea_udy"
+		texturefile = "gfx/interface/ideas/udy.dds"
+	}
+	SpriteType = { 
+		name = "GFX_idea_starlight"
+		texturefile = "gfx/interface/ideas/starlight.dds"
+	}
+}

@@ -1,0 +1,24 @@
+
+state={
+	id=84
+	name="STATE_84"
+	resources={
+		oil=8
+	}
+	history={
+		owner = EQS
+		add_core_of = EQS
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+		victory_points = { 541 5 }
+	}
+
+	provinces={
+		541 925 967 1440 3716 3968 9539 9618 9924 9990 10027 11732 12066 12698
+	}
+	manpower=833800
+	buildings_max_level_factor=1.000
+	state_category=town
+}

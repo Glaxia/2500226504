@@ -1,0 +1,25 @@
+
+state={
+	id=658
+	name="STATE_658"
+
+	history={
+		owner = JER
+		add_core_of = JER
+		buildings = {
+			infrastructure = 2
+			industrial_complex = 1
+		}
+		victory_points = {
+			13197 5
+		}
+
+	}
+
+	provinces={
+		1175 1190 4845 7866 10550 10619 10680 12529 12601 13149 13197 
+	}
+	manpower=225670
+	buildings_max_level_factor=3.000
+	state_category=rural
+}

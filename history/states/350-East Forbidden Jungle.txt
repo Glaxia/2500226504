@@ -1,0 +1,21 @@
+
+state={
+	id=350
+	name="STATE_350"
+
+	history={
+		owner = CES
+		add_core_of = CES
+		victory_points = { 6418 5 }
+		buildings = {
+			infrastructure = 2
+		}
+	}
+
+	provinces={
+		532 583 4018 5012 6418 7203 7857 9429 9527 9569 10045 11497 12020
+	}
+	manpower=932080
+	buildings_max_level_factor=1.000
+	state_category=town
+}

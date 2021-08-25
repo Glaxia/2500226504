@@ -1,0 +1,20 @@
+on_actions = {
+	on_startup = {
+        EQS = {
+            mark_land_connected_states = yes
+				if = {
+					limit = { is_ai = no }
+					random_other_country = {
+						limit = { is_ai = yes }
+						set_variable = { eaw_welcome_screen = 1 }
+						capital_scope = { SOL = { goto_state = PREV } }
+						change_tag_from = PREV
+					}
+				}
+            set_variable = {
+                var = EQS_industrial_points
+                value = 0
+            }
+        }
+	}
+}

@@ -1,0 +1,23 @@
+
+state={
+	id=178
+	name="STATE_178"
+
+	history={
+		owner = EQS
+		add_core_of = EQS
+        victory_points = { 3851 1 }
+		victory_points = { 849 5 }
+		victory_points = { 6375 5 }
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 1
+		}
+	}
+
+	provinces={
+		849 928 947 3851 6038 6375 6912 7361 9139 9227 9921 11028 11081 11245 11848 11898 13282 13284 13285 13287 13290
+	}
+	manpower=1654850
+	buildings_max_level_factor=1.000
+	state_category= town

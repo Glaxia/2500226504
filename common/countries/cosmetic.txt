@@ -1,0 +1,5 @@
+EQS_empire = {
+	color = rgb { 158 242 117 }
+	color_ui = rgb { 158 242 117 }
+
+}

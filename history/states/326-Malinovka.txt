@@ -1,0 +1,24 @@
+
+state={
+	id=326
+	name="STATE_326"
+
+	history={
+		owner = STG
+		add_core_of = STG
+		buildings = {
+			infrastructure = 2
+		}
+		victory_points = {
+			6350 1 
+		}
+
+	}
+
+	provinces={
+		3273 6350 6395 6478 9237 9379 9383 9392 
+	}
+	manpower=383890
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

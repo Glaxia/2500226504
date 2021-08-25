@@ -1,0 +1,162 @@
+﻿add_namespace = equestria
+add_namespace = equestriaflavor
+
+country_event = {
+	id = equestria.1
+	title = equestria.1.t
+	desc = equestria.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = equestria.1.a
+		ai_chance = {
+			base = party_popularity@social_harmonism
+			modifier = {
+				add = 20
+			}
+		}
+		set_politics = {
+			ruling_party = social_harmonism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = social_harmonism
+			popularity = 0.2
+		}
+		hidden_effect = {
+			complete_national_focus = EQS_twilight_rule
+		}
+	}
+
+	option = {
+		name = equestria.1.b
+		ai_chance = {
+			base = party_popularity@authoritarian_hamronism
+		}
+		set_politics = {
+			ruling_party = authoritarian_harmonism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = authoritarian_harmonism
+			popularity = 0.1
+		}
+		hidden_effect = {
+			complete_national_focus = EQS_celestia_rule
+		}
+	}
+
+	option = {
+		name = equestria.1.c
+		ai_chance = {
+			base = party_popularity@liberal_harmonism
+			modifier = {
+				add = 20
+			}
+		}
+		set_politics = {
+			ruling_party = liberal_harmonism
+			elections_allowed = no
+		}
+		add_popularity = {
+			ideology = liberal_harmonism
+			popularity = 0.2
+		}
+		hidden_effect = {
+			complete_national_focus = EQS_luna_rule
+		}
+	}
+}
+
+country_event = {
+	id = equestriaflavor.1
+	title = equestriaflavor.1.t
+	desc = equestriaflavor.1.d
+	is_triggered_only = yes
+
+	option = {
+		name = equestriaflavor.1.a
+	}
+}
+
+country_event = {
+	id = equestriaflavor.2
+	title = equestriaflavor.2.t
+	desc = equestriaflavor.2.d
+	is_triggered_only = yes
+
+	option = {
+		name = equestriaflavor.2.a
+	}
+}
+
+country_event = {
+	id = equestriaflavor.3
+	title = equestriaflavor.3.t
+	desc = equestriaflavor.3.d
+	is_triggered_only = yes
+
+	option = {
+		name = equestriaflavor.3.a
+	}
+}
+
+country_event = {
+	id = equestriaflavor.4
+	title = equestriaflavor.4.t
+	desc = equestriaflavor.4.d
+	is_triggered_only = yes
+
+	option = {
+		name = equestriaflavor.4.a
+	}
+}
+
+country_event = {
+	id = equestriaflavor.5
+	title = equestriaflavor.5.t
+	desc = equestriaflavor.5.d
+	is_triggered_only = yes
+
+	option = {
+		name = equestriaflavor.5.a
+	}
+}
+
+country_event = {
+	id = equestriaflavor.6
+	title = equestriaflavor.6.t
+	desc = equestriaflavor.6.d
+	is_triggered_only = yes
+
+	option = {
+		name = equestriaflavor.6.a
+	}
+}
+
+country_event = {
+	id = equestriaflavor.7
+	title = equestriaflavor.7.t
+	desc = equestriaflavor.7.d
+	is_triggered_only = yes
+
+	option = {
+		name = equestriaflavor.7.a
+	}
+}
+
+country_event = {
+	id = equestriaflavor.8
+	title = equestriaflavor.8.t
+	desc = equestriaflavor.8.d
+	is_triggered_only = yes
+
+	option = {
+		name = equestriaflavor.8.a
+	}
+}
+
+
+
+
+

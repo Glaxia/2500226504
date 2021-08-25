@@ -1,0 +1,180 @@
+﻿capital = 30
+
+set_research_slots = 2
+
+set_technology = {
+	pony_race = 1
+	infantry_weapons = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+}
+actually_fix_weapon_techs = yes 
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+generic_SS_template = yes
+
+set_cosmetic_tag = EQS_empire
+set_convoys = 20
+set_popularities = {
+	liberal_harmonism = 45
+	authoritarian_harmonism = 35
+	despotism = 20
+}
+set_politics = {
+
+	ruling_party = liberal_harmonism
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+add_ideas = {
+	pre_industrial_society
+	lack_of_scientists1
+	better_science_base
+	poverty3
+}
+
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 200
+	producer = NMS
+}
+
+add_equipment_to_stockpile = {
+	type = melee_equipment_1
+	amount = 800
+	producer = NMS
+}
+
+set_stability = 0.75
+set_war_support = 0.55
+
+
+create_country_leader = {
+	name = "Stars Whirl"
+	expire = "1965.1.1"
+	picture = "StarsWhirl.tga"
+	ideology = liberal_harmonism_sub
+	female = yes
+	traits = {
+	}
+}
+
+create_field_marshal = {
+	name = "Stars Whirl"
+	portrait_path = "gfx/leaders/NMS/StarsWhirl.tga"
+	traits = { pony_race_trait defensive_doctrine inspirational_leader }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 3
+	female = yes
+	id = 132389
+}
+create_corps_commander = {
+	name = "Star Chaser"
+	picture = "starchaser.tga"
+	traits = { thestral_race_trait jungle_rat night_guard }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 2
+	planning_skill = 1
+	logistics_skill = 2
+	id = 132390
+}
+create_corps_commander = {
+	name = "Berry Meadow"
+	picture = "berrymeadow.tga"
+	traits = { thestral_race_trait trait_mountaineer night_guard }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 3
+	logistics_skill = 2
+	id = 132391
+}
+create_corps_commander = {
+	name = "Comet Chaser"
+	picture = "cometchaser.tga"
+	traits = { thestral_race_trait jungle_rat night_guard }
+	skill = 1
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+	id = 132392
+}
+create_corps_commander = {
+	name = "Light Narrative"
+	picture = "batgarrison.tga"
+	traits = { thestral_race_trait promising_general media_personality }
+	skill = 1
+	attack_skill = 1
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 3
+	id = 132393
+}
+
+random_unit_leader = {
+	limit = {
+		has_id = 132389
+	}
+	save_global_event_target_as = NMS_stars_whirl
+}
+random_unit_leader = {
+	limit = {
+		has_id = 132390
+	}
+	save_global_event_target_as = NMS_star_chaser
+}
+random_unit_leader = {
+	limit = {
+		has_id = 132391
+	}
+	save_global_event_target_as = NMS_berry_meadow
+}
+random_unit_leader = {
+	limit = {
+		has_id = 132392
+	}
+	save_global_event_target_as = NMS_comet_chaser
+}
+random_unit_leader = {
+	limit = {
+		has_id = 132393
+	}
+	save_global_event_target_as = NMS_light_narrative
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}

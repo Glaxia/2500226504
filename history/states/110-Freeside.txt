@@ -1,0 +1,32 @@
+
+state={
+	id=110
+	name="STATE_110"
+
+	history={
+		owner = MAN
+		add_core_of = MAN
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+
+		}
+		victory_points = {
+			874 5 
+		}
+		victory_points = {
+			9703 3 
+		}
+		victory_points = {
+			7945 3 
+		}
+
+	}
+
+	provinces={
+		809 874 875 877 920 977 7153 7945 8668 9703 9881 10009 10094 11688 11863 
+	}
+	manpower=1374200
+	buildings_max_level_factor=1.000
+	state_category=town
+}

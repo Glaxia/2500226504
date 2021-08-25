@@ -1,0 +1,24 @@
+
+state={
+	id=148
+	name="STATE_148"
+
+	history={
+		owner = CRY
+		add_core_of = CRY
+		buildings = {
+			infrastructure = 4
+		}
+		victory_points = {
+			3496 2 
+		}
+
+	}
+
+	provinces={
+		32 149 169 474 3496 3511 6232 9533 11464 13299 
+	}
+	manpower=286420
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

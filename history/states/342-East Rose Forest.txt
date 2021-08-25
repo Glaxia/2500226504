@@ -1,0 +1,24 @@
+state={
+	id=342
+	name="STATE_342"
+	resources={
+		tungsten = 8
+	}
+	provinces={
+		23 112 3017 3103 6158 6396 9136 9200 9366 9395 9402 11035 11268
+	}
+	history={
+		owner = GRF
+		add_core_of = GRF
+		victory_points = {
+			9200 5
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+		}
+	}
+	manpower=457400
+	state_category=town
+	buildings_max_level_factor=1.000
+}

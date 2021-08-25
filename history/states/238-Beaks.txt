@@ -1,0 +1,29 @@
+
+state={
+	id=238
+	name="STATE_238"
+	resources={
+		crystals = 8
+		chromium = 8
+	}
+
+	history={
+		owner = GRF
+		add_core_of = GRF
+		buildings = {
+			infrastructure = 4
+			arms_factory = 1
+		}
+		victory_points = {
+			13320 5
+		}
+
+	}
+
+	provinces={
+		1088 1164 1606 3255 3264 3942 4170 6171 6383 7140 9214 9390 9940 10087 12029 12058 13319 13320
+	}
+	manpower=335937
+	buildings_max_level_factor=1.000
+	state_category=town
+}

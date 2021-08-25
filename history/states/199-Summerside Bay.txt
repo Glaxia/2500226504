@@ -1,0 +1,23 @@
+
+state={
+	id=199
+	name="STATE_199"
+
+	history={
+		owner = OLE
+		add_core_of = OLE
+		victory_points = {
+			6732 3
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		6732 11769 
+	}
+	manpower=131398
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
