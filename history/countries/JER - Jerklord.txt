@@ -110,7 +110,7 @@ create_country_leader = {
 	expire = "1965.1.1"
 	ideology = conservative_democracy_sub
 	traits = {
-
+		father_of_the_republic
 	}
 }
 
