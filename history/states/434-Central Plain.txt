@@ -1,0 +1,28 @@
+
+state={
+	id=434
+	name="STATE_434"
+	resources={
+		oil=8
+	}
+
+	history={
+		owner = FEA
+		add_core_of = FEA
+		victory_points = {
+			4106 5 
+		}
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+
+	}
+
+	provinces={
+		1103 1199 1728 1798 1908 4106 4149 4732 4971 4984 7165 7881 11959 12092 12743 12829 12886 
+	}
+	manpower=405607
+	buildings_max_level_factor=1.000
+	state_category=town
+}

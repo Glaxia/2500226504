@@ -1,0 +1,36 @@
+
+state={
+	id=380
+	name="STATE_380"
+	resources={
+		tungsten=8
+		steel=16
+	}
+
+	history={
+		owner = TRD
+		add_core_of = TRD
+		victory_points = {
+			1963 30
+		}
+		buildings = {
+			infrastructure = 10
+			industrial_complex = 3
+			arms_factory = 3
+			air_base = 4
+			dockyard = 2
+			1963 = {
+				naval_base = 4
+			}
+
+		}
+
+	}
+
+	provinces={
+		1963 
+	}
+	manpower=1740600
+	buildings_max_level_factor=1.000
+	state_category=metropolis
+}

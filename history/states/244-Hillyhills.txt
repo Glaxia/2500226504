@@ -1,0 +1,29 @@
+
+state={
+	id=244
+	name="STATE_244"
+
+	history={
+		owner = AET
+		add_core_of = AET
+		victory_points = {
+			1948 5
+		}
+		victory_points = {
+			5105 3
+		}
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 1
+			arms_factory = 1
+		}
+
+	}
+
+	provinces={
+		1948 2017 2078 2101 4949 5020 5064 5075 5105 7847 8013 8044 
+	}
+	manpower=549140
+	buildings_max_level_factor=1.000
+	state_category=town
+}

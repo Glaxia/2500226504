@@ -1,0 +1,20 @@
+state={
+	id=400
+	name="STATE_400"
+	state_category = town
+	provinces={
+		1504 1697 1837 1971 3695 3753 4782 4842 7802 7863 10735 10866 10898 11629 12523 12792
+	}
+	history = {
+		owner = AVI
+		add_core_of = AVI
+		victory_points = { 1697 5 }
+		victory_points = { 3753 3 }
+		buildings = {
+			infrastructure = 4
+			industrial_complex = 1
+		}
+	}
+	manpower=567004
+	buildings_max_level_factor=1.000
+}

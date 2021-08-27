@@ -1,0 +1,30 @@
+
+state={
+	id=458
+	name="STATE_458"
+
+	history={
+		add_core_of = STW
+		owner = STW
+		victory_points = {
+			8072 10 
+		}
+		victory_points = {
+			1603 3 
+		}
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 2
+			arms_factory = 1
+
+		}
+
+	}
+
+	provinces={
+		1603 4009 4519 4547 5092 6932 7019 7406 7418 7459 7596 7609 8072 10474 12408 12713 
+	}
+	manpower=727009
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

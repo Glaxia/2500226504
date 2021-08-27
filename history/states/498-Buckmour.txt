@@ -1,0 +1,26 @@
+
+state={
+	id=498
+	name="STATE_498"
+
+	history={
+		owner = FEA
+		add_core_of = FEA
+		victory_points = {
+			4777 10
+		}
+		buildings = {
+			infrastructure = 6
+			industrial_complex = 2
+			arms_factory = 1
+		}
+
+	}
+
+	provinces={
+		1727 1774 1877 4751 4777 4835 7736 7773 7816 7843 7870 10539 10563 10658 10669 12506 12520 12695 
+	}
+	manpower=530670
+	buildings_max_level_factor=1.000
+	state_category=large_town
+}

@@ -2,18 +2,29 @@
 state={
 	id=284
 	name="STATE_284"
+	resources={
+		oil = 8
+		steel = 8
+	}
 
 	history={
-		owner = GRF
-		add_core_of = GRF
-
+		owner = FEA
+		add_core_of = FEA
+		victory_points = {
+			4742 15 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 2
+			arms_factory = 2
+		}
 
 	}
 
 	provinces={
-		90 3068 3084 3185 4432 6106 6156 6172 9104 9556 11059 11076 11191 13112 13114 
+		1177 1690 1740 1954 2037 2104 4742 4865 5061 6897 7747 8097 10597 10809 12579 12649 12811 12897 
 	}
-	manpower=7864
+	manpower=1057864
 	buildings_max_level_factor=1.000
-	state_category=wasteland
+	state_category=city
 }

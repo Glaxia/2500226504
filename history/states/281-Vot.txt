@@ -1,14 +1,12 @@
+
 state={
 	id=281
 	name="STATE_281"
 	resources={
-		steel=12
-		oil = 8
+		steel=12.000
+		oil=8.000
 	}
-	provinces={
-		214 378 3030 6316 9181 9235 9278 9311 9356 11217 11362 13103
-	}
-	manpower=902800
+
 	history={
 		owner = GRF
 		add_core_of = GRF
@@ -16,10 +14,18 @@ state={
 			infrastructure = 5
 			industrial_complex = 1
 			arms_factory = 1
+
 		}
-		victory_points = { 9235 15 }
+		victory_points = {
+			9235 15 
+		}
+
 	}
 
-	state_category = large_town
+	provinces={
+		52 214 283 350 378 3030 3290 6316 9100 9181 9235 9278 9311 9356 11217 11314 11330 11362 13103 13106 13107 
+	}
+	manpower=902800
 	buildings_max_level_factor=1.000
+	state_category=large_town
 }

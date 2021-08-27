@@ -3,8 +3,9 @@ state={
 	id=245
 	name="STATE_245"
 	resources={
-		tungsten = 6
+		tungsten=6.000
 	}
+
 	history={
 		owner = GRF
 		add_core_of = GRF
@@ -12,7 +13,7 @@ state={
 	}
 
 	provinces={
-		1056 1072 3101 6883 7513 7671 9370 12473 13338
+		1056 1072 1606 3101 4170 6171 6883 7513 7671 9370 12029 12473 13319 13338 
 	}
 	manpower=21157
 	buildings_max_level_factor=1.000

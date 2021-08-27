@@ -1,0 +1,39 @@
+
+state={
+	id=390
+	name="STATE_390"
+	resources={
+		steel = 12
+		aluminium = 6
+	}
+
+	history={
+		owner = FEZ
+		add_core_of = FEZ
+		victory_points = {
+			4868 20 
+		}
+		victory_points = {
+			1792 5 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 3
+			arms_factory = 3
+			dockyard = 2
+			air_base = 3
+			4868 = {
+				naval_base = 4
+			}
+
+		}
+
+	}
+
+	provinces={
+		1792 4703 4737 4795 4868 4959 4966 7726 7828 8117 10557 10797 10881 12538 12611 12681 12832 13059 
+	}
+	manpower=1635600
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

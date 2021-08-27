@@ -1,0 +1,32 @@
+
+state={
+	id=379
+	name="STATE_379"
+	resources={
+		chromium=8.000
+	}
+
+	history={
+		owner = TRD
+		add_core_of = TRD
+		victory_points = {
+			10536 10 
+		}
+		buildings = {
+			infrastructure = 8
+			industrial_complex = 2
+			arms_factory = 1
+			fuel_silo = 1
+			dockyard = 1
+
+		}
+
+	}
+
+	provinces={
+		531 1729 1828 7397 7781 7809 9142 10536 10561 10564 10635 10806 12545 12615 12643 12797 
+	}
+	manpower=845007
+	buildings_max_level_factor=1.000
+	state_category=city
+}
