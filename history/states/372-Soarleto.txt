@@ -1,0 +1,40 @@
+
+state={
+	id=372
+	name="STATE_372"
+	resources={
+		steel=12
+		rubber=12
+	}
+
+	history={
+		owner = WNG
+		add_core_of = WNG
+		victory_points = {
+			9118 20 
+		}
+		victory_points = {
+			2998 5 
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 3
+			arms_factory = 2
+			dockyard = 1
+			air_base = 2
+			9118 = {
+				naval_base = 1
+
+			}
+
+		}
+
+	}
+
+	provinces={
+		127 138 1112 2994 2998 9078 9118 9231 10099 10178 11156 11159 11922 13198 
+	}
+	manpower=2020670
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

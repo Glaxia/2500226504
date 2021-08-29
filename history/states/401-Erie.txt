@@ -2,10 +2,13 @@
 state={
 	id=401
 	name="STATE_401"
+	resources={
+		tungsten = 8
+	}
 
 	history={
-		owner = ERI
-		add_core_of = ERI
+		owner = AVI
+		add_core_of = AVI
 		victory_points = {
 			10601 10
 		}

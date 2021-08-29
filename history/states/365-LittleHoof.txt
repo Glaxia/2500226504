@@ -8,13 +8,13 @@ state={
 
 	history={
 		victory_points = {
-			7774 5
+			7774 10
 		}
 		owner = JER
 		add_core_of = JER
 		buildings = {
-			infrastructure = 4
-			industrial_complex = 1
+			infrastructure = 6
+			industrial_complex = 2
 			arms_factory = 1
 		}
 
@@ -23,7 +23,7 @@ state={
 	provinces={
 		1292 1722 1745 3220 3472 4242 6056 7774 7846 9512 10542 10600 10670 12106 
 	}
-	manpower=524560
+	manpower=824560
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=large_town
 }

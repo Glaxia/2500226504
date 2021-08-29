@@ -5,17 +5,16 @@ state={
 
 	history={
 		victory_points = {
-			8101 1 
+			8101 5
 		}
 		owner = EQC
 		add_core_of = EQC
 		buildings = {
-			infrastructure = 2
+			infrastructure = 4
+			industrial_complex = 1
 			8101 = {
 				naval_base = 1
-
 			}
-
 		}
 
 	}
@@ -23,7 +22,7 @@ state={
 	provinces={
 		1631 2089 3916 4603 5005 5098 6826 7953 7970 7977 8101 8123 9257 10774 10793 10815 12413 12455 12702 12726 12773 12855 
 	}
-	manpower=127645
+	manpower=397645
 	buildings_max_level_factor=1.000
-	state_category=rural
+	state_category=town
 }

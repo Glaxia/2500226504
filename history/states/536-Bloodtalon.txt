@@ -1,0 +1,34 @@
+
+state={
+	id=536
+	name="STATE_536"
+	resources={
+		steel = 12
+		rubber = 8
+	}
+
+	history={
+		owner = WNG
+		add_core_of = WNG
+		victory_points = {
+			11094 20
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 2
+			arms_factory = 2
+			dockyard = 2
+			11094 = {
+				naval_base = 3
+			}
+		}
+
+	}
+
+	provinces={
+		40 1155 1229 3071 3092 4055 6090 6109 6153 6159 6182 7117 11092 11094 11175 11212 12049 13194 
+	}
+	manpower=1945689
+	buildings_max_level_factor=1.000
+	state_category=large_city
+}

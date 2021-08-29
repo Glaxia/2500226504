@@ -1,0 +1,35 @@
+
+state={
+	id=369
+	name="STATE_369"
+	resources={
+		steel = 12
+		tungsten = 8
+	}
+
+	history={
+		owner = WNG
+		add_core_of = WNG
+		victory_points = {
+			183 20
+		}
+		buildings = {
+			infrastructure = 7
+			industrial_complex = 2
+			arms_factory = 1
+			dockyard = 1
+			air_base = 2
+			183 = {	
+				naval_base = 1
+			}
+		}
+
+	}
+
+	provinces={
+		155 157 183 3033 4161 9113 9947 11046 11074 11979 13130 
+	}
+	manpower=1270467
+	buildings_max_level_factor=1.000
+	state_category=city
+}

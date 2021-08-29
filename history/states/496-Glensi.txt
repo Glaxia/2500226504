@@ -6,9 +6,13 @@ state={
 	history={
 		owner = FEA
 		add_core_of = FEA
+		victory_points = {
+			10596 3 
+		}
 		buildings = {
 			infrastructure = 4
 			industrial_complex = 1
+			air_base = 2
 		}
 	}
 	provinces={

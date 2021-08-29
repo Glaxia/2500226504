@@ -2,6 +2,9 @@
 state={
 	id=519
 	name="STATE_519"
+	resources = {
+		crystals = 8
+	}
 
 	history={
 		victory_points = {
@@ -10,7 +13,7 @@ state={
 		owner = JER
 		add_core_of = JER
 		buildings = {
-			infrastructure = 4
+			infrastructure = 5
 			industrial_complex = 1
 
 		}

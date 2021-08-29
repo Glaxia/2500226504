@@ -1,0 +1,32 @@
+
+state={
+	id=375
+	name="STATE_375"
+	resources={
+		oil=12.000
+	}
+
+	history={
+		owner = WNG
+		add_core_of = WNG
+		victory_points = {
+			12115 1 
+		}
+		victory_points = {
+			3900 5 
+		}
+		buildings = {
+			fuel_silo = 1
+			infrastructure = 4
+
+		}
+
+	}
+
+	provinces={
+		814 972 1052 1672 1743 3830 3900 4719 4745 4876 7697 7725 7743 7763 9873 9905 10612 10675 12618 12622 12657 12690 
+	}
+	manpower=694800
+	buildings_max_level_factor=1.000
+	state_category=town
+}

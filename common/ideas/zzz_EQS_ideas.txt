@@ -1720,27 +1720,6 @@ ideas = {
 			}	
 		}
 
-		EQS_elite_army_idea = {
-			allowed =  { always = no }
-			allowed_civil_war = { always = yes }
-
-			removal_cost = -1
-
-			modifier = {}			
-			equipment_bonus = {
-				armor = {
-					build_cost_ic = -0.05
-					instant = yes
-				}	
-			}
-			equipment_bonus = {
-				motorized_equipment = {
-					build_cost_ic = -0.05
-					instant = yes
-				}	
-			}	
-		}
-
 		EQS_supply_bureau_idea = {
 			picture = GFX_goal_arms_dealing
 			allowed =  { always = no }

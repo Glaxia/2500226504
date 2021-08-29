@@ -267,7 +267,7 @@ focus_tree = {
 	focus = {
 		id = EQS_left_research
 		icon = GFX_focus_generic_socialist_science
-		cost = 5.8
+		cost = 4.3
 		prerequisite = { focus = EQS_worship_TS }
 		relative_position_id = EQS_worship_TS
 		x = 0
@@ -561,22 +561,6 @@ focus_tree = {
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			525 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			231 = {
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
@@ -1655,6 +1639,7 @@ focus_tree = {
 			} 
 		}
 	}
+
 	focus = {
 		id = EQS_heavy_tank_focus
 		icon = GFX_goal_Timberwolf_research
@@ -1672,6 +1657,20 @@ focus_tree = {
 				uses = 2
 				category = cat_heavy_armor
 			} 
+		}
+	}
+
+	focus = {
+		id = EQS_modern_army
+		icon = GFX_goal_support_equestria
+		cost = 4.3
+		prerequisite = { focus = EQS_heavy_tank_focus }
+		prerequisite = { focus = EQS_medium_tank_focus }
+		relative_position_id = EQS_heavy_tank_focus
+		x = -1
+		y = 1
+		completion_reward = {
+			remove_ideas = EQS_nonmilitary2
 		}
 	}
 
