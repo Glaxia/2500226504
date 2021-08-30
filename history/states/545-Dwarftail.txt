@@ -3,19 +3,19 @@ state={
 	id=545
 	name="STATE_545"
 	resources={
-		chromium=16.000
-		steel=12.000
+		chromium = 8
+		crystals = 8
 	}
 
 	history={
 		victory_points = {
-			6482 5 
+			6482 3
 		}
 		add_core_of = STW
 		owner = STW
 		buildings = {
-			infrastructure = 2
-
+			infrastructure = 4
+			industrial_complex = 1
 		}
 
 	}

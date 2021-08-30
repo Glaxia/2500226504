@@ -9,12 +9,13 @@ state={
 	}
 	state_category = rural
 	history = {
-		owner = FEA
-		add_core_of = FEA
+		owner = GRI
+		add_core_of = GRI
 		victory_points = { 7790 5 }
 		buildings = {
 			infrastructure = 5
 			industrial_complex = 1
+			air_base = 2
 		}
 	}
 	manpower=175600

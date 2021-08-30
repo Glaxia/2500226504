@@ -10,13 +10,13 @@ state={
 		owner = FLO
 		add_core_of = FLO
 		victory_points = {
-			12740 20
+			12740 30
 		}
 
 		buildings = {
-			infrastructure = 8
+			infrastructure = 10
 			industrial_complex = 4
-			arms_factory = 2
+			arms_factory = 4
 			air_base = 2
 		}
 
@@ -25,7 +25,7 @@ state={
 	provinces={
 		12740
 	}
-	manpower=1250607
+	manpower=1450607
 	buildings_max_level_factor=1.000
-	state_category=large_city
+	state_category=metropolis
 }

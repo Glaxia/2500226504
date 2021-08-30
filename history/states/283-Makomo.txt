@@ -10,10 +10,13 @@ state={
 	history={
 		owner = STW
 		add_core_of = STW
+		victory_points = {
+			12765 10
+		}
 		buildings = {
-			infrastructure = 5
+			infrastructure = 6
 			industrial_complex = 1
-			arms_factory = 1
+			arms_factory = 2
 		}
 
 	}
@@ -21,7 +24,7 @@ state={
 	provinces={
 		710 4368 4607 4736 7301 9159 10159 10305 10422 10591 12765 
 	}
-	manpower=460400
+	manpower=760400
 	buildings_max_level_factor=1.000
-	state_category=town
+	state_category=large_town
 }

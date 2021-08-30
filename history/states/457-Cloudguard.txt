@@ -8,12 +8,12 @@ state={
 
 	history={
 		victory_points = {
-			1179 5
+			1179 3
 		}
 		owner = AET
 		add_core_of = AET
 		buildings = {
-			infrastructure = 5
+			infrastructure = 4
 			industrial_complex = 1
 		}
 

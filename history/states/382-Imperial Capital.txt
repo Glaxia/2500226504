@@ -1,0 +1,26 @@
+state={
+	id=382
+	name="STATE_382"
+	resources={
+		steel = 20
+		aluminium = 8
+	}
+	state_category = megalopolis
+	provinces={
+		4734 7274 10537
+	}
+	history = {
+		owner = GRI
+		add_core_of = GRI
+		victory_points = { 10537 40 }
+		buildings = {
+			infrastructure = 10
+			industrial_complex = 5
+			arms_factory = 5
+			air_base = 6
+			anti_air_building = 3
+		}
+	}
+	manpower=3860700
+	buildings_max_level_factor=1.000
+}
