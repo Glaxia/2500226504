@@ -294,7 +294,7 @@ set_popularities = {
 	liberal_socialism = 4
 }
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = despotism
 	last_election = "1000.10.10"
 	election_frequency = 36
 	elections_allowed = no
@@ -311,7 +311,7 @@ create_country_leader = {
 	name = "Emperor Grover V"
 	picture = "Grover.tga"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = despotism_sub
 	traits = {
 	}
 }

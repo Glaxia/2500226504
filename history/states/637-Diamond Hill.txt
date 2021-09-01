@@ -1,0 +1,25 @@
+state={
+	id=637
+	name="STATE_637"
+	provinces={
+		1029 1076 1121 1158 7200 9956 11973 12055 13144
+	}
+	resources={
+		steel=6
+		chromium=6
+	}
+	state_category = city
+	history = {
+		owner = DMT
+		add_core_of = DMT
+		victory_points = { 12055 20 }
+		buildings = {
+			infrastructure = 5
+			industrial_complex = 2
+			arms_factory = 1
+			air_base = 2
+		}
+	}
+	manpower=1325219
+	buildings_max_level_factor=1.000
+}

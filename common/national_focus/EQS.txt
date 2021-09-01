@@ -686,12 +686,6 @@ focus_tree = {
 		completion_reward = {
 			add_war_support = 0.025
 			add_ideas = { EQS_royal_army_idea1 }
-			STG = {
-				add_opinion_modifier =  { target = EQS modifier = EQS_threaten_us_opinion }
-			}
-			MAN = {
-				add_opinion_modifier =  { target = EQS modifier = EQS_threaten_us_opinion }
-			}
 		}
 	}
 
@@ -811,6 +805,12 @@ focus_tree = {
 				add_idea = EQS_royal_army_idea2
 				remove_idea = EQS_royal_army_idea1
 			}	
+			STG = {
+				add_opinion_modifier =  { target = EQS modifier = EQS_threaten_us_opinion }
+			}
+			MAN = {
+				add_opinion_modifier =  { target = EQS modifier = EQS_threaten_us_opinion }
+			}
 		}
 	}
 
@@ -4055,7 +4055,23 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			 add_tech_bonus = {
+			100 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
+			94 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_tech_bonus = {
 				name = EQS_southwestern_oil
 				bonus = 1.0
 				uses = 1

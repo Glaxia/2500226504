@@ -1,0 +1,23 @@
+state={
+	id=467
+	name="STATE_467"
+	provinces={
+		12919 12965
+	}
+	resources={
+		rubber=6
+	}
+	history = {
+		owner = MIT
+		add_core_of = MIT
+		victory_points = {
+			12919 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+	state_category = small_island
+	manpower=124500
+	buildings_max_level_factor=1.000
+}

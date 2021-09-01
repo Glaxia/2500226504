@@ -1092,7 +1092,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.02
+				production_speed_buildings_factor = 0.025
 			}
 		}
 
@@ -1103,7 +1103,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.04
+				production_speed_buildings_factor = 0.05
 			}
 		}
 
@@ -1114,7 +1114,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.06
+				production_speed_buildings_factor = 0.075
 			}
 		}
 		EQS_left_rural_idea4 = {
@@ -1124,7 +1124,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.08
+				production_speed_buildings_factor = 0.1
 			}
 		}
 		EQS_left_rural_idea5 = {
@@ -1134,7 +1134,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.1
+				production_speed_buildings_factor = 0.125
 			}
 		}
 		EQS_left_rural_idea6 = {
@@ -1144,7 +1144,7 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.12
+				production_speed_buildings_factor = 0.15
 			}
 		}
 		EQS_left_rural_idea7 = {
@@ -1154,21 +1154,10 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				production_speed_buildings_factor = 0.14
+				production_speed_buildings_factor = 0.175
 			}
 		}
 		EQS_left_rural_idea8 = {
-			allowed =  { always = no }
-			allowed_civil_war = { always = yes }
-
-			removal_cost = -1
-			
-			modifier = {
-				production_speed_buildings_factor = 0.16
-			}
-		}
-
-		EQS_left_rural_idea9 = {
 			allowed =  { always = no }
 			allowed_civil_war = { always = yes }
 
@@ -1179,6 +1168,17 @@ ideas = {
 			}
 		}
 
+		EQS_left_rural_idea9 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				production_speed_buildings_factor = 0.25
+			}
+		}
+
 		EQS_left_city_idea1 = {
 			allowed =  { always = no }
 			allowed_civil_war = { always = yes }
@@ -1186,8 +1186,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.02
-				industrial_capacity_dockyard = 0.02
+				industrial_capacity_factory = 0.025
+				industrial_capacity_dockyard = 0.025
 			}
 		}
 		EQS_left_city_idea2 = {
@@ -1197,8 +1197,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.04
-				industrial_capacity_dockyard = 0.04		
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05		
 			}
 		}
 		EQS_left_city_idea3 = {
@@ -1208,22 +1208,11 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.06
-				industrial_capacity_dockyard = 0.06
+				industrial_capacity_factory = 0.075
+				industrial_capacity_dockyard = 0.075
 			}
 		}
 		EQS_left_city_idea4 = {
-			allowed =  { always = no }
-			allowed_civil_war = { always = yes }
-
-			removal_cost = -1
-			
-			modifier = {
-				industrial_capacity_factory = 0.08
-				industrial_capacity_dockyard = 0.08
-			}
-		}
-		EQS_left_city_idea5 = {
 			allowed =  { always = no }
 			allowed_civil_war = { always = yes }
 
@@ -1234,6 +1223,17 @@ ideas = {
 				industrial_capacity_dockyard = 0.1
 			}
 		}
+		EQS_left_city_idea5 = {
+			allowed =  { always = no }
+			allowed_civil_war = { always = yes }
+
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = 0.125
+				industrial_capacity_dockyard = 0.125
+			}
+		}
 		EQS_left_city_idea6 = {
 			allowed =  { always = no }
 			allowed_civil_war = { always = yes }
@@ -1241,8 +1241,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.12
-				industrial_capacity_dockyard = 0.12
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
 			}
 		}
 		EQS_left_city_idea7 = {
@@ -1252,8 +1252,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.14
-				industrial_capacity_dockyard = 0.14
+				industrial_capacity_factory = 0.175
+				industrial_capacity_dockyard = 0.175
 			}
 		}
 		EQS_left_city_idea8 = {
@@ -1263,8 +1263,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.16
-				industrial_capacity_dockyard = 0.16
+				industrial_capacity_factory = 0.2
+				industrial_capacity_dockyard = 0.2
 			}
 		}
 		EQS_left_city_idea9 = {
@@ -1274,8 +1274,8 @@ ideas = {
 			removal_cost = -1
 			
 			modifier = {
-				industrial_capacity_factory = 0.2
-				industrial_capacity_dockyard = 0.2
+				industrial_capacity_factory = 0.25
+				industrial_capacity_dockyard = 0.25
 			}
 		}	
 
@@ -2098,7 +2098,7 @@ ideas = {
 
 			modifier = {
 				research_speed_factor = 0.15
-				political_power_gain = -0.1
+				political_power_gain = -0.05
 			}
 		}
 		

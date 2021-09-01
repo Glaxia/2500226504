@@ -1,0 +1,23 @@
+state={
+	id=425
+	name="STATE_425"
+	provinces={
+		365 6157 7375 11352
+	}
+	resources = {
+		steel = 8
+	}
+	history = {
+		owner = HLR
+		add_core_of = HLR
+		victory_points = { 6157 20 }
+		buildings = {
+			infrastructure = 3
+			industrial_complex = 1
+			arms_factory = 2
+		}
+	}
+	manpower=943007
+	state_category=city
+	buildings_max_level_factor=1.000
+}

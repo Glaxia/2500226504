@@ -1,0 +1,24 @@
+
+state={
+	id=426
+	name="STATE_426"
+
+	history={
+		owner = HLR
+		add_core_of = HLR
+		victory_points = {
+			10125 2
+		}
+		buildings = {
+			infrastructure = 2
+		}
+
+	}
+
+	provinces={
+		292 339 6404 10125 11273 11319 13167 13183 13187 
+	}
+	manpower=254600
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

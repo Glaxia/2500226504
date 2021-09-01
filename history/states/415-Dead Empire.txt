@@ -1,0 +1,14 @@
+state={
+	id=415
+	name="STATE_415"
+	provinces={
+		4351 7438 9528
+	}
+	history = {
+		owner = DED
+		add_core_of = DED
+	}
+	manpower=1500000
+	state_category=rural
+	buildings_max_level_factor=1.000
+}

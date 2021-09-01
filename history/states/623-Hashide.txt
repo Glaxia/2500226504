@@ -1,0 +1,27 @@
+
+state={
+	id=623
+	name="STATE_623"
+	resources={
+		crystals=6
+		tungsten=4
+	}
+
+	history={
+		owner = GRU
+		add_core_of = GRU
+		victory_points = {
+			12241 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		1622 1929 2072 3109 4128 7372 7465 7931 9986 10071 10883 10951 12241 12824 
+	}
+	manpower=129709
+	buildings_max_level_factor=1.000
+	state_category=rural
+}

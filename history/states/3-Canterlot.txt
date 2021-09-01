@@ -4,16 +4,16 @@ state={
 	name="STATE_3"
 	resources={
 		aluminium = 12
-		steel = 12
+		steel = 16
 	}
 
 	history={
 		owner = EQS
 		add_core_of = EQS
 		buildings = {
-			infrastructure = 6
+			infrastructure = 8
 			air_base = 10
-			arms_factory = 2
+			arms_factory = 3
 			industrial_complex = 4
 			anti_air_building = 5
 			179 = {

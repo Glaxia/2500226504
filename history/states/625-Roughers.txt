@@ -1,0 +1,30 @@
+
+state={
+	id=625
+	name="STATE_625"
+	resources={
+		chromium=4
+		steel=4
+	}
+
+	history={
+		owner = ZES
+		add_core_of = ZES
+		victory_points = {
+			4516 1
+		}
+		victory_points = {
+			4910 1
+		}
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	provinces={
+		1059 1444 1977 2003 2046 4104 4516 4544 4571 4910 10844 10902 12452 12796 12836
+	}
+	manpower=127666
+	buildings_max_level_factor=1.000
+	state_category=rural
+}
