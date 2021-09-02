@@ -30,14 +30,15 @@ if = {
 
 set_convoys = 70
 set_popularities = {
-	democratic = 40
-	fascism = 0
-	communism = 0
-	neutrality = 60
+	despotism = 46
+	hegemonism = 20
+	authoritarian_harmonism = 14
+	liberal_harmonism = 12
+	social_harmonism = 8
+
 }
 set_politics = {
-
-	ruling_party = neutrality
+	ruling_party = despotism
 	last_election = "1000.10.10"
 	election_frequency = 36
 	elections_allowed = no
@@ -46,6 +47,7 @@ add_ideas = {
 	home_of_the_griffons
 	pre_industrial_society
 	lack_of_scientists2
+	better_science_base
 	poverty
 }
 
@@ -56,17 +58,16 @@ create_country_leader = {
 	desc = ""
 	picture = "Gruff.tga"
 	expire = "1965.1.1"
-	ideology = despotism
+	ideology = despotism_sub
 	traits = {
 	}
 }
 
 create_country_leader = {
 	name = "Zombie Guto"
-
 	picture = "Governor.tga"
 	expire = "1965.1.1"
-	ideology = nazism
+	ideology = hegemonism_sub
 	traits = {
 
 	}
@@ -74,21 +75,29 @@ create_country_leader = {
 
 create_country_leader = {
 	name = "Gilda"
-	desc = ""
 	picture = "Gilda.dds"
 	expire = "1965.1.1"
-	ideology = liberalism
+	ideology = authoritarian_harmonism_sub
 	traits = {
 
 	}
 }
 
 create_country_leader = {
-	name = "Gertrude"
-	desc = ""
-	picture = "Governor.tga"
+	name = "Gabriella"
+	picture = "Gabby.dds"
 	expire = "1965.1.1"
-	ideology = leninism
+	ideology = liberal_harmonism_sub
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Gallus"
+	picture = "Gallus.dds"
+	expire = "1965.1.1"
+	ideology = social_harmonism_sub
 	traits = {
 
 	}

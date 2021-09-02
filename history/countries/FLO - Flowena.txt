@@ -1,0 +1,183 @@
+﻿capital = 442
+oob = "FLO_1007"
+set_research_slots = 3
+
+set_technology = {
+	griffon_race = 1
+	tech_griffon_army = 1
+	tech_knights = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	pre_gw_artillery = 1
+	gw_artillery = 1
+	tech_engineers = 1
+	tech_support = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+set_convoys = 70
+set_popularities = {
+	liberal_democracy = 60
+	conservative_democracy = 24
+	authoritarian_socialism = 8
+	liberal_socialism = 8
+}
+set_politics = {
+	ruling_party = liberal_democracy
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = {
+	poverty4
+	lack_of_scientists3
+	outdated_industry
+	big_science_base
+}
+set_stability = 0.50
+create_country_leader = {
+	name = "Chocolat de Rosebrune"
+	picture = "ChocolatePrince.tga"
+	expire = "1965.1.1"
+	ideology = liberal_democracy_sub
+	traits = {
+		hedonist
+	}
+}
+
+create_country_leader = {
+	name = "Anna de Indigo"
+	picture = "AnnaEmerald.tga"
+	desc = FLO_fancybird_desc
+	expire = "1965.1.1"
+	ideology = conservative_democracy_sub
+	female = yes
+	traits = {
+
+	}
+}
+
+create_country_leader = {
+	name = "Michael Landreau"
+	picture = "Loter.tga"
+	expire = "1965.1.1"
+	ideology = liberal_socialism_sub
+	traits = {
+		hero_of_the_revolution
+	}
+}
+
+create_country_leader = {
+	name = "Michael Landreau"
+	picture = "Loter.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_socialism_sub
+	traits = {
+		hero_of_the_revolution
+	}
+}
+
+
+create_corps_commander = {
+	name = "Nicolas de Charbon"
+	portrait_path = "gfx/leaders/FLO/Richter.tga"
+	desc = FLO_general_machiavelli_desc
+	traits = {
+		griffon_race_trait trickster urban_assault_specialist
+	}
+	skill = 3
+	id = 5201
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 4
+	logistics_skill = 1
+	female = no
+}
+
+create_corps_commander = {
+	name = "Astrit Koch"
+	portrait_path = "gfx/leaders/FLO/Astrit.tga"
+	desc = FLO_kock_desc
+	traits = {
+		 griffon_race_trait infantry_leader infantry_officer skilled_staffer
+	}
+	skill = 4
+	id = 5202
+	attack_skill = 4
+	defense_skill = 5
+	planning_skill = 3
+	logistics_skill = 1
+	female = yes
+}
+create_corps_commander = {
+	name = "René de Artois"
+	portrait_path = "gfx/leaders/FLO/gaybird.tga"
+	desc = FLO_artois_desc
+	traits = {
+		trait_reckless
+		harsh_leader
+		griffon_race_trait
+		infantry_officer
+	}
+	skill = 2
+	attack_skill = 4
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill =1
+	female = no
+}
+create_corps_commander = {
+	name = "Aileclaire de Vermilion"
+	portrait_path = "gfx/leaders/FLO/Inferior_Serperior.tga"
+	desc = FLO_inferior_desc
+	traits = {
+		infantry_officer
+		renowned_marksgriff
+		griffon_race_trait
+	}
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 1
+	logistics_skill = 2
+	female = yes
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}
+random_unit_leader = {
+	limit = { has_id = 5201}
+	save_global_event_target_as = FLO_Machiavelli
+}

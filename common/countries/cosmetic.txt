@@ -1,5 +1,14 @@
 EQS_empire = {
 	color = rgb { 158 242 117 }
 	color_ui = rgb { 158 242 117 }
+}
 
+GRF_EMP = {
+	color = rgb { 104 52 9 }
+	color_ui = rgb { 181 110 53 }
+}
+
+RIV_federation_mem = {
+	color = rgb { 58 190 95 }
+	color_ui = rgb { 58 190 95 }
 }

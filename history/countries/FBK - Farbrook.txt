@@ -1,0 +1,140 @@
+﻿capital = 455
+oob = "FBK_1007"
+set_research_slots = 3
+
+set_technology = {
+	pony_race = 1
+	melee_weapons = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		mtg_transport = 1
+	}
+}
+
+set_convoys = 70
+set_popularities = {
+	authoritarian_harmonism = 60
+	despotism = 40
+}
+set_politics = {
+	ruling_party = authoritarian_harmonism
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = { 
+	agrarian_society 
+	lack_of_scientists 
+}
+set_stability = 0.50
+
+create_country_leader = {
+	name = "Council of Chieftains"
+	desc = ""
+	picture = "Governor.tga"
+	expire = "1965.1.1"
+	ideology = despotism_sub
+	traits = {
+	}
+}
+
+create_country_leader = {
+	name = "Cenhelm of Farbrook"
+	desc = ""
+	picture = "Cenhelm.tga"
+	expire = "1965.1.1"
+	ideology = authoritarian_harmonism_sub
+	traits = {
+
+	}
+}
+
+create_field_marshal = {
+	name = "Cenhelm Ironhelm"
+	traits = { pony_race_trait politically_connected inflexible_strategist  }
+	portrait_path = "gfx/leaders/FBK/Cenhelm.tga"
+	skill = 2
+	attack_skill = 1
+	defense_skill = 3
+	planning_skill = 1
+	logistics_skill = 2
+	id = 1499
+}
+create_field_marshal = {
+	name = "Comrade Applethorn"
+	traits = { pony_race_trait infantry_officer harsh_leader  }
+	portrait_path = "gfx/leaders/FBK/Applethorn.tga"
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+	id = 1498
+}
+create_field_marshal = {
+	name = "Hermane Gering"
+	traits = { pony_race_trait trait_reckless infantry_officer inflexible_strategist  }
+	portrait_path = "gfx/leaders/FBK/HermaneGering.tga"
+	skill = 4
+	attack_skill = 4
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 3
+	id = 1497
+}
+create_corps_commander = {
+	name = "Taffy Swirl"
+	traits = { pony_race_trait trait_cautious promising_general }
+	skill = 2
+	portrait_path = "gfx/leaders/FBK/Taffy_Swirl.tga"
+	attack_skill = 1
+	defense_skill = 2
+	planning_skill = 3
+	logistics_skill = 1
+}
+
+create_corps_commander = {
+	name = "Mertweth of Losthope"
+	traits = { pony_race_trait infantry_officer }
+	skill = 2
+	attack_skill = 2
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 2
+}
+create_corps_commander = {
+	name = "Minnyhooves"
+	traits = { pony_race_trait old_guard trait_reckless }
+	skill = 2
+	attack_skill = 3
+	defense_skill = 1
+	planning_skill = 2
+	logistics_skill = 1
+}
+create_corps_commander = {
+	name = "Chief Brightflank"
+	traits = { pony_race_trait old_guard career_officer }
+	skill = 3
+	attack_skill = 2
+	defense_skill = 3
+	planning_skill = 3
+	logistics_skill = 2
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}
