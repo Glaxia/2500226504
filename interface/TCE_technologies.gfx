@@ -55,7 +55,7 @@ spriteTypes = {
 
 	##############
 	SpriteType = {
-		name = "GFX_unicorn_m_medium"
+		name = "GFX_unicorn_magic_medium"
 		texturefile = "gfx/interface/technologies/engineers.dds"
 	}
 	SpriteType = {

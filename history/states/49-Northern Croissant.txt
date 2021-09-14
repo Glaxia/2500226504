@@ -15,8 +15,7 @@ state={
 		add_core_of = MGY
 		buildings = {
 			infrastructure = 3
-			industrial_complex = 1
-			arms_factory = 2
+			arms_factory = 1
 			11583 = { naval_base = 1 }
 		}
 		victory_points = {

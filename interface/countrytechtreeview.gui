@@ -4449,7 +4449,7 @@ guiTypes = {
 			}
 
 			gridboxtype = {
-				name = "unicorn_m_tree"
+				name = "unicorn_magic_tree"
 				position = { x = 270 y = 593 }
 				#size = { width = 420 height = 500 }
 				slotsize = { width = 70 height = 70 }

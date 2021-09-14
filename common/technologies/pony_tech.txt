@@ -694,19 +694,21 @@ technologies = {
 	}
 
 	pegasi_t5 = {
-
+		
 		pegasi = {
 			max_organisation = 5
-			mountain = {
+			max_strength = 1
+			forest = {
 				attack = 0.05
 				movement = 0.05
 			}
-			hills = {
+			jungle = {
 				attack = 0.05
 				movement = 0.05
-			}
+			}	
+		
 		}
-
+		
 		path = {
 			leads_to_tech = pegasi_t6
 			research_cost_coeff = 1
@@ -741,16 +743,14 @@ technologies = {
 
 		pegasi = {
 			max_organisation = 5
-			max_strength = 1
-			forest = {
+			mountain = {
 				attack = 0.05
 				movement = 0.05
 			}
-			jungle = {
+			hills = {
 				attack = 0.05
 				movement = 0.05
-			}	
-		
+			}
 		}
 
 		research_cost = 1.5
@@ -993,25 +993,30 @@ technologies = {
 		}
 	}
 
-	unicorn_m = {
+	unicorn_magic = {
 
 		dependencies = {
 			pony_race = 1
 		}
+
 		enable_equipments = {
 			unicorn_company_equipment_1
 		}
+
 		enable_subunits = {
 			unicorn_company
 		}
+
 		path = {
 			leads_to_tech = unicorn_a1
 			research_cost_coeff = 1
 		}
+
 		path = {
 			leads_to_tech = unicorn_d1
 			research_cost_coeff = 1
 		}
+		
 		research_cost = 1.5
 		start_year = 1007
 		folder = {
